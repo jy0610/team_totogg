@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+	<head>
+		<title>리브 샌드박스</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'totogg/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'totogg/css/noscript.css' %}" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				{% include 'totogg/mainmenu.html' %}
+				<header id="header">
+					<div class="inner">
+						<!-- Logo -->
+							<a href="/team/lsb" class="logo">
+								<span class="symbol"><img src="{% static 'totogg/images/lsb_logo.png' %}" alt="" /></span><span class="title" style=" color: rgba(227, 187, 7, 0.743)">리브 샌드박스</span>
+							</a>
+					</div>
+				</header>
+				
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							
+							<section class="tiles">
+								<article class="style1">
+									<span class="image">
+										<img src="{% static 'totogg/images/dove.png' %}" alt="" />
+									</span>
+									<a href="/team/lsb_T">
+										<h2>dove</h2>
+										<div class="content">
+											<p>1998. 7. 25 <br>김재연<br>비둘기도브</p>
+										</div>
+									</a>
+								</article>
+								<article class="style2">
+									<span class="image">
+										<img src="{% static 'totogg/images/croco.png' %}" alt="" />
+									</span>
+									<a href="/team/lsb_J">
+										<h2>croco</h2>
+										<div class="content">
+											<p>2000. 2. 3 <br>김동범<br>LSBCroc0</p>
+										</div>
+									</a>
+								</article>
+								<article class="style3">
+									<span class="image">
+										<img src="{% static 'totogg/images/clozer.png' %}" alt="" />
+									</span>
+									<a href="/team/lsb_M">
+										<h2>clozer</h2>
+										<div class="content">
+											<p>2003.07.27 <br>이주현<br>27haokan</p>
+										</div>
+									</a>
+								</article>
+								<article class="style4">
+									<span class="image">
+										<img src="{% static 'totogg/images/prince.png' %}" alt="" />
+									</span>
+									<a href="/team/lsb_A">
+										<h2>prince </h2>
+										<div class="content">
+											<p>2000. 4. 5<br>이채환<br>수피</p>
+										</div>
+									</a>
+								</article>
+								<article class="style5">
+									<span class="image">
+										<img src="{% static 'totogg/images/kael.png' %}" alt="" />
+									</span>
+									<a href="/team/lsb_S">
+										<h2>kael </h2>
+										<div class="content">
+											<p>2004.02.11 <br>김진홍<br>신입서폿</p>
+										</div>
+									</a>
+								</article>
+							</section>
+						</div>
+					</div>
+
+				
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'totogg/js/jquery.min.js' %}"></script>
+			<script src="{% static 'totogg/js/browser.min.js' %}"></script>
+			<script src="{% static 'totogg/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'totogg/js/util.js' %}"></script>
+			<script src="{% static 'totogg/js/main.js' %}"></script>
+
+	</body>
+</html>

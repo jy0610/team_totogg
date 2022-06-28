@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+	<head>
+		<title>한화생명e스포츠</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'totogg/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'totogg/css/noscript.css' %}" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				{% include 'totogg/mainmenu.html' %}
+				<header id="header">
+					<div class="inner">
+						<!-- Logo -->
+							<a href="/team/hle" class="logo">
+								<span class="symbol"><img src="{% static 'totogg/images/hl_logo.png' %}" alt="" /></span><span class="title" style=" color: rgb(230, 115, 15)">한화생명e스포츠</span>
+							</a>
+					</div>
+				</header>
+				
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							
+							<section class="tiles">
+								<article class="style1">
+									<span class="image">
+										<img src="{% static 'totogg/images/dudu.png' %}" alt="" />
+									</span>
+									<a href="/team/hle_T">
+										<h2>dudu</h2>
+										<div class="content">
+											<p>2001. 3. 8 <br>이동주<br>따봉람머스</p>
+										</div>
+									</a>
+								</article>
+								<article class="style2">
+									<span class="image">
+										<img src="{% static 'totogg/images/onfleek.png' %}" alt="" />
+									</span>
+									<a href="/team/hle_J">
+										<h2>onfleek</h2>
+										<div class="content">
+											<p>1997. 12. 20 <br>김장겸<br>HLEOnFleek</p>
+										</div>
+									</a>
+								</article>
+								<article class="style3">
+									<span class="image">
+										<img src="{% static 'totogg/images/karis.png' %}" alt="" />
+									</span>
+									<a href="/team/hle_M">
+										<h2>karis</h2>
+										<div class="content">
+											<p>2003.05.21 <br>김홍조<br>HLEKaris1</p>
+										</div>
+									</a>
+								</article>
+								<article class="style4">
+									<span class="image">
+										<img src="{% static 'totogg/images/samd.png' %}" alt="" />
+									</span>
+									<a href="/team/hle_A">
+										<h2>samd</h2>
+										<div class="content">
+											<p>2001.03.14<br>이재훈<br>HLESamD1</p>
+										</div>
+									</a>
+								</article>
+								<article class="style5">
+									<span class="image">
+										<img src="{% static 'totogg/images/vsta.png' %}" alt="" />
+									</span>
+									<a href="/team/hle_S">
+										<h2>vsta</h2>
+										<div class="content">
+											<p>2000.10.03<br>오효성<br>Vsta1</p>
+										</div>
+									</a>
+								</article>
+							</section>
+						</div>
+					</div>
+
+				
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'totogg/js/jquery.min.js' %}"></script>
+			<script src="{% static 'totogg/js/browser.min.js' %}"></script>
+			<script src="{% static 'totogg/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'totogg/js/util.js' %}"></script>
+			<script src="{% static 'totogg/js/main.js' %}"></script>
+
+	</body>
+</html>

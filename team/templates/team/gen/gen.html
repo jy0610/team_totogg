@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+	<head>
+		<title>젠지</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'totogg/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'totogg/css/noscript.css' %}" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				{% include 'totogg/mainmenu.html' %}
+				<header id="header">
+					<div class="inner">
+						<!-- Logo -->
+							<a href="/team/gen" class="logo">
+								<span class="symbol"><img src="{% static 'totogg/images/gen_logo.png' %}" alt="" /></span><span class="title" style=" color: rgb(181, 119, 18)">젠지</span>
+							</a>
+					</div>
+				</header>
+				
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							
+							<section class="tiles">
+								<article class="style1">
+									<span class="image">
+										<img src="{% static 'totogg/images/doran.png' %}" alt="" />
+									</span>
+									<a href="/team/gen_T">
+										<h2>doran</h2>
+										<div class="content">
+											<p>2000. 7. 22<br>최현준<br>어리고싶다</p>
+										</div>
+									</a>
+								</article>
+								<article class="style2">
+									<span class="image">
+										<img src="{% static 'totogg/images/peanut.png' %}" alt="" />
+									</span>
+									<a href="/team/gen_J">
+										<h2>peanut</h2>
+										<div class="content">
+											<p>1998. 2. 3 <br>한왕호<br>XiaoHuaSheng7</p>
+										</div>
+									</a>
+								</article>
+								<article class="style3">
+									<span class="image">
+										<img src="{% static 'totogg/images/chovy.png' %}" alt="" />
+									</span>
+									<a href="/team/gen_M">
+										<h2>chovy</h2>
+										<div class="content">
+											<p>2001. 3. 3 <br>정지훈<br>아파요머리가</p>
+										</div>
+									</a>
+								</article>
+								<article class="style4">
+									<span class="image">
+										<img src="{% static 'totogg/images/ruler.png' %}" alt="" />
+									</span>
+									<a href="/team/gen_A">
+										<h2>ruler</h2>
+										<div class="content">
+											<p>1998. 12. 29<br>박재혁<br>GenGRuler</p>
+										</div>
+									</a>
+								</article>
+								<article class="style5">
+									<span class="image">
+										<img src="{% static 'totogg/images/lehends.png' %}" alt="" />
+									</span>
+									<a href="/team/gen_S">
+										<h2>lehends</h2>
+										<div class="content">
+											<p>1998. 12. 24 <br>손시우<br>Lehends</p>
+										</div>
+									</a>
+								</article>
+							</section>
+						</div>
+					</div>
+
+				
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'totogg/js/jquery.min.js' %}"></script>
+			<script src="{% static 'totogg/js/browser.min.js' %}"></script>
+			<script src="{% static 'totogg/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'totogg/js/util.js' %}"></script>
+			<script src="{% static 'totogg/js/main.js' %}"></script>
+
+	</body>
+</html>

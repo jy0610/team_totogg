@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+	<head>
+		<title>DK</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'totogg/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'totogg/css/noscript.css' %}" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			{% include 'totogg/mainmenu.html' %}
+			<header id="header">
+				<div class="inner">
+					<!-- Logo -->
+						<a href="/team/dk" class="logo">
+							<span class="symbol"><img src="{% static 'totogg/images/dk_logo.png' %}" alt="" /></span><span class="title" style=" color: rgb(22, 200, 182)">담원 기아</span>
+						</a>
+				</div>
+			</header>
+				
+				
+				
+				
+
+				<!-- Main -->
+				<body>
+					<div id="main">
+					<div class="inner">
+					<div class="container mt-5">
+						<table class="table table-hover">
+							<h2><a href="https://www.op.gg/summoners/kr/t1zeus" target="_blank">OP.GG : T1 Zeus</a></h2>
+							<thead>
+								<tr>
+									<th scope="col">결과</th>
+									<th scope="col">챔피언</th>
+									<th scope="col">KDA</th>
+									<th scope="col">평점</th>
+									<th scope="col">킬관여</th>
+									<th scope="col">CS</th>
+									<th scope="col">게임시간</th>
+								</tr>
+							</thead>
+							<tbody>
+								{% for data in datas %}
+								{% if data.playerName == 'T1Zeus'%}
+								<tr>
+									<td class="center">{{ data.rst }}</td>
+									<td class="center"><img src="{{ data.champ_img }}" height="20" weight="20">{{ data.champ }}</td>
+									<td class="center">{{ data.kda }}</td>
+									<td class="center">{{ data.score }}</td>
+									<td class="center">{{ data.ka }}</td>
+									<td class="center">{{ data.cs }}</td>
+									<td class="center">{{ data.g_time }}</td>
+								</tr>
+								{% endif %}
+								{% endfor%}</tbody>
+							
+						</table>
+				
+					</div>
+					</div>
+					</div>
+				</body>
+
+				<!-- Footer -->
+					<!-- <footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Get in touch</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer> -->
+
+			</div>
+
+		<!-- Scripts -->
+		<script src="{% static 'totogg/js/jquery.min.js' %}"></script>
+		<script src="{% static 'totogg/js/browser.min.js' %}"></script>
+		<script src="{% static 'totogg/js/breakpoints.min.js' %}"></script>
+		<script src="{% static 'totogg/js/util.js' %}"></script>
+		<script src="{% static 'totogg/js/main.js' %}"></script>
+
+	</body>
+</html>

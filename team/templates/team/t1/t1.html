@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+	<head>
+		<title>T1</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'totogg/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'totogg/css/noscript.css' %}" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				{% include 'totogg/mainmenu.html' %}
+				<header id="header">
+					<div class="inner">
+						<!-- Logo -->
+							<a href="/team/t1" class="logo">
+								<span class="symbol"><img src="{% static 'totogg/images/t1logo.png' %}" alt="" /></span><span class="title" style=" color: rgb(230, 15, 15)">SKT T1</span>
+							</a>
+					</div>
+				</header>
+				
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							
+							<section class="tiles">
+								<article class="style1">
+									<span class="image">
+										<img src="{% static 'totogg/images/zeus.png' %}" alt="" />
+									</span>
+									<a href="/team/t1_T">
+										<h2>Zeus</h2>
+										<div class="content">
+											<p>2004.01.31 <br>최우제<br>T1 Zeus</p>
+										</div>
+									</a>
+								</article>
+								<article class="style2">
+									<span class="image">
+										<img src="{% static 'totogg/images/oner.png' %}" alt="" />
+									</span>
+									<a href="/team/t1_J">
+										<h2>Oner</h2>
+										<div class="content">
+											<p>2002.12.24 <br>문현준<br>0NER0</p>
+										</div>
+									</a>
+								</article>
+								<article class="style3">
+									<span class="image">
+										<img src="{% static 'totogg/images/faker.png' %}" alt="" />
+									</span>
+									<a href="/team/t1_M">
+										<h2>Faker</h2>
+										<div class="content">
+											<p>1996.05.07 <br>이상혁<br>hide on bush</p>
+										</div>
+									</a>
+								</article>
+								<article class="style4">
+									<span class="image">
+										<img src="{% static 'totogg/images/gumayusi.png' %}" alt="" />
+									</span>
+									<a href="/team/t1_A">
+										<h2>Gumayusi</h2>
+										<div class="content">
+											<p>2002.02.06 <br>이민형<br>T1 Gumayusi</p>
+										</div>
+									</a>
+								</article>
+								<article class="style5">
+									<span class="image">
+										<img src="{% static 'totogg/images/keria.png' %}" alt="" />
+									</span>
+									<a href="/team/t1_S">
+										<h2>Keria</h2>
+										<div class="content">
+											<p>2002.10.14 <br>류민석<br>역천괴</p>
+										</div>
+									</a>
+								</article>
+							</section>
+						</div>
+					</div>
+
+				
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'totogg/js/jquery.min.js' %}"></script>
+			<script src="{% static 'totogg/js/browser.min.js' %}"></script>
+			<script src="{% static 'totogg/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'totogg/js/util.js' %}"></script>
+			<script src="{% static 'totogg/js/main.js' %}"></script>
+
+	</body>
+</html>

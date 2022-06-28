@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+	<head>
+		<title>승부예측모델</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="icon" href="{% static 'totogg/images/t1logo_fa.ico' %}" type="image/x-icon">
+		<link rel="stylesheet" href="{% static 'totogg/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'totogg/css/noscript.css' %}" /></noscript>
+	</head>
+    <body class="is-preload">
+		<div id="wrapper">
+        {% include 'totogg/mainmenu.html' %}
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+				<!-- Text -->
+				<section>
+					<h2>Rank</h2>
+					<p><img src="{% static 'totogg/images/lck_rank.JPG' %}" alt="" /></p>
+					<h2><a href="pred.html">Predict</a></h2>
+					<p><img src="{% static 'totogg/images/lck_pred.JPG' %}" alt="" /></p>
+					<h2>Team</h2>
+					<section class="tiles2">
+						<article class="style6">
+							<span class="image">
+								<img src="{% static 'totogg/images/t1_logo.png' %}" alt="" />
+							</span>
+							<a href="/team/t1">
+								<h2>T1</h2>
+							</a>
+						</article>
+						<article class="style6">
+							<span class="image">
+								<img src="{% static 'totogg/images/gen_logo.png' %}" alt="" />
+							</span>
+							<a href="/team/gen">
+								<h2>젠지</h2>
+							</a>
+						</article>
+						<article class="style6">
+							<span class="image">
+								<img src="{% static 'totogg/images/drx_logo.png' %}" alt="" />
+							</span>
+							<a href="/team/drx">
+								<h2>DRX</h2>
+							</a>
+						</article>
+						<article class="style6">
+							<span class="image">
+								<img src="{% static 'totogg/images/dk_logo.png' %}" alt="" />
+							</span>
+							<a href="/team/dk">
+								<h2>담원 기아</h2>
+							</a>
+						</article>
+						<article class="style6">
+							<span class="image">
+								<img src="{% static 'totogg/images/kt_logo.png' %}" alt="" />
+							</span>
+							<a href="/team/kt">
+								<h2>KT</h2>
+							</a>
+						</article>
+						<article class="style6">
+							<span class="image">
+								<img src="{% static 'totogg/images/lsb_logo.png' %}" alt="" />
+							</span>
+							<a href="/team/lsb">
+								<h2>리브 샌박</h2>
+							</a>
+						</article>
+						<article class="style6">
+							<span class="image">
+								<img src="{% static 'totogg/images/ns_logo.png' %}" alt="" />
+							</span>
+							<a href="/team/ns">
+								<h2>농심</h2>
+							</a>
+						</article>
+						<article class="style6">
+							<span class="image">
+								<img src="{% static 'totogg/images/kf_logo.png' %}" alt="" />
+							</span>
+							<a href="/team/kdf">
+								<h2>광동</h2>
+							</a>
+						</article>
+						<article class="style6">
+							<span class="image">
+								<img src="{% static 'totogg/images/hl_logo.png' %}" alt="" />
+							</span>
+							<a href="/team/hle">
+								<h2>한화생명</h2>
+							</a>
+						</article>
+						<article class="style6">
+							<span class="image">
+								<img src="{% static 'totogg/images/bro_logo.png' %}" alt="" />
+							</span>
+							<a href="/team/bro">
+								<h2>프레딧</h2>
+							</a>
+						</article>
+					</section>
+					
+				</section>
+
+    <!-- Scripts -->
+			<script src="{% static 'totogg/js/jquery.min.js' %}"></script>
+			<script src="{% static 'totogg/js/browser.min.js' %}"></script>
+			<script src="{% static 'totogg/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'totogg/js/util.js' %}"></script>
+			<script src="{% static 'totogg/js/main.js' %}"></script>
+		</div>
+	</body>
+</html>

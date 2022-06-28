@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+	<head>
+		<title>프레딧 브리온</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'totogg/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'totogg/css/noscript.css' %}" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				{% include 'totogg/mainmenu.html' %}
+				<header id="header">
+					<div class="inner">
+						<!-- Logo -->
+							<a href="/team/bro" class="logo">
+								<span class="symbol"><img src="{% static 'totogg/images/bro_logo.png' %}" alt="" /></span><span class="title" style=" color: rgb(11, 90, 19)">프레딧 브리온</span>
+							</a>
+					</div>
+				</header>
+				
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							
+							<section class="tiles">
+								<article class="style1">
+									<span class="image">
+										<img src="{% static 'totogg/images/morgan.png' %}" alt="" />
+									</span>
+									<a href="/team/bro_T">
+										<h2>Morgan</h2>
+										<div class="content">
+											<p>2001. 9. 26 <br>박기태<br>BROMorgan</p>
+										</div>
+									</a>
+								</article>
+								<article class="style2">
+									<span class="image">
+										<img src="{% static 'totogg/images/umti.png' %}" alt="" />
+									</span>
+									<a href="/team/bro_J">
+										<h2>Umti</h2>
+										<div class="content">
+											<p>1999. 6. 2 <br>엄성현<br>SeeuAG</p>
+										</div>
+									</a>
+								</article>
+								<article class="style3">
+									<span class="image">
+										<img src="{% static 'totogg/images/lava.png' %}" alt="" />
+									</span>
+									<a href="/team/bro_M">
+										<h2>Lava</h2>
+										<div class="content">
+											<p>1999. 7. 14<br>김태훈<br>골목대장태훈이</p>
+										</div>
+									</a>
+								</article>
+								<article class="style4">
+									<span class="image">
+										<img src="{% static 'totogg/images/hena.png' %}" alt="" />
+									</span>
+									<a href="/team/bro_A">
+										<h2>Hena</h2>
+										<div class="content">
+											<p>1999. 10. 8<br>박증환<br>BROHena</p>
+										</div>
+									</a>
+								</article>
+								<article class="style5">
+									<span class="image">
+										<img src="{% static 'totogg/images/delight.png' %}" alt="" />
+									</span>
+									<a href="/team/bro_S">
+										<h2>Delight</h2>
+										<div class="content">
+											<p>2002. 9. 12 <br>유환중<br>BRODelight</p>
+										</div>
+									</a>
+								</article>
+							</section>
+						</div>
+					</div>
+
+				
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'totogg/js/jquery.min.js' %}"></script>
+			<script src="{% static 'totogg/js/browser.min.js' %}"></script>
+			<script src="{% static 'totogg/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'totogg/js/util.js' %}"></script>
+			<script src="{% static 'totogg/js/main.js' %}"></script>
+
+	</body>
+</html>
