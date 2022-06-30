@@ -92,23 +92,35 @@ def run():
     # print('='*100)
     # print(score_wins_rates)
 
+    rank_data = []
     for a,b,c,d,e in zip(TEAM, score_wins, score_loses, score_scd, score_wins_rates):
-        rank_data = a,b,c,d,e
-        print(rank_data)
+        data = []
+        # rank_data.append(a,b,c,d,e)
+        data.append(a)
+        data.append(b)
+        data.append(c)
+        data.append(d)
+        data.append(e)
+        # data.append('\n')
+        # print(rank_data)
 
-    # # 파일로 저장하기
-    # t = datetime.today().strftime("%Y-%m-%d-%H")
+        rank_data.append(data)
 
-    # base_path = './scraper_rank/'
-    # file_name = base_path + t + ".csv"
+    print(rank_data)
+
+    # 파일로 저장하기
+    t = datetime.today().strftime("%Y-%m-%d-%H")
+
+    base_path = './scraper_rank/'
+    file_name = base_path + t + ".csv"
     
-    # if not os.path.exists(base_path):
-    #     os.mkdir(base_path)
+    if not os.path.exists(base_path):
+        os.mkdir(base_path)
 
-    # import csv
-    # with open(file_name, 'w', encoding='utf8', newline="") as f:
-    #     writer = csv.writer(f)
-    #     writer.writerows(rank_data)
+    import csv
+    with open(file_name, 'w', encoding='utf8', newline="") as f:
+        writer = csv.writer(f)
+        writer.writerows(rank_data)
 
 
 
