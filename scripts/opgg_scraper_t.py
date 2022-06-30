@@ -3,7 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 #from slack_sdk import WebClient
-#from opgg.models import opggData
+from team.models import opggData
 from webdriver_manager.chrome import ChromeDriverManager
 import time
 
@@ -172,7 +172,7 @@ def run():
     pnames = value['pname']
 
     #검색하려는 팀 명과 같은 데이터를 삭제처리
-    #opggData.objects.filter(teamName=tname).delete()
+    opggData.objects.filter(teamName=tname).delete()
 
     for player, pname in zip(players, pnames):
       try:
@@ -194,16 +194,16 @@ def run():
             cs = item.find_element(By.CSS_SELECTOR, "div .info  div .stats .cs div").text[3:5]
             g_time = item.find_element(By.CSS_SELECTOR, "div .game .length").text
 
-            #opggData(teamName=teamName, playerName=playerName, rst=rst, champ_img=champ_img, champ=champ, kda=kda, score=score, ka=ka, cs=cs, g_time=g_time).save()
+            opggData(teamName=teamName, playerName=playerName, rst=rst, champ_img=champ_img, champ=champ, kda=kda, score=score, ka=ka, cs=cs, g_time=g_time).save()
 
-            message = f"{teamName} - {playerName}\
-                        결과 : {rst} \
-                        챔피언 : {champ} \
-                        kda : {kda} \
-                        평점 : {score} \
-                        킬관여 : {ka} \
-                        CS : {cs} \
-                        게임시간 : {g_time}"
+            # message = f"{teamName} - {playerName}\
+            #             결과 : {rst} \
+            #             챔피언 : {champ} \
+            #             kda : {kda} \
+            #             평점 : {score} \
+            #             킬관여 : {ka} \
+            #             CS : {cs} \
+            #             게임시간 : {g_time}"
             #slack_bot(message)
 
           except Exception as e:
