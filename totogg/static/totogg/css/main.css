@@ -2383,7 +2383,7 @@ input, select, textarea {
 	}
 
 		table tbody tr {
-			border: solid 1px #c9c9c9;
+			/* border: solid 1px #c9c9c9; */
 			border-left: 0;
 			border-right: 0;
 		}
@@ -2392,10 +2392,10 @@ input, select, textarea {
 				background-color: rgba(148, 251, 144, 0.053);
 			} */
 			table tbody .승리 {
-				background-color: rgba(0, 0, 255, 0.100);
+				background-color: rgba(0, 0, 255, 0.125);
 			}
 			table tbody .패배 {
-				background-color: rgba(255, 0, 0, 0.100);
+				background-color: rgba(255, 0, 0, 0.125);
 			}
 
 
@@ -3641,8 +3641,9 @@ input, select, textarea {
 /* Footer */
 
 	#footer {
-		padding: 5em 0 6em 0 ;
+		padding: 3em 0 1em 5em ;
 		background-color: #f6f6f6;
+		/* text-align : center; */
 	}
 
 		#footer > .inner {
