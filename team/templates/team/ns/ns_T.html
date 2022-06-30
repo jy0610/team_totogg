@@ -35,7 +35,8 @@
 							<h2><a href="https://www.op.gg/summoners/kr/Canna00" target="_blank">OP.GG : Canna00</a></h2>
 							<thead>
 								<tr>
-									<th scope="col">결과</th>
+									<th scope="col">결과
+									</th>
 									<th scope="col">챔피언</th>
 									<th scope="col">KDA</th>
 									<th scope="col">평점</th>
@@ -46,7 +47,7 @@
 							</thead>
 							<tbody>
 								{% for data in datas %}
-								{% if data.playerName == 'Canna00'%}
+								{% if data.playerName == 'canna'%}
 								<tr>
 									<td class="center">{{ data.rst }}</td>
 									<td class="center"><img src="{{ data.champ_img }}" height="20" weight="20">{{ data.champ }}</td>
