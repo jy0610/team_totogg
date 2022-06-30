@@ -47,7 +47,7 @@
 							<tbody>
 								{% for data in datas %}
 								{% if data.playerName == 'doran'%}
-								<tr>
+								<tr class="{{ data.rst }}">
 									<td class="center">{{ data.rst }}</td>
 									<td class="center"><img src="{{ data.champ_img }}" height="20" weight="20">{{ data.champ }}</td>
 									<td class="center">{{ data.kda }}</td>
