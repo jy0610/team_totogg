@@ -24,12 +24,12 @@ driver.implicitly_wait(5)
 
 url_pre = 'https://www.op.gg/summoners/kr/'
 
-# def slack_bot(message):
-#     print(message)
-#     requests.post("https://slack.com/api/chat.postMessage", 
-#         headers={"Authorization": "Bearer "+ SLACK_BOT_TOKEN}, 
-#         data={"channel": slack_channel, "text": message}
-#         )
+def slack_bot(message):
+    print(message)
+    requests.post("https://slack.com/api/chat.postMessage", 
+        headers={"Authorization": "Bearer "+ SLACK_BOT_TOKEN}, 
+        data={"channel": slack_channel, "text": message}
+        )
 
 #검색어
 team = 'T1'
@@ -53,7 +53,7 @@ beryl = '율자주세요'
 players = [kingen, pyosik, zeka, deft, beryl]
 pname = ['kingen', 'pyosik', 'zeka', 'deft', 'beryl']
 
-LCK = {'DRX':{'team':team, 'players':players, 'pname':pname}}
+LCK['DRX'] = {'team':team, 'players':players, 'pname':pname}
 
 # 담원 기아
 team = 'DK'
@@ -67,7 +67,7 @@ players = [nuguri, canyon, showmaker, deokdam, kellin]
 pname = ['nuguri', 'canyon', 'showmaker', 'deokdam', 'kellin']
 
 
-LCK = {'DK':{'team':team, 'players':players, 'pname':pname}}
+LCK['DK'] = {'team':team, 'players':players, 'pname':pname}
 
 # 젠지
 team = 'GenG'
@@ -80,7 +80,7 @@ lehends = 'Lehends'
 players = [doran, peanut, chovy, ruler, lehends]
 pname = ['doran', 'peanut', 'chovy', 'ruler', 'lehends']
 
-LCK = {'GenG':{'team':team, 'players':players, 'pname':pname}}
+LCK['GenG'] = {'team':team, 'players':players, 'pname':pname}
 
 # 리브 샌드박스
 team = 'LSB'
@@ -94,7 +94,7 @@ players = [dove, croco, clozer, prince, kael]
 pname = ['dove', 'croco', 'clozer', 'prince', 'kael']
 
 
-LCK = {'LSB':{'team':team, 'players':players, 'pname':pname}}
+LCK['LSB'] = {'team':team, 'players':players, 'pname':pname}
 
 # 광동 프릭스
 team = 'KDF'
@@ -108,7 +108,7 @@ players = [kiin, ellim, fate, teddy, hoit]
 pname = ['kiin', 'ellim', 'fate', 'teddy', 'hoit']
 
 
-LCK = {'KDF':{'team':team, 'players':players, 'pname':pname}}
+LCK['KDF'] = {'team':team, 'players':players, 'pname':pname}
 
 # kt 롤스터
 team = 'KT'
@@ -122,7 +122,7 @@ players = [rascal, cuzz, aria, aiming, life]
 pname = ['rascal', 'cuzz', 'aria', 'aiming', 'life']
 
 
-LCK = {'KT':{'team':team, 'players':players, 'pname':pname}}
+LCK['KT'] = {'team':team, 'players':players, 'pname':pname}
 
 # 한화생명 e스포츠
 team = 'HLE'
@@ -136,7 +136,7 @@ players = [dudu, onfleek, karis, samd, vsta]
 pname = ['dudu', 'onfleek', 'karis', 'samd', 'vsta']
 
 
-LCK = {'HLE':{'team':team, 'players':players, 'pname':pname}}
+LCK['HLE'] = {'team':team, 'players':players, 'pname':pname}
 
 # 프레딧 브리온
 team = 'BRO'
@@ -149,7 +149,7 @@ delight = 'BRODelight'
 players = [morgan, umti, lava, hena, delight]
 pname = ['morgan', 'umti', 'lava', 'hena', 'delight']
 
-LCK = {'BRO':{'team':team, 'players':players, 'pname':pname}}
+LCK['BRO'] = {'team':team, 'players':players, 'pname':pname}
 
 # 농심 레드포스
 team = 'NS'
@@ -163,7 +163,7 @@ players = [canna, dread, bdd, ghost, effort]
 pname = ['canna', 'dread', 'bdd', 'ghost', 'effort']
 
 
-LCK = {'NS':{'team':team, 'players':players, 'pname':pname}}
+LCK['NS'] = {'team':team, 'players':players, 'pname':pname}
 
 def run():
   for key, value in LCK.items():
@@ -196,15 +196,15 @@ def run():
 
             opggData(teamName=teamName, playerName=playerName, rst=rst, champ_img=champ_img, champ=champ, kda=kda, score=score, ka=ka, cs=cs, g_time=g_time).save()
 
-            # message = f"{teamName} - {playerName}\
-            #             결과 : {rst} \
-            #             챔피언 : {champ} \
-            #             kda : {kda} \
-            #             평점 : {score} \
-            #             킬관여 : {ka} \
-            #             CS : {cs} \
-            #             게임시간 : {g_time}"
-            #slack_bot(message)
+            message = f"{teamName} - {playerName}\
+                        결과 : {rst} \
+                        챔피언 : {champ} \
+                        kda : {kda} \
+                        평점 : {score} \
+                        킬관여 : {ka} \
+                        CS : {cs} \
+                        게임시간 : {g_time}"
+            slack_bot(message)
 
           except Exception as e:
             print("--")
