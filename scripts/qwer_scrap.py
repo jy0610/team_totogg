@@ -1,5 +1,6 @@
 import requests
 from selenium import webdriver
+from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 #from opgg.models import opggData
@@ -11,20 +12,30 @@ springUrl = 'https://qwer.gg/ko/leagues/LCK/2022/Spring?tournament=%22890%22'
 # 2022 Spring 선택
 
 # getRegular() -> Regular 선택 후 driver 반환
-def getRegular(driver):
-  #driver.find_element_by_css_selector("button#headlessui-tabs-tab-10").send_keys(Keys.ENTER)
-  driver.find_element(By.XPATH, "//button[contains(@id, 'headlessui-tabs-tab-10')]").send_keys(Keys.ENTER) 
-  #2022Spring 클릭
-  #driver.find_element_by_css_selector("div#headlessui-menu-button-14").send_keys(Keys.ENTER)
-  driver.find_element(By.XPATH, "//div[contains(@id, 'headlessui-menu-button-14')]").send_keys(Keys.ENTER)
-  #driver.find_element_by_css_selector('[href^=/ko/leagues/LCK/2022/Spring]').send_keys(Keys.ENTER)
-  driver.find_element(By.XPATH, "//a[contains(@href, '/ko/leagues/LCK/2022/Spring')]").send_keys(Keys.ENTER)
-  #정규시즌 클릭
-  #driver.find_element_by_css_selector("button#headlessui-tabs-tab-16").send_keys(Keys.ENTER)
-  driver.find_element(By.XPATH, "//button[contains(@id, 'headlessui-tabs-tab-16')]").send_keys(Keys.ENTER)
-  #driver.find_element_by_css_selector("div#headlessui-menu-item-304").send_keys(Keys.ENTER)
-  driver.find_element(By.XPATH, "//div[contains(@id, 'headlessui-menu-item-304')]").send_keys(Keys.ENTER)
 
+def getSpring(driver):
+  #2022Spring 클릭
+  driver.find_element(By.XPATH, "//button[contains(@class, 'select-none rounded border text-center outline-none transition-all flex w-full items-center justify-between text-xs border-gray-600 hover:bg-gray-600 active:bg-opacity-75 h-10 px-3 py-2 text-base')]").send_keys(Keys.ENTER)
+
+  driver.find_element(By.XPATH, "//a[contains(@href, '/ko/leagues/LCK/2022/Spring')]").send_keys(Keys.ENTER)
+
+def getRegular(driver):
+  #정규시즌 클릭
+  driver.find_element(By.XPATH, "//button[contains(@class, 'select-none rounded border text-center outline-none transition-all text-xs border-gray-600 hover:bg-gray-600 active:bg-opacity-75 h-10 px-3 py-2 text-base')]").send_keys(Keys.ENTER)
+
+  reg = driver.find_elements(By.XPATH, "//div[contains(@id, 'headlessui-menu-item-')]")
+  reg[0].click()
+
+def getPlayoff(driver):
+  #정규시즌 클릭
+  driver.find_element(By.XPATH, "//button[contains(@class, 'select-none rounded border text-center outline-none transition-all text-xs border-gray-600 hover:bg-gray-600 active:bg-opacity-75 h-10 px-3 py-2 text-base')]").send_keys(Keys.ENTER)
+  reg = driver.find_elements(By.XPATH, "//div[contains(@id, 'headlessui-menu-item-')]")
+  reg[1].click()
+
+def deleteSideBar(driver):
+  x_button = driver.find_elements_by_css_selector("div#__next div div.flex.h-12 button.h-b-8 svg.fill-gray-400")
+  for x in x_button:
+    x.click()
 
 # getPlayoff() -> playoff 선택 후 driver 반환
 # scrapBlue(TeamName)
@@ -45,45 +56,67 @@ def run():
   #검색하려는 팀 명과 같은 데이터를 삭제처리
   driver = webdriver.Chrome(ChromeDriverManager().install(), chrome_options=chrome_options)
   driver.get(springUrl)
-  time.sleep(5)
+  #time.sleep(5)
   print("--")
 
-
-   #사이드바 제거(임시)
-  driver.find_element_by_css_selector("div.-ml-3 svg").click()
-  time.sleep(5)
-  print("--")
-
-  driver.find_element_by_css_selector("div.-mr-3 svg").click()
-  time.sleep(5)
-
-
-  print("--")
-  print(driver.find_element_by_css_selector("button#headlessui-tabs-tab-10"))
-  print("--")
+  #사이드바 제거
+  deleteSideBar(driver)
+  
+  #경기 결과 클릭
   driver.find_element_by_css_selector("button#headlessui-tabs-tab-10").click()
-  print("--")
-  #driver.find_element(By.XPATH, "//button[contains(@id, 'headlessui-tabs-tab-10')]").click()
+  
+  #2022 Spring 정규시즌 선택
+  getSpring(driver)
+  getRegular(driver)
+  #getPlayoff(driver)
+  
+  #items = driver.find_elements_by_css_selector("li.mt-1.first:mt-0")
+  items = driver.find_elements(By.XPATH, "//button[contains(@id, 'headlessui-disclosure-button-')]")
+
+  for item in items:
+    #마지막에 driver.back() 넣어서 뒤로가기
+    item.click()
+    #url에서 match번호 가져오기! -> 한 번 스크랩 한 경기는 스크랩 하지 않음
+    # 매치 번호, 팀 명으로 Delete 여부 결정
+    detail = driver.find_element(By.XPATH, "//a[contains(@href, '/ko/matches/')]")
+    match_link = detail.get_attribute("href")
+    #item.click()
+    #detail.click()
+    
+    #아이디어
+    #링크를 찾는 메소드 -> 링크를 리스트에 저장 -> for문 돌려서 스크랩 하기
+    #item.click()로 열고 마지막에 item.click()로 닫기
+    #driver(link) deleteSideBar()
+
+
+  # 세트 구분하는 기능
+  # 매치, 세트를 DB에 넣을 예정
+  
   
 
-  # while(True):
-  #   pass
+  #-----
+  # Blue, Red 식별
+    driver.get(match_link)
+    deleteSideBar(driver)
+
+    teams = driver.find_elements(By.XPATH, "//div[contains(@class, 'ml-2 font-bold')]")
+    result = driver.find_elements(By.XPATH, "//strong[contains(@class, 'ml-3 text-')]")
+    side = driver.find_elements(By.XPATH, "//span[contains(@class, 'pt-0.5 font-bold')]")
+
+    print(teams)
+    print(result)
+    print(side)
+
+    while True:
+      pass
+    
+
+    #DB 저장
+    #print()
+    #driver.back()
+    #back 이후에 경기 결과 클릭 해줄 것!
   
-  #getRegular(driver)
-  # items = driver.find_elements_by_css_selector("li.mt-1.first:mt-0")
-  # for item in items:
-  #   item.send_keys(Keys.ENTER)
-  #   driver.find_element_by_css_selector("div.flex.cursor-pointer.items-center").send_keys(Keys.ENTER)
-
-    #세트 구분하는 기능
-
-    # -----
-    #Blue, Red 식별
-    # teams = driver.find_elements_by_css_selector("li.mt-4.first:mt=0 div.ml-2.font-bold").text
-    # result = driver.find_elements_by_css_selector("li.mt-4.first:mt=0 strong.ml-3.text-green-500").text
-    # side = driver.find_elements_by_css_selector("li.mt-4.first:mt=0 div div span.pt-0.5").text
-
-    # print(side)
+  
 
   
 #run()
