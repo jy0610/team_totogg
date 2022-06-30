@@ -113,7 +113,7 @@ LCK['KDF'] = {'team':team, 'players':players, 'pname':pname}
 # kt 롤스터
 team = 'KT'
 rascal = '리바이병장'
-cuzz = 'Cuzz'
+cuzz = '우찬굳'
 aria = '오늘도잠에든다'
 aiming = '강미나'
 life = 'Rascal'
