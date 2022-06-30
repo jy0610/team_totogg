@@ -3,7 +3,6 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.keys import Keys
 import time
 import requests
-from gamesaver.models import GameSaver
 from selenium.webdriver.common.by import By
 import discord
 from discord.ext import commands
@@ -87,7 +86,7 @@ LCK.append(KDF)
 # kt 롤스터
 team = 'KT'
 rascal = '리바이병장'
-cuzz = 'Cuzz'
+cuzz = '우찬굳'
 aria = '오늘도잠에든다'
 aiming = '강미나'
 life = 'Rascal'
@@ -102,7 +101,7 @@ dudu = '따봉람머스'
 onfleek = 'HLEOnFleek'
 karis = 'HLEKaris1'
 samd = 'HLESamD1'
-vsta = 'Vsta1'
+vsta = '건들지마심기'
 players = [dudu, onfleek, karis, samd, vsta]
 pname = ['dudu', 'onfleek', 'karis', 'samd', 'vsta']
 HLE = [team, players, pname]
@@ -143,20 +142,17 @@ options.add_argument('--disable-dev-shm-usage')
 chrome = webdriver.Chrome(ChromeDriverManager().install(), options=options)
 chrome.implicitly_wait(10)
 
-# 슬랙
-SLACK_TOKEN = 'xoxb-3092638135718-3616430141383-ddZhWZ7KOPidJTePkTxx84al'
-slack_channel = '#test'
+# # 슬랙
+# SLACK_TOKEN = 'xoxb-3092638135718-3616430141383-ddZhWZ7KOPidJTePkTxx84al'
+# slack_channel = '#test'
 
-# slack 봇 만들기 https://developerdk.tistory.com/96
-def slack_bot(message):
-   #  print(message)
-    requests.post("https://slack.com/api/chat.postMessage", 
-        headers={"Authorization": "Bearer "+ SLACK_TOKEN}, 
-        data={"channel": slack_channel, "text": message}
-        )
-
-# 디스코드
-DISCORD_TOKEN = 'OTkxMjY2MzQ2NTUxNzUwNzE2.Gtv4W9.cDrChBqukjuAEh149awqoayhunKNIcKn5RJkTs'
+# # slack 봇 만들기 https://developerdk.tistory.com/96
+# def slack_bot(message):
+#    #  print(message)
+#     requests.post("https://slack.com/api/chat.postMessage", 
+#         headers={"Authorization": "Bearer "+ SLACK_TOKEN}, 
+#         data={"channel": slack_channel, "text": message}
+#         )
 
 def run():
  
@@ -165,9 +161,9 @@ def run():
       # print('선수 닉네임 : ',teeam[1])
       # print('선수 명 : ', teeam[2])
       tname = teeam[0]
-      player = teeam[1]
+      players = teeam[1]
       pnames = teeam[2]
-
+      
       # DB 팀명이 같은 데이터 삭제
       # GameSaver.objects.all().delete()
       # GameSaver.objects.filter(teamName = team).delete()
@@ -217,7 +213,6 @@ def run():
                print(message)
                # slack_bot(message)
 
-               GameSaver(teamName = team, name = player, rst = rst, img_url = img, champ = champ, kda = kda, ratio = ratio, pkill = pkill, cs = cs, gtime = gtime).save()
 
          except Exception as e:
                print("공백")
