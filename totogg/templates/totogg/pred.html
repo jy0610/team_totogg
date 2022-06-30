@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+	<head>
+		<title>승부예측</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="icon" href="{% static 'totogg/images/t1logo_fa.ico' %}" type="image/x-icon">
+		<link rel="stylesheet" href="{% static 'totogg/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'totogg/css/noscript.css' %}" /></noscript>
+	</head>
+    <body class="is-preload">
+		<div id="wrapper">
+        {% include 'totogg/mainmenu.html' %}
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+				<!-- Text -->
+				
+				
+
+    <!-- Scripts -->
+			<script src="{% static 'totogg/js/jquery.min.js' %}"></script>
+			<script src="{% static 'totogg/js/browser.min.js' %}"></script>
+			<script src="{% static 'totogg/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'totogg/js/util.js' %}"></script>
+			<script src="{% static 'totogg/js/main.js' %}"></script>
+		</div>
+		{% include 'totogg/footer.html' %}
+	</body>
+	
+</html>
