@@ -18,7 +18,43 @@
 				<!-- Text -->
 				<section>
 					<h2>Rank</h2>
-					<p><img src="{% static 'totogg/images/lck_rank.JPG' %}" alt="" /></p>
+					<div id="main">
+						<div class="inner">
+						<div class="container mt-5">
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th scope="col">승</th>
+										<th scope="col">패</th>
+										<th scope="col">득실차</th>
+										<th scope="col">승률</th>
+										<th scope="col">KDA</th>
+										<th scope="col">킬</th>
+										<th scope="col">데스</th>
+										<th scope="col">어시스트</th>
+									</tr>
+								</thead>
+								<tbody>
+									{% for data in datas %}
+									{% if data.playerName == 'hena'%}
+									<tr class="rank">
+										<td class="center">{{ data.rst }}</td>
+										<td class="center"><img src="{{ data.champ_img }}" height="20" weight="20">{{ data.champ }}</td>
+										<td class="center">{{ data.kda }}</td>
+										<td class="center">{{ data.score }}</td>
+										<td class="center">{{ data.ka }}</td>
+										<td class="center">{{ data.cs }}</td>
+										<td class="center">{{ data.g_time }}</td>
+										<td class="center">{{ data.g_time }}</td>
+									</tr>
+									{% endif %}
+									{% endfor%}
+								</tbody>
+							</table>
+					
+						</div>
+						</div>
+						</div>
 					<h2><a href="/pred">Predict</a></h2>
 					<p><img src="{% static 'totogg/images/lck_pred.JPG' %}" alt="" /></p>
 					<h2>Team</h2>
@@ -115,7 +151,7 @@
 			<script src="{% static 'totogg/js/util.js' %}"></script>
 			<script src="{% static 'totogg/js/main.js' %}"></script>
 		</div>
-		{% include 'totogg/footer.html' %}
-	</body>
+		
+	</body>{% include 'totogg/footer.html' %}
 	
 </html>
