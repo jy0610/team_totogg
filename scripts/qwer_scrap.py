@@ -106,7 +106,7 @@ def run():
       #refresh
       driver.find_element(By.CSS_SELECTOR, "#__next div.min-h-content div > div div.container.transition-all div:nth-child(3) div.flex.items-center.justify-between.lg\:mt-2 div").click()
       print("refreshed")
-      
+
       driver.find_element(By.XPATH, "//button[contains(@class, 'select-none rounded border text-center outline-none transition-all border-red-500 bg-red-500 hover:bg-red-400 active:bg-red-600 h-10 px-3 py-2 text-base')]").click()
       print("done click")
 
@@ -120,10 +120,22 @@ def run():
       b.click()
       print("done click")
       time.sleep(5)
-      t = driver.find_element(By.CSS_SELECTOR, "#headlessui-tabs-panel-15 ul li:nth-child(1) div.min-h-10.relative.overflow-x-auto.overflow-hidden.rounded-md table tbody tr:nth-child(1) td.py-4.px-1.text-xs.text-center.py-0.pt-3.xl\:w-52.hidden.lg\:table-cell div")
-      print(t.text)
-      teams = driver.find_element(By.CSS_SELECTOR, "#headlessui-tabs-panel-15 > ul > li:nth-child(1) > div.flex.items-center.justify-between.px-4.text-sm.text-gray-100 > div.font-axiforma.flex.items-center > div.ml-2.font-bold")
-      print(teams.text)
+      #데미지 추출
+      top_dam = driver.find_element(By.CSS_SELECTOR, "#headlessui-tabs-panel-15 ul li:nth-child(1) div.min-h-10.relative.overflow-x-auto.overflow-hidden.rounded-md table tbody tr:nth-child(1) td.py-4.px-1.text-xs.text-center.py-0.pt-3.xl\:w-52.hidden.lg\:table-cell div").text.replace(',','')
+      jg_dam = driver.find_element(By.CSS_SELECTOR,"#headlessui-tabs-panel-15 > ul > li:nth-child(1) > div.min-h-10.relative.overflow-x-auto.overflow-hidden.rounded-md > table > tbody > tr:nth-child(2) > td.py-4.px-1.text-xs.text-center.py-0.pt-3.xl\:w-52.hidden.lg\:table-cell > div").text.replace(',','')
+      mid_dam = driver.find_element(By.CSS_SELECTOR,"#headlessui-tabs-panel-15 > ul > li:nth-child(1) > div.min-h-10.relative.overflow-x-auto.overflow-hidden.rounded-md > table > tbody > tr:nth-child(3) > td.py-4.px-1.text-xs.text-center.py-0.pt-3.xl\:w-52.hidden.lg\:table-cell > div").text.replace(',','')
+      ad_dam = driver.find_element(By.CSS_SELECTOR,"#headlessui-tabs-panel-15 > ul > li:nth-child(1) > div.min-h-10.relative.overflow-x-auto.overflow-hidden.rounded-md > table > tbody > tr:nth-child(4) > td.py-4.px-1.text-xs.text-center.py-0.pt-3.xl\:w-52.hidden.lg\:table-cell > div").text.replace(',','')
+      spt_dam = driver.find_element(By.CSS_SELECTOR,"#headlessui-tabs-panel-15 > ul > li:nth-child(1) > div.min-h-10.relative.overflow-x-auto.overflow-hidden.rounded-md > table > tbody > tr:nth-child(5) > td.py-4.px-1.text-xs.text-center.py-0.pt-3.xl\:w-52.hidden.lg\:table-cell > div").text.replace(',','')
+      tot_dam = int(top_dam) + int(jg_dam) + int(mid_dam) + int(ad_dam) + int(spt_dam)
+      print('총 데미지 : ', tot_dam)
+
+      #팀명 추출
+      team = driver.find_element(By.CSS_SELECTOR, "#headlessui-tabs-panel-15 > ul > li:nth-child(1) > div.flex.items-center.justify-between.px-4.text-sm.text-gray-100 > div.font-axiforma.flex.items-center > div.ml-2.font-bold")
+      print(team.text)
+      rst = driver.find_element(By.CSS_SELECTOR, "#headlessui-tabs-panel-15 > ul > li:nth-child(1) > div.flex.items-center.justify-between.px-4.text-sm.text-gray-100 > div.font-axiforma.flex.items-center > strong")
+      print(rst.text)
+      side = driver.find_element(By.CSS_SELECTOR, "#headlessui-tabs-panel-15 > ul > li:nth-child(1) > div.flex.items-center.justify-between.px-4.text-sm.text-gray-100 > div.flex.items-center.space-x-2.capitalize > div > span")
+      print(side.text)
 
       
       #teams = driver.find_elements(By.XPATH, "//div[contains(@class, 'ml-2 font-bold')]")
