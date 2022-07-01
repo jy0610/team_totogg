@@ -197,7 +197,7 @@ def run():
                kda = item.find_element(By.CSS_SELECTOR, "div.kda .k-d-a").text
                ratio = item.find_element(By.CSS_SELECTOR, "div.ratio span").text
                pkill = item.find_element(By.CSS_SELECTOR, "div.p-kill").text[3:]
-               cs = item.find_element(By.CSS_SELECTOR, "div.cs").text[3:]
+               cs = item.find_element(By.CSS_SELECTOR, "div.cs").text[2:]
                gtime = item.find_element(By.CSS_SELECTOR, "div.game .length").text
                # print(player, '--', teamName, img, rst)
          
