@@ -191,7 +191,7 @@ def run():
             kda = item.find_element(By.CSS_SELECTOR, "div .info  div .kda .k-d-a").text
             score = item.find_element(By.CSS_SELECTOR, "div .info  div .ratio span").text
             ka = item.find_element(By.CSS_SELECTOR, "div .info  div .stats .p-kill div").text[4:]
-            cs = item.find_element(By.CSS_SELECTOR, "div .info  div .stats .cs div").text[3:5]
+            cs = item.find_element(By.CSS_SELECTOR, "div .info  div .stats .cs div").text[3:6]
             g_time = item.find_element(By.CSS_SELECTOR, "div .game .length").text
 
             opggData(teamName=teamName, playerName=playerName, rst=rst, champ_img=champ_img, champ=champ, kda=kda, score=score, ka=ka, cs=cs, g_time=g_time).save()
