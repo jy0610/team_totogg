@@ -2,7 +2,7 @@
 {% load static %}
 <html>
 	<head>
-		<title>승부예측</title>
+		<title>Data Visualization</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="icon" href="{% static 'totogg/images/t1logo_fa.ico' %}" type="image/x-icon">
@@ -28,40 +28,44 @@
                         data: { // 차트에 들어갈 데이터
                             labels: [
                                 //x 축
-                                'gen', 'bro', 'hle', 'kdf', 'dk', 'kt', 'lsb', 'ns', 'drx', 't1'
+                                'gen', 'drx', 't1', 'lsb', 'dk', 'kdf', 'ns', 'kt', 'hle', 'bro'
                             ],
                             datasets: [
                                 { //데이터
                                     label: '승률', //차트 제목
                                     fill: false, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
-                                    data: [ 100, 0, 0, 40, 50, 25, 60, 50, 80, 80
+                                    data: [100, 80, 80, 60, 50, 40, 40, 25, 20, 0
+                                    
                                     //x축 label에 대응되는 데이터 값
                                     ],
                                     backgroundColor: [
                                         //색상
                                         'rgba(181, 119, 18, 0.2)', //gen
-                                        'rgba(11, 90, 19, 0.2)', //bro
-                                        'rgba(230, 115, 15, 0.2)', //hle
-                                        'rgba(238, 56, 20, 0.2)', //kdf
-                                        'rgba(22, 200, 182, 0.2)', //dk
-                                        'rgba(255, 0, 0, 0.2)', //kt
-                                        'rgba(227, 187, 7, 0.2)', //lsb
-                                        'rgba(136, 43, 43, 0.2)', //ns
                                         'rgba(62, 55, 252, 0.2)', //drx
-                                        'rgba(230, 15, 15, 0.2)' //t1
+                                        'rgba(200, 15, 15, 0.2)', //t1
+                                        'rgba(227, 187, 7, 0.2)', //lsb
+                                        'rgba(22, 200, 182, 0.2)', //dk
+                                        'rgba(238, 80, 20, 0.2)', //kdf
+                                        'rgba(136, 43, 43, 0.2)', //ns
+                                        'rgba(255, 0, 0, 0.2)', //kt
+                                        'rgba(230, 115, 15, 0.2)', //hle
+                                        'rgba(11, 90, 19, 0.2)' //bro
+                                        
+                                        
                                     ],
                                     borderColor: [
                                         //경계선 색상
                                         'rgba(181, 119, 18, 1)',
-                                        'rgba(11, 90, 19, 1)',
-                                        'rgba(230, 115, 15, 1)',
-                                        'rgba(238, 56, 20, 1)',
-                                        'rgba(22, 200, 182, 1)',
-                                        'rgba(255, 0, 0, 1)',
-                                        'rgba(227, 187, 7, 1)',
-                                        'rgba(136, 43, 43, 1)',
                                         'rgba(62, 55, 252, 1)',
-                                        'rgba(230, 15, 15, 1)'
+                                        'rgba(200, 15, 15, 1)',
+                                        'rgba(227, 187, 7, 1)',
+                                        'rgba(22, 200, 182, 1)',
+                                        'rgba(238, 80, 20, 1)',
+                                        'rgba(136, 43, 43, 1)',
+                                        'rgba(255, 0, 0, 1)',
+                                        'rgba(230, 115, 15, 1)',
+                                        'rgba(11, 90, 19, 1)'
+                                       
                                     ],
                                     borderWidth: 1 //경계선 굵기
                                 }/* ,
@@ -89,6 +93,8 @@
                         }
                     });
                 </script>
+
+                
                 <h2>팀 총합 킬</h2>
                 <h2>골드 획득량</h2>
                 <h2>바론</h2>
@@ -110,35 +116,3 @@
 	</body>
 	
 </html>
-<!-- data: {
-    labels: ['T1', 'GenG', 'DK', 'DRX', 'BRO', 'HLE', 'KT', 'KDF', 'LSB', 'NS'],
-    datasets: [{
-        label: '# of Votes',
-        data: [12, 15, 7, 10, 10, 7, 11, 7, 10, 10],
-        backgroundColor: [
-            'rgba(11, 90, 19, 0.2)', //bro
-            'rgba(22, 200, 182, 0.2)', //dk
-            'rgba(62, 55, 252, 0.2)', //drx
-            'rgba(181, 119, 18, 0.2)', //gen
-            'rgba(230, 115, 15, 0.2)', //hle
-            'rgba(255, 159, 64, 0.2)',
-            'rgba(54, 162, 235, 0.2)',
-            'rgba(255, 206, 86, 0.2)',
-            'rgba(75, 192, 192, 0.2)',
-            'rgba(153, 102, 255, 0.2)'
-        ],
-        borderColor: [
-            'rgba(11, 90, 19, 1)',
-            'rgba(22, 200, 182, 1)',
-            'rgba(62, 55, 252, 1)',
-            'rgba(181, 119, 18, 1)',
-            'rgba(230, 115, 15, 1)',
-            'rgba(255, 159, 64, 1)',
-            'rgba(54, 162, 235, 1)',
-            'rgba(255, 206, 86, 1)',
-            'rgba(75, 192, 192, 1)',
-            'rgba(153, 102, 255, 1)'
-        ],
-        borderWidth: 1
-    }]
-}, -->
