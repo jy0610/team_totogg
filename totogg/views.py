@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import LCK_Data
 # from .models import opggData
 # Create your views here.
 def totogg(request):
