@@ -23,3 +23,6 @@ class LCK_Data(models.Model):
 
   def __str__(self):
     return f'{self.team}--{self.rst}'
+
+# if __name__=='__main__':
+#   print(LCK_Data) 

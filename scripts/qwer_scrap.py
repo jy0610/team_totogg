@@ -186,7 +186,7 @@ def run():
   deleteSideBar(driver)
   
   #경기 결과 클릭
-  driver.find_element_by_css_selector("button#headlessui-tabs-tab-10").click()
+  driver.find_element(By.CSS_SELECTOR, "button#headlessui-tabs-tab-10").click()
   
   #매치 링크를 저장하는 리스트
   links = []
