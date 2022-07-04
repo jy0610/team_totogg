@@ -1,0 +1,452 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+	<head>
+		<title>Data Visualization</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="icon" href="{% static 'totogg/images/t1logo_fa.ico' %}" type="image/x-icon">
+		<link rel="stylesheet" href="{% static 'totogg/css/main.css' %}" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+		<noscript><link rel="stylesheet" href="{% static 'totogg/css/noscript.css' %}" /></noscript>
+	</head>
+    <body class="is-preload">
+		<div id="wrapper">
+        {% include 'totogg/mainmenu.html' %}
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+				<!-- Text -->
+                <h2>- 각 게임 승률 -</h2>
+                <canvas id="rate" width="400" height="200"></canvas>
+                <script type="text/javascript">
+                    var context = document
+                        .getElementById('rate')
+                        .getContext('2d');
+                    var myChart = new Chart(context, {
+                        type: 'bar', // 차트의 형태
+                        data: { // 차트에 들어갈 데이터
+                            labels: [
+                                //x 축
+                                {% for data in datas %}'{{ data.tname }}',{% endfor%}
+                            ],
+                            datasets: [
+                                { //데이터
+                                    label: '승률', //차트 제목
+                                    fill: false, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
+                                    data: [{% for data in datas %}'{{ data.rate }}',{% endfor%}
+                                    
+                                    //x축 label에 대응되는 데이터 값
+                                    ],
+		
+									
+                                    backgroundColor: [
+                                        //색상
+                                        'rgba(200, 15, 15, 0.2)', //t1
+                                        'rgba(136, 43, 43, 0.2)', //ns
+                                        'rgba(227, 187, 7, 0.2)', //lsb
+                                        'rgba(255, 0, 0, 0.2)', //kt
+                                        'rgba(238, 80, 20, 0.2)', //kdf
+                                        'rgba(230, 115, 15, 0.2)', //hle
+										'rgba(181, 119, 18, 0.2)', //gen
+                                        'rgba(62, 55, 252, 0.2)', //drx
+                                        'rgba(22, 200, 182, 0.2)', //dk
+                                        'rgba(11, 90, 19, 0.2)' //bro
+                                    ],
+                                    borderColor: [
+                                        //경계선 색상
+                                        'rgba(200, 15, 15, 1)', //t1
+                                        'rgba(136, 43, 43, 1)', //ns
+                                        'rgba(227, 187, 7, 1)', //lsb
+                                        'rgba(255, 0, 0, 1)', //kt
+                                        'rgba(238, 80, 20, 1)', //kdf
+                                        'rgba(230, 115, 15, 1)', //hle
+										'rgba(181, 119, 18, 1)', //gen
+                                        'rgba(62, 55, 252, 1)', //drx
+                                        'rgba(22, 200, 182, 1)', //dk
+                                        'rgba(11, 90, 19, 1)' //bro
+                                    ],
+                                    borderWidth: 1 //경계선 굵기
+                                }
+                            ]
+                        },
+                        options: {
+                            scales: {
+                                yAxes: [
+                                    {
+                                        ticks: {
+                                            beginAtZero: true
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    });
+                </script>
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <h2>- 게임당 평균 팀 총합 킬 -</h2>
+                <canvas id="kill" width="400" height="200"></canvas>
+                <script type="text/javascript">
+                    var context = document
+                        .getElementById('kill')
+                        .getContext('2d');
+                    var myChart = new Chart(context, {
+                        type: 'bar', // 차트의 형태
+                        data: { // 차트에 들어갈 데이터
+                            labels: [
+                                //x 축
+                                {% for data in datas %}'{{ data.tname }}',{% endfor%}
+                            ],
+                            datasets: [
+                                { //데이터
+                                    label: '킬', //차트 제목
+                                    fill: false, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
+                                    data: [{% for data in datas %}'{{ data.kill }}',{% endfor%}
+                                    
+                                    //x축 label에 대응되는 데이터 값
+                                    ],
+		
+									
+                                    backgroundColor: [
+                                        //색상
+                                        'rgba(200, 15, 15, 0.2)', //t1
+                                        'rgba(136, 43, 43, 0.2)', //ns
+                                        'rgba(227, 187, 7, 0.2)', //lsb
+                                        'rgba(255, 0, 0, 0.2)', //kt
+                                        'rgba(238, 80, 20, 0.2)', //kdf
+                                        'rgba(230, 115, 15, 0.2)', //hle
+										'rgba(181, 119, 18, 0.2)', //gen
+                                        'rgba(62, 55, 252, 0.2)', //drx
+                                        'rgba(22, 200, 182, 0.2)', //dk
+                                        'rgba(11, 90, 19, 0.2)' //bro
+                                    ],
+                                    borderColor: [
+                                        //경계선 색상
+                                        'rgba(200, 15, 15, 1)', //t1
+                                        'rgba(136, 43, 43, 1)', //ns
+                                        'rgba(227, 187, 7, 1)', //lsb
+                                        'rgba(255, 0, 0, 1)', //kt
+                                        'rgba(238, 80, 20, 1)', //kdf
+                                        'rgba(230, 115, 15, 1)', //hle
+										'rgba(181, 119, 18, 1)', //gen
+                                        'rgba(62, 55, 252, 1)', //drx
+                                        'rgba(22, 200, 182, 1)', //dk
+                                        'rgba(11, 90, 19, 1)' //bro
+                                    ],
+                                    borderWidth: 1 //경계선 굵기
+                                }
+                            ]
+                        },
+                        options: {
+                            scales: {
+                                yAxes: [
+                                    {
+                                        ticks: {
+                                            beginAtZero: true
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    });
+                </script>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h2>- 게임당 평균 골드 획득량 -</h2>
+                <canvas id="gold" width="400" height="200"></canvas>
+                <script type="text/javascript">
+                    var context = document
+                        .getElementById('gold')
+                        .getContext('2d');
+                    var myChart = new Chart(context, {
+                        type: 'bar', // 차트의 형태
+                        data: { // 차트에 들어갈 데이터
+                            labels: [
+                                //x 축
+                                {% for data in datas %}'{{ data.tname }}',{% endfor%}
+                            ],
+                            datasets: [
+                                { //데이터
+                                    label: '골드', //차트 제목
+                                    fill: false, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
+                                    data: [{% for data in datas %}'{{ data.gold }}',{% endfor%}
+                                    
+                                    //x축 label에 대응되는 데이터 값
+                                    ],
+		
+									
+                                    backgroundColor: [
+                                        //색상
+                                        'rgba(200, 15, 15, 0.2)', //t1
+                                        'rgba(136, 43, 43, 0.2)', //ns
+                                        'rgba(227, 187, 7, 0.2)', //lsb
+                                        'rgba(255, 0, 0, 0.2)', //kt
+                                        'rgba(238, 80, 20, 0.2)', //kdf
+                                        'rgba(230, 115, 15, 0.2)', //hle
+										'rgba(181, 119, 18, 0.2)', //gen
+                                        'rgba(62, 55, 252, 0.2)', //drx
+                                        'rgba(22, 200, 182, 0.2)', //dk
+                                        'rgba(11, 90, 19, 0.2)' //bro
+                                    ],
+                                    borderColor: [
+                                        //경계선 색상
+                                        'rgba(200, 15, 15, 1)', //t1
+                                        'rgba(136, 43, 43, 1)', //ns
+                                        'rgba(227, 187, 7, 1)', //lsb
+                                        'rgba(255, 0, 0, 1)', //kt
+                                        'rgba(238, 80, 20, 1)', //kdf
+                                        'rgba(230, 115, 15, 1)', //hle
+										'rgba(181, 119, 18, 1)', //gen
+                                        'rgba(62, 55, 252, 1)', //drx
+                                        'rgba(22, 200, 182, 1)', //dk
+                                        'rgba(11, 90, 19, 1)' //bro
+                                    ],
+                                    borderWidth: 1 //경계선 굵기
+                                }
+                            ]
+                        },
+                        options: {
+                            scales: {
+                                yAxes: [
+                                    {
+                                        ticks: {
+                                            beginAtZero: true
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    });
+                </script>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h2>- 게임당 평균 바론 -</h2>
+                <canvas id="baron" width="400" height="200"></canvas>
+                <script type="text/javascript">
+                    var context = document
+                        .getElementById('baron')
+                        .getContext('2d');
+                    var myChart = new Chart(context, {
+                        type: 'bar', // 차트의 형태
+                        data: { // 차트에 들어갈 데이터
+                            labels: [
+                                //x 축
+                                {% for data in datas %}'{{ data.tname }}',{% endfor%}
+                            ],
+                            datasets: [
+                                { //데이터
+                                    label: '바론', //차트 제목
+                                    fill: false, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
+                                    data: [{% for data in datas %}'{{ data.baron }}',{% endfor%}
+                                    
+                                    //x축 label에 대응되는 데이터 값
+                                    ],
+		
+									
+                                    backgroundColor: [
+                                        //색상
+                                        'rgba(200, 15, 15, 0.2)', //t1
+                                        'rgba(136, 43, 43, 0.2)', //ns
+                                        'rgba(227, 187, 7, 0.2)', //lsb
+                                        'rgba(255, 0, 0, 0.2)', //kt
+                                        'rgba(238, 80, 20, 0.2)', //kdf
+                                        'rgba(230, 115, 15, 0.2)', //hle
+										'rgba(181, 119, 18, 0.2)', //gen
+                                        'rgba(62, 55, 252, 0.2)', //drx
+                                        'rgba(22, 200, 182, 0.2)', //dk
+                                        'rgba(11, 90, 19, 0.2)' //bro
+                                    ],
+                                    borderColor: [
+                                        //경계선 색상
+                                        'rgba(200, 15, 15, 1)', //t1
+                                        'rgba(136, 43, 43, 1)', //ns
+                                        'rgba(227, 187, 7, 1)', //lsb
+                                        'rgba(255, 0, 0, 1)', //kt
+                                        'rgba(238, 80, 20, 1)', //kdf
+                                        'rgba(230, 115, 15, 1)', //hle
+										'rgba(181, 119, 18, 1)', //gen
+                                        'rgba(62, 55, 252, 1)', //drx
+                                        'rgba(22, 200, 182, 1)', //dk
+                                        'rgba(11, 90, 19, 1)' //bro
+                                    ],
+                                    borderWidth: 1 //경계선 굵기
+                                }
+                            ]
+                        },
+                        options: {
+                            scales: {
+                                yAxes: [
+                                    {
+                                        ticks: {
+                                            beginAtZero: true
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    });
+                </script>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h2>- 게임당 평균 드래곤 -</h2>
+                <canvas id="dragon" width="400" height="200"></canvas>
+                <script type="text/javascript">
+                    var context = document
+                        .getElementById('dragon')
+                        .getContext('2d');
+                    var myChart = new Chart(context, {
+                        type: 'bar', // 차트의 형태
+                        data: { // 차트에 들어갈 데이터
+                            labels: [
+                                //x 축
+                                {% for data in datas %}'{{ data.tname }}',{% endfor%}
+                            ],
+                            datasets: [
+                                { //데이터
+                                    label: '드래곤', //차트 제목
+                                    fill: false, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
+                                    data: [{% for data in datas %}'{{ data.dragon }}',{% endfor%}
+                                    
+                                    //x축 label에 대응되는 데이터 값
+                                    ],
+		
+									
+                                    backgroundColor: [
+                                        //색상
+                                        'rgba(200, 15, 15, 0.2)', //t1
+                                        'rgba(136, 43, 43, 0.2)', //ns
+                                        'rgba(227, 187, 7, 0.2)', //lsb
+                                        'rgba(255, 0, 0, 0.2)', //kt
+                                        'rgba(238, 80, 20, 0.2)', //kdf
+                                        'rgba(230, 115, 15, 0.2)', //hle
+										'rgba(181, 119, 18, 0.2)', //gen
+                                        'rgba(62, 55, 252, 0.2)', //drx
+                                        'rgba(22, 200, 182, 0.2)', //dk
+                                        'rgba(11, 90, 19, 0.2)' //bro
+                                    ],
+                                    borderColor: [
+                                        //경계선 색상
+                                        'rgba(200, 15, 15, 1)', //t1
+                                        'rgba(136, 43, 43, 1)', //ns
+                                        'rgba(227, 187, 7, 1)', //lsb
+                                        'rgba(255, 0, 0, 1)', //kt
+                                        'rgba(238, 80, 20, 1)', //kdf
+                                        'rgba(230, 115, 15, 1)', //hle
+										'rgba(181, 119, 18, 1)', //gen
+                                        'rgba(62, 55, 252, 1)', //drx
+                                        'rgba(22, 200, 182, 1)', //dk
+                                        'rgba(11, 90, 19, 1)' //bro
+                                    ],
+                                    borderWidth: 1 //경계선 굵기
+                                }
+                            ]
+                        },
+                        options: {
+                            scales: {
+                                yAxes: [
+                                    {
+                                        ticks: {
+                                            beginAtZero: true
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    });
+                </script>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h2>- 게임당 평균 타워 -</h2>
+                <canvas id="tower" width="400" height="200"></canvas>
+                <script type="text/javascript">
+                    var context = document
+                        .getElementById('tower')
+                        .getContext('2d');
+                    var myChart = new Chart(context, {
+                        type: 'bar', // 차트의 형태
+                        data: { // 차트에 들어갈 데이터
+                            labels: [
+                                //x 축
+                                {% for data in datas %}'{{ data.tname }}',{% endfor%}
+                            ],
+                            datasets: [
+                                { //데이터
+                                    label: '타워', //차트 제목
+                                    fill: false, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
+                                    data: [{% for data in datas %}'{{ data.tower }}',{% endfor%}
+                                    
+                                    //x축 label에 대응되는 데이터 값
+                                    ],
+		
+									
+                                    backgroundColor: [
+                                        //색상
+                                        'rgba(200, 15, 15, 0.2)', //t1
+                                        'rgba(136, 43, 43, 0.2)', //ns
+                                        'rgba(227, 187, 7, 0.2)', //lsb
+                                        'rgba(255, 0, 0, 0.2)', //kt
+                                        'rgba(238, 80, 20, 0.2)', //kdf
+                                        'rgba(230, 115, 15, 0.2)', //hle
+										'rgba(181, 119, 18, 0.2)', //gen
+                                        'rgba(62, 55, 252, 0.2)', //drx
+                                        'rgba(22, 200, 182, 0.2)', //dk
+                                        'rgba(11, 90, 19, 0.2)' //bro
+                                    ],
+                                    borderColor: [
+                                        //경계선 색상
+                                        'rgba(200, 15, 15, 1)', //t1
+                                        'rgba(136, 43, 43, 1)', //ns
+                                        'rgba(227, 187, 7, 1)', //lsb
+                                        'rgba(255, 0, 0, 1)', //kt
+                                        'rgba(238, 80, 20, 1)', //kdf
+                                        'rgba(230, 115, 15, 1)', //hle
+										'rgba(181, 119, 18, 1)', //gen
+                                        'rgba(62, 55, 252, 1)', //drx
+                                        'rgba(22, 200, 182, 1)', //dk
+                                        'rgba(11, 90, 19, 1)' //bro
+                                    ],
+                                    borderWidth: 1 //경계선 굵기
+                                }
+                            ]
+                        },
+                        options: {
+                            scales: {
+                                yAxes: [
+                                    {
+                                        ticks: {
+                                            beginAtZero: true
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    });
+                </script>
+                </div>
+            </div>
+				
+				
+
+    <!-- Scripts -->
+			<script src="{% static 'totogg/js/jquery.min.js' %}"></script>
+			<script src="{% static 'totogg/js/browser.min.js' %}"></script>
+			<script src="{% static 'totogg/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'totogg/js/util.js' %}"></script>
+			<script src="{% static 'totogg/js/main.js' %}"></script>
+		</div>
+		
+	</body>
+	
+</html>

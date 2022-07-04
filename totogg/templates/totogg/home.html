@@ -7,7 +7,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="icon" href="{% static 'totogg/images/t1logo_fa.ico' %}" type="image/x-icon">
 		<link rel="stylesheet" href="{% static 'totogg/css/main.css' %}" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 		<noscript><link rel="stylesheet" href="{% static 'totogg/css/noscript.css' %}" /></noscript>
+		
 	</head>
     <body class="is-preload">
 		<div id="wrapper">
@@ -55,8 +57,85 @@
 						</div>
 						</div>
 						</div>
-					<h2><a href="/pred">Predict</a></h2>
+					<h2><a href="/pred">pred</a></h2>
 					<p><img src="{% static 'totogg/images/lck_pred.JPG' %}" alt="" /></p>
+					<h2><a href="/dashboard">Dashboard</a></h2>
+					<canvas id="myChart" width="400" height="200"></canvas>
+                <script type="text/javascript">
+                    var context = document
+                        .getElementById('myChart')
+                        .getContext('2d');
+                    var myChart = new Chart(context, {
+                        type: 'bar', // 차트의 형태
+                        data: { // 차트에 들어갈 데이터
+                            labels: [
+                                //x 축
+                                {% for data in datas %}'{{ data.team }}',{% endfor%}
+                            ],
+                            datasets: [
+                                { //데이터
+                                    label: '승리', //차트 제목
+                                    fill: false, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
+                                    data: [{% for data in datas %}'{{ data.score_wins_rates }}',{% endfor%}
+                                    
+                                    //x축 label에 대응되는 데이터 값
+                                    ],
+									borderColor: "rgba(9, 255, 0, 0.5)",
+            						backgroundColor: "rgba(9, 255, 0, 0.1)",
+		
+									
+                                    // backgroundColor: [
+                                    //     //색상
+									// 	'rgba(181, 119, 18, 0.2)', //gen
+                                    //     'rgba(200, 15, 15, 0.2)', //t1
+                                    //     'rgba(22, 200, 182, 0.2)', //dk
+                                    //     'rgba(62, 55, 252, 0.2)', //drx
+									// 	'rgba(227, 187, 7, 0.2)', //lsb
+									// 	'rgba(255, 0, 0, 0.2)', //kt
+									// 	'rgba(136, 43, 43, 0.2)', //ns
+                                    //     'rgba(238, 80, 20, 0.2)', //kdf
+									// 	'rgba(230, 115, 15, 0.2)', //hle
+                                    //     'rgba(11, 90, 19, 0.2)' //bro
+                                        
+                                        
+                                    // ],
+                                    // borderColor: [
+                                    //     //경계선 색상
+									// 	'rgba(181, 119, 18, 1)', //gen
+                                    //     'rgba(200, 15, 15, 1)', //t1
+                                    //     'rgba(22, 200, 182, 1)', //dk
+                                    //     'rgba(62, 55, 252, 1)', //drx
+									// 	'rgba(227, 187, 7, 1)', //lsb
+									// 	'rgba(255, 0, 0, 1)', //kt
+									// 	'rgba(136, 43, 43, 1)', //ns
+                                    //     'rgba(238, 80, 20, 1)', //kdf
+									// 	'rgba(230, 115, 15, 1)', //hle
+                                    //     'rgba(11, 90, 19, 1)' //bro
+                                        
+                                        
+                                        
+                                        
+                                        
+  
+                                       
+                                    // ],
+                                    borderWidth: 1 //경계선 굵기
+                                }
+                            ]
+                        },
+                        options: {
+                            scales: {
+                                yAxes: [
+                                    {
+                                        ticks: {
+                                            beginAtZero: true
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    });
+                </script>
 					<h2>Team</h2>
 					<section class="tiles2">
 						<article class="style6">

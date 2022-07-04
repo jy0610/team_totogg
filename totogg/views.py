@@ -1,8 +1,7 @@
 from django.shortcuts import render
 from .models import LCK_Data
-import csv
-import pandas as pd
 from .models import rank
+from .models import summerSummary
 # from .models import opggData
 # Create your views here.
 def totogg(request):
@@ -13,6 +12,18 @@ def totogg(request):
         {"datas":data}
         )
 
+def dashboard(request):
+    data = summerSummary.objects.all()
+    return render(
+        request,
+        'totogg/dashboard.html',
+        {"datas":data}
+        )
+
 def pred(request):
-  return render(request, 'totogg/pred.html')
+    return render(
+        request,
+        'totogg/pred.html'
+        )
+  
 
