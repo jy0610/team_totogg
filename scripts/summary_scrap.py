@@ -36,6 +36,11 @@ def run():
   driver.find_element(By.CSS_SELECTOR, "button#headlessui-tabs-tab-13").click()
   print("Clicked!")
   time.sleep(1)
+
+  #팀명 클릭
+  driver.find_element(By.CSS_SELECTOR, "div.min-h-10.relative.overflow-x-auto.overflow-hidden.rounded-md.mt-2 > table > thead > tr > th.h-26px.select-none.whitespace-nowrap.px-1.py-1.text-xs.font-normal.cursor-pointer.text-left.capitalize").click()
+  print("Sorted!")
+  time.sleep(1)
   
   tnames = driver.find_elements(By.CSS_SELECTOR, "div.min-h-10.relative.overflow-x-auto.overflow-hidden.rounded-md.mt-2 > table > tbody > tr > td:nth-child(2) > a > div > div.transition-colors.group-hover\:text-red-500")
 
