@@ -35,3 +35,16 @@ class rank(models.Model):
 
   def __str__(self):
     return self.team
+
+
+class summerSummary(models.Model):
+  tname = models.CharField(max_length=20, primary_key=True)
+  rate = models.FloatField()
+  kill = models.FloatField()
+  gold = models.IntegerField()
+  baron = models.FloatField()
+  dragon = models.FloatField()
+  tower = models.FloatField()
+
+  def __str__(self):
+    return f'{self.tname}-{self.rate}'
