@@ -2390,7 +2390,7 @@ input, select, textarea {
 
 			table tbody .rank:nth-child(2n + 1) {
 				background-color: rgba(9, 255, 0, 0.053);
-				border: solid 1px #c9c9c9;
+				
 			}
 			table tbody .승리 {
 				background-color: rgba(0, 0, 255, 0.125);
