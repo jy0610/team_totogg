@@ -57,7 +57,7 @@
 						</div>
 						</div>
 						</div>
-					<h2><a href="/pred">pred</a></h2>
+						<h2><a href="/pred">pred</a></h2>
 					<p><img src="{% static 'totogg/images/lck_pred.JPG' %}" alt="" /></p>
 					<h2><a href="/dashboard">Dashboard</a></h2>
 					<canvas id="myChart" width="400" height="200"></canvas>
@@ -74,7 +74,7 @@
                             ],
                             datasets: [
                                 { //데이터
-                                    label: '승리', //차트 제목
+                                    label: '총 게임 승률', //차트 제목
                                     fill: false, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
                                     data: [{% for data in datas %}'{{ data.score_wins_rates }}',{% endfor%}
                                     
