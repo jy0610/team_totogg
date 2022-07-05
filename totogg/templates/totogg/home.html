@@ -7,7 +7,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="icon" href="{% static 'totogg/images/t1logo_fa.ico' %}" type="image/x-icon">
 		<link rel="stylesheet" href="{% static 'totogg/css/main.css' %}" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 		<noscript><link rel="stylesheet" href="{% static 'totogg/css/noscript.css' %}" /></noscript>
+		
 	</head>
     <body class="is-preload">
 		<div id="wrapper">
@@ -21,33 +23,33 @@
 					<div id="main">
 						<div class="inner">
 						<div class="container mt-5">
+							<style>
+								tbody>tr {
+								  counter-increment: no;
+								}
+								tbody>tr>td:first-child:before {
+								  content: counter(no) ". ";
+								}
+								</style>
 							<table class="table table-hover">
 								<thead>
 									<tr>
+										<th scope="col">팀순위</th>
 										<th scope="col">승</th>
 										<th scope="col">패</th>
 										<th scope="col">득실차</th>
 										<th scope="col">승률</th>
-										<th scope="col">KDA</th>
-										<th scope="col">킬</th>
-										<th scope="col">데스</th>
-										<th scope="col">어시스트</th>
 									</tr>
 								</thead>
 								<tbody>
 									{% for data in datas %}
-									{% if data.playerName == 'hena'%}
 									<tr class="rank">
-										<td class="center">{{ data.rst }}</td>
-										<td class="center"><img src="{{ data.champ_img }}" height="20" weight="20">{{ data.champ }}</td>
-										<td class="center">{{ data.kda }}</td>
-										<td class="center">{{ data.score }}</td>
-										<td class="center">{{ data.ka }}</td>
-										<td class="center">{{ data.cs }}</td>
-										<td class="center">{{ data.g_time }}</td>
-										<td class="center">{{ data.g_time }}</td>
+										<td class="center">{{ data.team }}</td>
+										<td class="center">{{ data.score_wins }}</td>
+										<td class="center">{{ data.score_loses }}</td>
+										<td class="center">{{ data.score_scd }}</td>
+										<td class="center">{{ data.score_wins_rates }}</td>
 									</tr>
-									{% endif %}
 									{% endfor%}
 								</tbody>
 							</table>
@@ -55,8 +57,85 @@
 						</div>
 						</div>
 						</div>
-					<h2><a href="/pred">Predict</a></h2>
+						<h2><a href="/pred">pred</a></h2>
 					<p><img src="{% static 'totogg/images/lck_pred.JPG' %}" alt="" /></p>
+					<h2><a href="/dashboard">Dashboard</a></h2>
+					<canvas id="myChart" width="400" height="200"></canvas>
+                <script type="text/javascript">
+                    var context = document
+                        .getElementById('myChart')
+                        .getContext('2d');
+                    var myChart = new Chart(context, {
+                        type: 'bar', // 차트의 형태
+                        data: { // 차트에 들어갈 데이터
+                            labels: [
+                                //x 축
+                                {% for data in datas %}'{{ data.team }}',{% endfor%}
+                            ],
+                            datasets: [
+                                { //데이터
+                                    label: '총 게임 승률', //차트 제목
+                                    fill: false, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
+                                    data: [{% for data in datas %}'{{ data.score_wins_rates }}',{% endfor%}
+                                    
+                                    //x축 label에 대응되는 데이터 값
+                                    ],
+									borderColor: "rgba(9, 255, 0, 0.5)",
+            						backgroundColor: "rgba(9, 255, 0, 0.1)",
+		
+									
+                                    // backgroundColor: [
+                                    //     //색상
+									// 	'rgba(181, 119, 18, 0.2)', //gen
+                                    //     'rgba(200, 15, 15, 0.2)', //t1
+                                    //     'rgba(22, 200, 182, 0.2)', //dk
+                                    //     'rgba(62, 55, 252, 0.2)', //drx
+									// 	'rgba(227, 187, 7, 0.2)', //lsb
+									// 	'rgba(255, 0, 0, 0.2)', //kt
+									// 	'rgba(136, 43, 43, 0.2)', //ns
+                                    //     'rgba(238, 80, 20, 0.2)', //kdf
+									// 	'rgba(230, 115, 15, 0.2)', //hle
+                                    //     'rgba(11, 90, 19, 0.2)' //bro
+                                        
+                                        
+                                    // ],
+                                    // borderColor: [
+                                    //     //경계선 색상
+									// 	'rgba(181, 119, 18, 1)', //gen
+                                    //     'rgba(200, 15, 15, 1)', //t1
+                                    //     'rgba(22, 200, 182, 1)', //dk
+                                    //     'rgba(62, 55, 252, 1)', //drx
+									// 	'rgba(227, 187, 7, 1)', //lsb
+									// 	'rgba(255, 0, 0, 1)', //kt
+									// 	'rgba(136, 43, 43, 1)', //ns
+                                    //     'rgba(238, 80, 20, 1)', //kdf
+									// 	'rgba(230, 115, 15, 1)', //hle
+                                    //     'rgba(11, 90, 19, 1)' //bro
+                                        
+                                        
+                                        
+                                        
+                                        
+  
+                                       
+                                    // ],
+                                    borderWidth: 1 //경계선 굵기
+                                }
+                            ]
+                        },
+                        options: {
+                            scales: {
+                                yAxes: [
+                                    {
+                                        ticks: {
+                                            beginAtZero: true
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    });
+                </script>
 					<h2>Team</h2>
 					<section class="tiles2">
 						<article class="style6">

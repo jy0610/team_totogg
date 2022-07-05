@@ -8,6 +8,7 @@ from selenium.webdriver.common.by import By
 # from gamesaver.models import Rank
 from datetime import datetime
 import os 
+from totogg.models import rank
 
 # url
 url = 'https://game.naver.com/esports/record/lck/team/lck_2022_summer'
@@ -15,7 +16,7 @@ url = 'https://game.naver.com/esports/record/lck/team/lck_2022_summer'
 # driver 설정과 지정
 options = webdriver.ChromeOptions()
 options.add_argument("window-size=1000,1000") # 윈도우 사이즈 결정
-# options.add_argument("headless") # 창을 띄우지않음
+options.add_argument("headless") # 창을 띄우지않음
 options.add_experimental_option('excludeSwitches', ['enable-logging'])
 options.add_argument('--no-sandbox')
 options.add_argument('--disable-dev-shm-usage')
@@ -103,10 +104,14 @@ def run():
         data.append(e)
         # data.append('\n')
         # print(rank_data)
+        rank.objects.filter(team=a).delete()
 
         rank_data.append(data)
+        rank(team=a,score_wins=b,score_loses=c,score_scd=d,score_wins_rates=e).save()
+        
 
     print(rank_data)
+
 
     # 파일로 저장하기
     t = datetime.today().strftime("%Y-%m-%d-%H")
@@ -121,9 +126,3 @@ def run():
     with open(file_name, 'w', encoding='utf8', newline="") as f:
         writer = csv.writer(f)
         writer.writerows(rank_data)
-
-
-
-
-            
-    
