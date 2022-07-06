@@ -6,6 +6,7 @@ urlpatterns = [
     path('', views.totogg),
     path('dashboard/', views.dashboard),
     path('pred/', views.pred),
+    path('rank/', views.rank_page),
     
     
 ]

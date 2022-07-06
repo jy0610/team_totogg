@@ -25,5 +25,12 @@ def pred(request):
         request,
         'totogg/pred.html'
         )
-  
+
+def rank_page(request):
+    data = rank.objects.all()
+    return render(
+        request,
+        'totogg/rank.html',
+        {"datas":data}
+        )
 
