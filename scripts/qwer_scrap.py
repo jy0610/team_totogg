@@ -170,7 +170,7 @@ def scrapRed(driver, match_num, set):
 
 def run():
   chrome_options = webdriver.ChromeOptions()
-  chrome_options.add_argument("window-size=1100,1000") # 윈도우 사이즈 결정
+  chrome_options.add_argument("window-size=1200,1000") # 윈도우 사이즈 결정
   #chrome_options.add_argument("headless") # 창을 띄우지않음
   #chrome_options.add_argument("--single-process")
   chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
@@ -238,19 +238,18 @@ def run():
     time.sleep(1)
     deleteSideBar(driver)
     time.sleep(1)
-    try:
-      #refresh
-      driver.find_element(By.CSS_SELECTOR, "#__next div.min-h-content div > div div.container.transition-all div:nth-child(3) div.flex.items-center.justify-between.lg\:mt-2 div").click()
-      print("refreshed")
+    #refresh
+    driver.find_element(By.CSS_SELECTOR, "#__next div.min-h-content div > div div.container.transition-all div:nth-child(3) div.flex.items-center.justify-between.lg\:mt-2 div").click()
+    print("refreshed")
 
-      #select set
-      sets = driver.find_elements(By.XPATH, "//li[@class='shrink-0']//button[contains(@class, 'select-none rounded border text-center outline-none transition-all border')]")
-      sn = 1
-      for set in sets:
+    #select set
+    sets = driver.find_elements(By.XPATH, "//li[@class='shrink-0']//button[contains(@class, 'select-none rounded border text-center outline-none transition-all border')]")
+    sn = 1
+    for set in sets:
+      try:
         set.click()
       #driver.find_element(By.XPATH, "//button[contains(@class, 'select-none rounded border text-center outline-none transition-all border-red-500 bg-red-500 hover:bg-red-400 active:bg-red-600 h-10 px-3 py-2 text-base')]").click()
         print(sn, " Set Selected!")
-        sn += 1
         time.sleep(1)
 
         #요약 클릭
@@ -265,14 +264,11 @@ def run():
         scrapRed(driver, match_num, sn)
         print("-"*20)
 
+        sn += 1
 
-    #DB 입력:
-    
-      
-
-    except Exception as e:
-      print("예외발생")
-      print(e)
+      except Exception as e:
+        print("예외발생")
+        print(e)
   
   
 
