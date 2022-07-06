@@ -39,7 +39,7 @@ def deleteSideBar(driver):
 
 # getPlayoff() -> playoff 선택 후 driver 반환
 # scrapBlue(TeamName)
-def scrapBlue(driver, match_num):
+def scrapBlue(driver, match_num, set):
   #게임 시간
   gtime = driver.find_element(By.CSS_SELECTOR, "#__next div.min-h-content div div div.container.transition-all div:nth-child(3) div.mt-3 div div:nth-child(1) div.flex.items-center.justify-between.px-2.py-1.lg\:px-4 div.mr-4.flex.flex-1.items-center.text-xs div").text
   print("게임 시간 : ", gtime)
@@ -100,10 +100,10 @@ def scrapBlue(driver, match_num):
   LCK_Data(match_num=match_num, team=team, rst=rst, side=side, gtime=gtime,
           gold=gold, tot_dam=tot_dam, kill=kill, death=death, assist=assist,
           tower=tower, inhibitor=inhibitor, herald=herald, dragon=dragon,
-          elder=elder, baron=baron, sight=sight, total_cs=total_cs).save()
+          elder=elder, baron=baron, sight=sight, total_cs=total_cs, set=set).save()
 
 
-def scrapRed(driver, match_num):
+def scrapRed(driver, match_num, set):
   #게임 시간
   gtime = driver.find_element(By.CSS_SELECTOR, "#__next div.min-h-content div div div.container.transition-all div:nth-child(3) div.mt-3 div div:nth-child(1) div.flex.items-center.justify-between.px-2.py-1.lg\:px-4 div.mr-4.flex.flex-1.items-center.text-xs div").text
   print("게임 시간 : ", gtime)
@@ -164,7 +164,7 @@ def scrapRed(driver, match_num):
   LCK_Data(match_num=match_num, team=team, rst=rst, side=side, gtime=gtime,
           gold=gold, tot_dam=tot_dam, kill=kill, death=death, assist=assist,
           tower=tower, inhibitor=inhibitor, herald=herald, dragon=dragon,
-          elder=elder, baron=baron, sight=sight, total_cs=total_cs).save()
+          elder=elder, baron=baron, sight=sight, total_cs=total_cs, set=set).save()
 
 
 
@@ -214,7 +214,6 @@ def run():
   print('PlayOffs Selected!')
   time.sleep(1)
   items = driver.find_elements(By.XPATH, "//button[contains(@id, 'headlessui-disclosure-button-')]")
-  print(items)
   for item in items:
     item.click()
     time.sleep(1)
@@ -226,8 +225,6 @@ def run():
     item.click()
     print('Saved!')
   
-  print(len(links))
-  print(len(match_nums))
 
   #-----
   # Blue, Red 식별
@@ -263,9 +260,9 @@ def run():
         time.sleep(1)
 
         print("-"*20)
-        scrapBlue(driver, match_num)
+        scrapBlue(driver, match_num, sn)
         print("-"*20)
-        scrapRed(driver, match_num)
+        scrapRed(driver, match_num, sn)
         print("-"*20)
 
 

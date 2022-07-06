@@ -1,11 +1,12 @@
 from django.db import models
+from django.forms import IntegerField
 
 
 # Create your models here.
 class LCK_Data(models.Model):
   match_num = models.CharField(max_length=20)
+  set = models.IntegerField(null=True, default=0)
   team = models.CharField(max_length=50)
-  rst = models.CharField(max_length=20)
   side =  models.CharField(max_length=20)
   gtime = models.CharField(max_length=50)
   gold = models.IntegerField()
@@ -21,6 +22,7 @@ class LCK_Data(models.Model):
   baron = models.IntegerField()
   sight = models.IntegerField()
   total_cs = models.IntegerField()
+  rst = models.CharField(max_length=20)
 
   def __str__(self):
     return f'{self.team}--{self.rst}'
