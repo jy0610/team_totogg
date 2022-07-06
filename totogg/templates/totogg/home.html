@@ -19,43 +19,37 @@
 			<div class="inner">
 				<!-- Text -->
 				<section>
-					<h2>Rank</h2>
+					<h2><a href="/rank">rank</a></h2>
 					<div id="main">
-						<div class="inner">
-						<div class="container mt-5">
-							<style>
-								tbody>tr {
-								  counter-increment: no;
-								}
-								tbody>tr>td:first-child:before {
-								  content: counter(no) ". ";
-								}
-								</style>
-							<table class="table table-hover">
-								<thead>
-									<tr>
-										<th scope="col">팀순위</th>
-										<th scope="col">승</th>
-										<th scope="col">패</th>
-										<th scope="col">득실차</th>
-										<th scope="col">승률</th>
-									</tr>
-								</thead>
-								<tbody>
-									{% for data in datas %}
-									<tr class="rank">
-										<td class="center">{{ data.team }}</td>
-										<td class="center">{{ data.score_wins }}</td>
-										<td class="center">{{ data.score_loses }}</td>
-										<td class="center">{{ data.score_scd }}</td>
-										<td class="center">{{ data.score_wins_rates }}</td>
-									</tr>
-									{% endfor%}
-								</tbody>
-							</table>
-					
-						</div>
-						</div>
+						<section class="tiles3">
+							<article class="style6">
+								<span class="image">
+									<img src="{% static 'totogg/images/no1.png' %}" alt="" />
+								</span>
+								<a>
+									<h2>{% for data in datas %}{% if data.rank_n == '1'%}{{ data.team }}{% endif %}{% endfor%}</h2>
+									
+								</a>
+							</article>
+							<article class="style6">
+								<span class="image">
+									<img src="{% static 'totogg/images/no2.png' %}" alt="" />
+								</span>
+								<a>
+									<h2>{% for data in datas %}{% if data.rank_n == '2'%}{{ data.team }}{% endif %}{% endfor%}</h2>
+									
+								</a>
+							</article>
+							<article class="style6">
+								<span class="image">
+									<img src="{% static 'totogg/images/no3.png' %}" alt="" />
+								</span>
+								<a>
+									<h2>{% for data in datas %}{% if data.rank_n == '3'%}{{ data.team }}{% endif %}{% endfor%}</h2>
+									
+								</a>
+							</article>
+							</section>
 						</div>
 						<h2><a href="/pred">pred</a></h2>
 					<p><img src="{% static 'totogg/images/lck_pred.JPG' %}" alt="" /></p>

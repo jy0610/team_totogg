@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+	<head>
+		<title>Rank</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="icon" href="{% static 'totogg/images/t1logo_fa.ico' %}" type="image/x-icon">
+		<link rel="stylesheet" href="{% static 'totogg/css/main.css' %}" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+		<noscript><link rel="stylesheet" href="{% static 'totogg/css/noscript.css' %}" /></noscript>
+	</head>
+    <body class="is-preload">
+		<div id="wrapper">
+        {% include 'totogg/mainmenu.html' %}
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+				<!-- Text -->
+                <style>
+                    tbody>tr {
+                      counter-increment: no;
+                    }
+                    tbody>tr>td:first-child:before {
+                      content: counter(no) ". ";
+                    }
+                    </style>
+                    <h2>Rank</h2>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">팀순위</th>
+                            <th scope="col">승</th>
+                            <th scope="col">패</th>
+                            <th scope="col">득실차</th>
+                            <th scope="col">승률</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for data in datas %}
+                        <tr class="rank">
+                            <td class="center">{{ data.team }}</td>
+                            <td class="center">{{ data.score_wins }}</td>
+                            <td class="center">{{ data.score_loses }}</td>
+                            <td class="center">{{ data.score_scd }}</td>
+                            <td class="center">{{ data.score_wins_rates }}</td>
+                        </tr>
+                        {% endfor%}
+                    </tbody>
+                </table>
+                </div>
+            </div>
+				
+				
+
+    <!-- Scripts -->
+			<script src="{% static 'totogg/js/jquery.min.js' %}"></script>
+			<script src="{% static 'totogg/js/browser.min.js' %}"></script>
+			<script src="{% static 'totogg/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'totogg/js/util.js' %}"></script>
+			<script src="{% static 'totogg/js/main.js' %}"></script>
+		</div>
+		
+	</body>
+	
+</html>
