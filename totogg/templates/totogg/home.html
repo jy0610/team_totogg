@@ -27,7 +27,7 @@
 									<img src="{% static 'totogg/images/no1.png' %}" alt="" />
 								</span>
 								<a>
-									<h2>{% for data in datas %}{% if data.rank_n == '1'%}{{ data.team }}{% endif %}{% endfor%}</h2>
+									<h2>{% for data in datas %}{% if data.score_n == '1'%}{{ data.team }}{% endif %}{% endfor%}</h2>
 									
 								</a>
 							</article>
@@ -36,7 +36,7 @@
 									<img src="{% static 'totogg/images/no2.png' %}" alt="" />
 								</span>
 								<a>
-									<h2>{% for data in datas %}{% if data.rank_n == '2'%}{{ data.team }}{% endif %}{% endfor%}</h2>
+									<h2>{% for data in datas %}{% if data.score_n == '2'%}{{ data.team }}{% endif %}{% endfor%}</h2>
 									
 								</a>
 							</article>
@@ -45,7 +45,7 @@
 									<img src="{% static 'totogg/images/no3.png' %}" alt="" />
 								</span>
 								<a>
-									<h2>{% for data in datas %}{% if data.rank_n == '3'%}{{ data.team }}{% endif %}{% endfor%}</h2>
+									<h2>{% for data in datas %}{% if data.score_n == '3'%}{{ data.team }}{% endif %}{% endfor%}</h2>
 									
 								</a>
 							</article>
@@ -74,58 +74,43 @@
                                     
                                     //x축 label에 대응되는 데이터 값
                                     ],
-									borderColor: "rgba(9, 255, 0, 0.5)",
-            						backgroundColor: "rgba(9, 255, 0, 0.1)",
-		
-									
-                                    // backgroundColor: [
-                                    //     //색상
-									// 	'rgba(181, 119, 18, 0.2)', //gen
-                                    //     'rgba(200, 15, 15, 0.2)', //t1
-                                    //     'rgba(22, 200, 182, 0.2)', //dk
-                                    //     'rgba(62, 55, 252, 0.2)', //drx
-									// 	'rgba(227, 187, 7, 0.2)', //lsb
-									// 	'rgba(255, 0, 0, 0.2)', //kt
-									// 	'rgba(136, 43, 43, 0.2)', //ns
-                                    //     'rgba(238, 80, 20, 0.2)', //kdf
-									// 	'rgba(230, 115, 15, 0.2)', //hle
-                                    //     'rgba(11, 90, 19, 0.2)' //bro
-                                        
-                                        
-                                    // ],
-                                    // borderColor: [
-                                    //     //경계선 색상
-									// 	'rgba(181, 119, 18, 1)', //gen
-                                    //     'rgba(200, 15, 15, 1)', //t1
-                                    //     'rgba(22, 200, 182, 1)', //dk
-                                    //     'rgba(62, 55, 252, 1)', //drx
-									// 	'rgba(227, 187, 7, 1)', //lsb
-									// 	'rgba(255, 0, 0, 1)', //kt
-									// 	'rgba(136, 43, 43, 1)', //ns
-                                    //     'rgba(238, 80, 20, 1)', //kdf
-									// 	'rgba(230, 115, 15, 1)', //hle
-                                    //     'rgba(11, 90, 19, 1)' //bro
-                                        
-                                        
-                                        
-                                        
-                                        
-  
-                                       
-                                    // ],
+									borderColor: "rgba(9, 255, 0, 1)",
+            						backgroundColor: "rgba(9, 255, 0, 0.7)",
                                     borderWidth: 1 //경계선 굵기
                                 }
                             ]
                         },
                         options: {
-                            scales: {
-                                yAxes: [
-                                    {
-                                        ticks: {
-                                            beginAtZero: true
+                                    
+                                    legend: {
+                                        labels: {
+                                            fontColor: 'rgba(255, 255, 255, 1)',
+                                                            
+                                            fontSize : 20
                                         }
-                                    }
-                                ]
+                                    },
+                                    scales: {
+                                        xAxes: [{
+                                            ticks: {
+                                                fontColor: 'rgba(255, 255, 255, 1)',
+                                                fontSize: 15
+                                            },
+                                            gridLines:{
+						                        color: "rgba(255, 255, 255, 1)",
+						                        lineWidth: 1
+					}       
+                                        }],
+                                        yAxes: [{
+                                            ticks: {
+                                                beginAtZero: true,
+                                                fontColor: 'rgba(255, 255, 255, 1)',
+                                                fontSize: 20
+                                            },
+                                            gridLines:{
+						                        color: "rgba(255, 255, 255, 1)",
+						                        lineWidth: 1
+					}
+                                }]
                             }
                         }
                     });
@@ -137,7 +122,7 @@
 								<img src="{% static 'totogg/images/t1_logo.png' %}" alt="" />
 							</span>
 							<a href="/team/t1">
-								<h2>T1</h2>
+								
 							</a>
 						</article>
 						<article class="style6">
@@ -145,7 +130,7 @@
 								<img src="{% static 'totogg/images/gen_logo.png' %}" alt="" />
 							</span>
 							<a href="/team/gen">
-								<h2>젠지</h2>
+								
 							</a>
 						</article>
 						<article class="style6">
@@ -153,7 +138,7 @@
 								<img src="{% static 'totogg/images/drx_logo.png' %}" alt="" />
 							</span>
 							<a href="/team/drx">
-								<h2>DRX</h2>
+								
 							</a>
 						</article>
 						<article class="style6">
@@ -161,7 +146,7 @@
 								<img src="{% static 'totogg/images/dk_logo.png' %}" alt="" />
 							</span>
 							<a href="/team/dk">
-								<h2>담원 기아</h2>
+								
 							</a>
 						</article>
 						<article class="style6">
@@ -169,7 +154,7 @@
 								<img src="{% static 'totogg/images/kt_logo.png' %}" alt="" />
 							</span>
 							<a href="/team/kt">
-								<h2>KT</h2>
+								
 							</a>
 						</article>
 						<article class="style6">
@@ -177,7 +162,7 @@
 								<img src="{% static 'totogg/images/lsb_logo.png' %}" alt="" />
 							</span>
 							<a href="/team/lsb">
-								<h2>리브 샌박</h2>
+								
 							</a>
 						</article>
 						<article class="style6">
@@ -185,7 +170,7 @@
 								<img src="{% static 'totogg/images/ns_logo.png' %}" alt="" />
 							</span>
 							<a href="/team/ns">
-								<h2>농심</h2>
+								
 							</a>
 						</article>
 						<article class="style6">
@@ -193,7 +178,7 @@
 								<img src="{% static 'totogg/images/kf_logo.png' %}" alt="" />
 							</span>
 							<a href="/team/kdf">
-								<h2>광동</h2>
+								
 							</a>
 						</article>
 						<article class="style6">
@@ -201,7 +186,7 @@
 								<img src="{% static 'totogg/images/hl_logo.png' %}" alt="" />
 							</span>
 							<a href="/team/hle">
-								<h2>한화생명</h2>
+								
 							</a>
 						</article>
 						<article class="style6">
@@ -209,7 +194,7 @@
 								<img src="{% static 'totogg/images/bro_logo.png' %}" alt="" />
 							</span>
 							<a href="/team/bro">
-								<h2>프레딧</h2>
+								
 							</a>
 						</article>
 					</section>
