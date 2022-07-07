@@ -25,6 +25,7 @@ chrome = webdriver.Chrome(ChromeDriverManager().install(), options=options)
 chrome.implicitly_wait(5)
 
 TEAM = []
+score_n = []
 score_wins = []
 score_loses = []
 score_scd = []
@@ -48,12 +49,14 @@ def run():
         for team in teams:
             team_name = team.find_element(By.CSS_SELECTOR, 'span.record_list_name__27huQ').text
             # print(team_name)
+            TEAM.append(team_name)
+            # print(TEAM)
 
             # 순위
-            rank_n = team.find_element(By.CSS_SELECTOR, 'span:nth-child(1)').text
+            rank_n = team.find_element(By.CSS_SELECTOR, 'span.record_list_rank__3mn_o').text
             # print(rank_n)
-
-            TEAM.append(team_name)
+            score_n.append(rank_n)
+            # print(score_n)
             
         # score 정보 가져오기
         score_datas = items.find_elements(By.CSS_SELECTOR, 'div.record_list_wrap_list__lkd3u > div > ul')
@@ -83,6 +86,8 @@ def run():
                 score_wins_rates.append(win_rates)
 
     # 확인
+    # print(score_n)
+    # print('='*100)
     # print(TEAM)
     # print('='*100)
     # print(score_wins)
@@ -94,7 +99,7 @@ def run():
     # print(score_wins_rates)
 
     rank_data = []
-    for a,b,c,d,e in zip(TEAM, score_wins, score_loses, score_scd, score_wins_rates):
+    for a,b,c,d,e,f in zip(score_n, TEAM, score_wins, score_loses, score_scd, score_wins_rates):
         data = []
         # rank_data.append(a,b,c,d,e)
         data.append(a)
@@ -102,12 +107,15 @@ def run():
         data.append(c)
         data.append(d)
         data.append(e)
+        data.append(f)
         # data.append('\n')
         # print(rank_data)
-        rank.objects.filter(team=a).delete()
+        rank.objects.filter(team=b).delete()
 
         rank_data.append(data)
-        rank(team=a,score_wins=b,score_loses=c,score_scd=d,score_wins_rates=e).save()
+
+        # DB 저장
+        rank(score_n=a,team=b,score_wins=c,score_loses=d,score_scd=e,score_wins_rates=f).save()
         
 
     print(rank_data)

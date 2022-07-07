@@ -33,7 +33,7 @@ def slack_bot(message):
 
 #검색어
 team = 'T1'
-zeus = 'T1Zeus'
+zeus = '자연계곡나무하늘'
 oner = '0NER0'
 faker = 'Hideonbush'
 gumayusi = 'T1Gumayusi'
@@ -85,7 +85,7 @@ LCK['GenG'] = {'team':team, 'players':players, 'pname':pname}
 # 리브 샌드박스
 team = 'LSB'
 dove = '비둘기도브'
-croco = 'LSBCroc0'
+croco = 'Croco'
 clozer = '27haokan'
 prince = '수피'
 kael = '신입서폿'
@@ -129,7 +129,7 @@ team = 'HLE'
 dudu = '따봉람머스'
 onfleek = 'HLEOnFleek'
 karis = 'HLEKaris1'
-samd = 'HLESamD1'
+samd = 'HLESamD1' ###
 vsta = '건들지마심기'
 
 players = [dudu, onfleek, karis, samd, vsta]
@@ -156,7 +156,7 @@ team = 'NS'
 canna = 'Canna00'
 dread = '오리지널찰떡쿠키'
 bdd = '저사람뭔데에에에'
-ghost = 'DWGGhost'
+ghost = '농고심스트'
 effort = '레전드오브롤1244'
 
 players = [canna, dread, bdd, ghost, effort]

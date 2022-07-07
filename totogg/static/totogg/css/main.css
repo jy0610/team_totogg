@@ -99,7 +99,11 @@ input, select, textarea {
 	}
 
 	body {
-		background: #ffffff;
+		/* background: #030303; */
+		background-image: url("../images/lol_background.jpg");
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		background-position: center center;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -116,7 +120,7 @@ input, select, textarea {
 /* Type */
 
 	body, input, select, textarea {
-		color: #585858;
+		color: #ffffff;
 		font-family: "Source Sans Pro", "Nanum Gothic Coding", Helvetica, sans-serif;
 		font-size: 16pt;
 		font-weight: 300;
@@ -146,7 +150,7 @@ input, select, textarea {
 		transition: border-bottom-color 0.2s ease, color 0.2s ease;
 		text-decoration: none;
 		 color: #ffffff;/* 글씨색 */
-		border-bottom: dotted 1px rgba(88, 88, 88, 0.5);
+		border-bottom: dotted 1px rgba(255, 255, 255, 0.5);
 	}
 
 		a:hover {
@@ -2383,20 +2387,24 @@ input, select, textarea {
 	}
 
 		table tbody tr {
-			/* border: solid 1px #c9c9c9; */
+			/* border: solid 1px #ffffff; */
 			border-left: 0;
 			border-right: 0;
 		}
 
 			table tbody .rank:nth-child(2n + 1) {
-				background-color: rgba(9, 255, 0, 0.053);
-				
+				color:black;
+				background-color: rgba(255, 255, 255, 0.8);	
+			}
+			table tbody .rank:nth-child(2n) {
+				color:black;
+				background-color: rgba(191, 191, 191, 0.8);
 			}
 			table tbody .승리 {
-				background-color: rgba(0, 0, 255, 0.125);
+				background-color: rgba(0, 0, 255, 0.3);
 			}
 			table tbody .패배 {
-				background-color: rgba(255, 0, 0, 0.125);
+				background-color: rgba(255, 0, 0, 0.3);
 			}
 
 
@@ -2412,11 +2420,11 @@ input, select, textarea {
 		}
 
 		table thead {
-			border-bottom: solid 2px #c9c9c9;
+			border-bottom: solid 2px #ffffff;
 		}
 
 		table tfoot {
-			border-top: solid 2px #c9c9c9;
+			border-top: solid 2px #ffffff;
 		}
 
 		table.alt {
@@ -2424,7 +2432,7 @@ input, select, textarea {
 		}
 
 			table.alt tbody tr td {
-				border: solid 1px #c9c9c9;
+				border: solid 1px #ffffff;
 				border-left-width: 0;
 				border-top-width: 0;
 			}
@@ -2960,7 +2968,7 @@ input, select, textarea {
         }
 
         .tiles2 article.style6 > .image:before {
-            background-color: #6c6c6c;
+            background-color: rgba(131, 131, 131, 0);
         }
 
         body:not(.is-touch) .tiles2 article:hover > .image {
@@ -3150,7 +3158,7 @@ input, select, textarea {
             padding: 1em;
             border-radius: 4px;
             border-bottom: 0;
-            color: #4c4c4c;
+            color: #ffffff;
             text-align: center;
             text-decoration: none;
             z-index: 3;
@@ -3161,7 +3169,7 @@ input, select, textarea {
             }
 
             .tiles3 article > a:hover {
-                color: #4c4c4c !important;
+                color: #ffffff !important;
             }
 
             .tiles3 article > a h2 {
