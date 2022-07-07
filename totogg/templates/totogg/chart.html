@@ -17,7 +17,8 @@
 		<div id="main">
 			<div class="inner">
 				<!-- Text -->
-                <h2>- 각 게임 승률 -</h2>
+                <h2>2022 LCK SUMMER Chart</h2>
+                <div class="chart">
                 <canvas id="rate" width="400" height="200"></canvas>
                 <script type="text/javascript">
                     var context = document
@@ -71,6 +72,12 @@
                             ]
                         },
                                 options: {
+                                    title: {
+                                                        display: true,
+                                                        text: '『 각 게임 승률 』',
+                                                        fontSize: 30,
+                                                        fontColor: 'rgba(255, 255, 255, 1)'
+                                                    },
                                     
                                     legend: {
                                         labels: {
@@ -105,12 +112,10 @@
                         }
                     });
                 </script>
+                </div>
 
-                <br>
-                <br>
-                <br>
-                <br>
-                <h2>- 게임당 평균 팀 총합 킬 -</h2>
+                <div class="chart">
+                
                 <canvas id="kill" width="400" height="200"></canvas>
                 <script type="text/javascript">
                     var context = document
@@ -164,6 +169,12 @@
                             ]
                         },
                         options: {
+                                    title: {
+                                                        display: true,
+                                                        text: '『 게임당 평균 팀 총합 킬 』',
+                                                        fontSize: 30,
+                                                        fontColor: 'rgba(255, 255, 255, 1)'
+                                                    },
                                     
                                     legend: {
                                         labels: {
@@ -198,11 +209,8 @@
                         }
                     });
                 </script>
-                <br>
-                <br>
-                <br>
-                <br>
-                <h2>- 게임당 평균 골드 획득량 -</h2>
+               </div>
+               <div class="chart">
                 <canvas id="gold" width="400" height="200"></canvas>
                 <script type="text/javascript">
                     var context = document
@@ -256,6 +264,12 @@
                             ]
                         },
                         options: {
+                                    title: {
+                                                        display: true,
+                                                        text: '『 게임당 평균 골드 획득량 』',
+                                                        fontSize: 30,
+                                                        fontColor: 'rgba(255, 255, 255, 1)'
+                                                    },
                                     
                                     legend: {
                                         labels: {
@@ -290,11 +304,8 @@
                         }
                     });
                 </script>
-                <br>
-                <br>
-                <br>
-                <br>
-                <h2>- 게임당 평균 바론 -</h2>
+                </div>
+                <div class="chart">
                 <canvas id="baron" width="400" height="200"></canvas>
                 <script type="text/javascript">
                     var context = document
@@ -348,6 +359,12 @@
                             ]
                         },
                         options: {
+                                    title: {
+                                                        display: true,
+                                                        text: '『 게임당 평균 바론 』',
+                                                        fontSize: 30,
+                                                        fontColor: 'rgba(255, 255, 255, 1)'
+                                                    },
                                     
                                     legend: {
                                         labels: {
@@ -382,11 +399,8 @@
                         }
                     });
                 </script>
-                <br>
-                <br>
-                <br>
-                <br>
-                <h2>- 게임당 평균 드래곤 -</h2>
+                </div>
+                <div class="chart">
                 <canvas id="dragon" width="400" height="200"></canvas>
                 <script type="text/javascript">
                     var context = document
@@ -440,6 +454,12 @@
                             ]
                         },
                         options: {
+                                    title: {
+                                                display: true,
+                                                text: '『 게임당 평균 드래곤 』',
+                                                fontSize: 30,
+                                                fontColor: 'rgba(255, 255, 255, 1)'
+                                            },
                                     
                                     legend: {
                                         labels: {
@@ -474,11 +494,8 @@
                         }
                     });
                 </script>
-                <br>
-                <br>
-                <br>
-                <br>
-                <h2>- 게임당 평균 타워 -</h2>
+                </div>
+                <div class="chart">
                 <canvas id="tower" width="400" height="200"></canvas>
                 <script type="text/javascript">
                     var context = document
@@ -532,6 +549,12 @@
                             ]
                         },
                         options: {
+                                    title: {
+                                        display: true,
+                                        text: '『 게임당 평균 타워 』',
+                                        fontSize: 30,
+                                        fontColor: 'rgba(255, 255, 255, 1)'
+                                    },
                                     
                                     legend: {
                                         labels: {
@@ -566,6 +589,7 @@
                         }
                     });
                 </script>
+                </div>
                 </div>
             </div>
 				

@@ -4,7 +4,7 @@ from . import views
 
 urlpatterns = [
     path('', views.totogg),
-    path('dashboard/', views.dashboard),
+    path('chart/', views.chart),
     path('pred/', views.pred),
     path('rank/', views.rank_page),
     

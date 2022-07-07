@@ -12,11 +12,11 @@ def totogg(request):
         {"datas":data}
         )
 
-def dashboard(request):
+def chart(request):
     data = summerSummary.objects.all()
     return render(
         request,
-        'totogg/dashboard.html',
+        'totogg/chart.html',
         {"datas":data}
         )
 

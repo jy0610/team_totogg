@@ -18,13 +18,14 @@
 		<div id="main">
 			<div class="inner">
 				<!-- Text -->
-				<section>
-					<h2><a href="/rank">rank</a></h2>
+				<h2><a href="/rank">▶ rank</a></h2>
+				<div class="home">
+					
 					<div id="main">
 						<section class="tiles3">
 							<article class="style6">
 								<span class="image">
-									<img src="{% static 'totogg/images/no1.png' %}" alt="" />
+									<img src="{% static 'totogg/images/no_1.png' %}" alt="" />
 								</span>
 								<a>
 									<h2>{% for data in datas %}{% if data.score_n == '1'%}{{ data.team }}{% endif %}{% endfor%}</h2>
@@ -33,7 +34,7 @@
 							</article>
 							<article class="style6">
 								<span class="image">
-									<img src="{% static 'totogg/images/no2.png' %}" alt="" />
+									<img src="{% static 'totogg/images/no_2.png' %}" alt="" />
 								</span>
 								<a>
 									<h2>{% for data in datas %}{% if data.score_n == '2'%}{{ data.team }}{% endif %}{% endfor%}</h2>
@@ -42,80 +43,89 @@
 							</article>
 							<article class="style6">
 								<span class="image">
-									<img src="{% static 'totogg/images/no3.png' %}" alt="" />
+									<img src="{% static 'totogg/images/no_3.png' %}" alt="" />
 								</span>
 								<a>
 									<h2>{% for data in datas %}{% if data.score_n == '3'%}{{ data.team }}{% endif %}{% endfor%}</h2>
 									
 								</a>
-							</article>
-							</section>
-						</div>
-						<h2><a href="/pred">pred</a></h2>
+								</article>
+							
+								</div>
+							</div>
+							<h2><a href="/pred">▶ predict</a></h2>
+							<div class="home">	
+						
 					<p><img src="{% static 'totogg/images/lck_pred.JPG' %}" alt="" /></p>
-					<h2><a href="/dashboard">Dashboard</a></h2>
-					<canvas id="myChart" width="400" height="200"></canvas>
-                <script type="text/javascript">
-                    var context = document
-                        .getElementById('myChart')
-                        .getContext('2d');
-                    var myChart = new Chart(context, {
-                        type: 'bar', // 차트의 형태
-                        data: { // 차트에 들어갈 데이터
-                            labels: [
-                                //x 축
-                                {% for data in datas %}'{{ data.team }}',{% endfor%}
-                            ],
-                            datasets: [
-                                { //데이터
-                                    label: '총 게임 승률', //차트 제목
-                                    fill: false, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
-                                    data: [{% for data in datas %}'{{ data.score_wins_rates }}',{% endfor%}
-                                    
-                                    //x축 label에 대응되는 데이터 값
-                                    ],
-									borderColor: "rgba(9, 255, 0, 1)",
-            						backgroundColor: "rgba(9, 255, 0, 0.7)",
-                                    borderWidth: 1 //경계선 굵기
-                                }
-                            ]
-                        },
-                        options: {
-                                    
-                                    legend: {
-                                        labels: {
-                                            fontColor: 'rgba(255, 255, 255, 1)',
-                                                            
-                                            fontSize : 20
-                                        }
-                                    },
-                                    scales: {
-                                        xAxes: [{
-                                            ticks: {
-                                                fontColor: 'rgba(255, 255, 255, 1)',
-                                                fontSize: 15
-                                            },
-                                            gridLines:{
-						                        color: "rgba(255, 255, 255, 1)",
-						                        lineWidth: 1
-					}       
-                                        }],
-                                        yAxes: [{
-                                            ticks: {
-                                                beginAtZero: true,
-                                                fontColor: 'rgba(255, 255, 255, 1)',
-                                                fontSize: 20
-                                            },
-                                            gridLines:{
-						                        color: "rgba(255, 255, 255, 1)",
-						                        lineWidth: 1
-					}
-                                }]
-                            }
-                        }
-                    });
+							</div>
+							<h2><a href="/chart">▶ chart</a></h2>
+							<div class="home">
+								
+								<canvas id="myChart" width="400" height="200"></canvas>
+                				<script type="text/javascript">
+                    			var context = document
+                    			    .getElementById('myChart')
+                    			    .getContext('2d');
+                    			var myChart = new Chart(context, {
+                    			    type: 'bar', // 차트의 형태
+                    			    data: { // 차트에 들어갈 데이터
+                    			        labels: [
+                    			            //x 축
+                    			            {% for data in datas %}'{{ data.team }}',{% endfor%}
+                    			        ],
+                    			        datasets: [
+                    			            { //데이터
+                    			                label: '총 게임 승률', //차트 제목
+                    			                fill: false, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
+                    			                data: [{% for data in datas %}'{{ data.score_wins_rates }}',{% endfor%}
+											
+                    			                //x축 label에 대응되는 데이터 값
+                    			                ],
+												borderColor: "rgba(255, 255, 255, 1)",
+            									backgroundColor: "rgba(255, 255, 255, 0.7)",
+                    			                borderWidth: 1 //경계선 굵기
+                    			            }
+                    			        ]
+                    			    },
+                    			    options: {
+									
+                    			                legend: {
+                    			                    labels: {
+                    			                        fontColor: 'rgba(255, 255, 255, 1)',
+													
+                    			                        fontSize : 20
+                    			                    }
+                    			                },
+                    			                scales: {
+                    			                    xAxes: [{
+                    			                        ticks: {
+                    			                            fontColor: 'rgba(255, 255, 255, 1)',
+                    			                            fontSize: 15
+                    			                        },
+                    			                        gridLines:{
+									                        color: "rgba(255, 255, 255, 1)",
+									                        lineWidth: 1
+								}       
+                    			                    }],
+                    			                    yAxes: [{
+                    			                        ticks: {
+                    			                            beginAtZero: true,
+                    			                            fontColor: 'rgba(255, 255, 255, 1)',
+                    			                            fontSize: 20
+                    			                        },
+                    			                        gridLines:{
+									                        color: "rgba(255, 255, 255, 1)",
+									                        lineWidth: 1
+								}
+                    			            }]
+                    			        }
+                    			    }
+                    			});
                 </script>
-					<h2>Team</h2>
+				</div>
+				<h2>▶ Team</h2>
+				<div class="home">
+					
 					<section class="tiles2">
 						<article class="style6">
 							<span class="image">
@@ -198,8 +208,9 @@
 							</a>
 						</article>
 					</section>
-					
-				</section>
+				</div>
+				
+			
 				
 
     <!-- Scripts -->
@@ -210,6 +221,7 @@
 			<script src="{% static 'totogg/js/main.js' %}"></script>
 		</div>
 		
-	</body>{% include 'totogg/footer.html' %}
+	</body>
+	{% include 'totogg/footer.html' %}
 	
 </html>
