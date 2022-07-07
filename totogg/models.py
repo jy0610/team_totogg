@@ -30,6 +30,7 @@ class LCK_Data(models.Model):
 
 class rank(models.Model):
   team = models.CharField(max_length=50)
+  score_n = models.CharField(max_length=50)
   score_wins = models.CharField(max_length=50)
   score_loses = models.CharField(max_length=50)
   score_scd = models.CharField(max_length=50)
