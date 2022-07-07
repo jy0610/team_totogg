@@ -16,7 +16,7 @@ url = 'https://game.naver.com/esports/record/lck/team/lck_2022_summer'
 # driver 설정과 지정
 options = webdriver.ChromeOptions()
 options.add_argument("window-size=1000,1000") # 윈도우 사이즈 결정
-options.add_argument("headless") # 창을 띄우지않음
+# options.add_argument("headless") # 창을 띄우지않음
 options.add_experimental_option('excludeSwitches', ['enable-logging'])
 options.add_argument('--no-sandbox')
 options.add_argument('--disable-dev-shm-usage')
@@ -26,6 +26,7 @@ chrome.implicitly_wait(5)
 
 TEAM = []
 score_n = []
+logo_url = []
 score_wins = []
 score_loses = []
 score_scd = []
@@ -46,6 +47,7 @@ def run():
         # team 정보 가져오기
         # teams = chrome.find_elements(By.CSS_SELECTOR, 'ul.record_list_team__2NtZO')
         teams = items.find_elements(By.CSS_SELECTOR, 'ul.record_list_team__2NtZO li.record_list_item__2fFsp')
+    
         for team in teams:
             team_name = team.find_element(By.CSS_SELECTOR, 'span.record_list_name__27huQ').text
             # print(team_name)
@@ -54,10 +56,16 @@ def run():
 
             # 순위
             rank_n = team.find_element(By.CSS_SELECTOR, 'span.record_list_rank__3mn_o').text
-            # print(rank_n)
+
             score_n.append(rank_n)
             # print(score_n)
-            
+
+            # 팀로고
+            logo = team.find_element(By.CSS_SELECTOR, 'span span.record_list_thumb_logo__1s1BT').get_attribute('style')
+            logo = logo[23:].replace('");', '')
+            # print(logo_url)
+            logo_url.append(logo)
+
         # score 정보 가져오기
         score_datas = items.find_elements(By.CSS_SELECTOR, 'div.record_list_wrap_list__lkd3u > div > ul')
         
@@ -86,20 +94,20 @@ def run():
                 score_wins_rates.append(win_rates)
 
     # 확인
-    # print(score_n)
-    # print('='*100)
-    # print(TEAM)
-    # print('='*100)
-    # print(score_wins)
-    # print('='*100)
-    # print(score_loses)
-    # print('='*100)
-    # print(score_scd)
-    # print('='*100)
-    # print(score_wins_rates)
+    print(score_n)
+    print('='*100)
+    print(TEAM)
+    print('='*100)
+    print(score_wins)
+    print('='*100)
+    print(score_loses)
+    print('='*100)
+    print(score_scd)
+    print('='*100)
+    print(score_wins_rates)
 
     rank_data = []
-    for a,b,c,d,e,f in zip(score_n, TEAM, score_wins, score_loses, score_scd, score_wins_rates):
+    for a,b,c,d,e,f,g in zip(score_n, logo_url, TEAM, score_wins, score_loses, score_scd, score_wins_rates):
         data = []
         # rank_data.append(a,b,c,d,e)
         data.append(a)
@@ -108,6 +116,7 @@ def run():
         data.append(d)
         data.append(e)
         data.append(f)
+        data.append(g)
         # data.append('\n')
         # print(rank_data)
         rank.objects.filter(team=b).delete()
@@ -115,7 +124,7 @@ def run():
         rank_data.append(data)
 
         # DB 저장
-        rank(score_n=a,team=b,score_wins=c,score_loses=d,score_scd=e,score_wins_rates=f).save()
+        rank(score_n=a,team_logo=b,team=c,score_wins=d,score_loses=e,score_scd=f,score_wins_rates=g).save()
         
 
     print(rank_data)
