@@ -129,7 +129,7 @@ team = 'HLE'
 dudu = '따봉람머스'
 onfleek = 'HLEOnFleek'
 karis = 'HLEKaris1'
-samd = 'HLESamD1' ###
+samd = '마른논에 물대기w'
 vsta = '건들지마심기'
 
 players = [dudu, onfleek, karis, samd, vsta]
