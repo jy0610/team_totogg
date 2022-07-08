@@ -99,7 +99,6 @@ input, select, textarea {
 	}
 
 	body {
-		/* background: #030303; */
 		background-image: url("../images/lol_background.jpg");
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
@@ -3174,7 +3173,8 @@ input, select, textarea {
 
             .tiles3 article > a h2 {
 				font-size: inherit;
-				padding-bottom: 45%;
+				padding-bottom: 42%;
+				padding-right: 3%;
 				color: #000000
             }
 
@@ -3615,21 +3615,21 @@ input, select, textarea {
 		}
 
 		.home  {
-			background-color: #7d7d7d25;
+			background-color: #2222224f;
 			width: 100%;
 			margin-bottom: 5em;
-			border: solid 2px rgb(220, 220, 220);
 			border-radius: 30px;
 			padding : 2em;
+			box-shadow: 1em 1em 1em black;
 		}
 
 		.chart  {
 			background-color: #00000084;
 			width: 100%;
 			margin-bottom: 5em;
-			border: solid 2px rgb(220, 220, 220);
 			border-radius: 30px;
 			padding : 2em;
+			box-shadow: 1em 1em 1em black;
 		}
 
 	body.is-menu-visible #wrapper {

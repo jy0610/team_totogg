@@ -28,7 +28,7 @@
 									<img src="{% static 'totogg/images/no_1.png' %}" alt="" />
 								</span>
 								<a>
-									<h2>{% for data in datas %}{% if data.score_n == '1'%}{{ data.team }}{% endif %}{% endfor%}</h2>
+									<h2>{% for data in datas %}{% if data.score_n == '1'%}<img src="{{ data.team_logo }}" alt="" />{% endif %}{% endfor%}</h2>
 									
 								</a>
 							</article>
@@ -37,7 +37,7 @@
 									<img src="{% static 'totogg/images/no_2.png' %}" alt="" />
 								</span>
 								<a>
-									<h2>{% for data in datas %}{% if data.score_n == '2'%}{{ data.team }}{% endif %}{% endfor%}</h2>
+									<h2>{% for data in datas %}{% if data.score_n == '2'%}<img src="{{ data.team_logo }}" alt="" />{% endif %}{% endfor%}</h2>
 									
 								</a>
 							</article>
@@ -46,7 +46,7 @@
 									<img src="{% static 'totogg/images/no_3.png' %}" alt="" />
 								</span>
 								<a>
-									<h2>{% for data in datas %}{% if data.score_n == '3'%}{{ data.team }}{% endif %}{% endfor%}</h2>
+									<h2>{% for data in datas %}{% if data.score_n == '3'%}<img src="{{ data.team_logo }}" alt="" />{% endif %}{% endfor%}</h2>
 									
 								</a>
 								</article>

@@ -29,6 +29,7 @@ class LCK_Data(models.Model):
 
 class rank(models.Model):
   team = models.CharField(max_length=50)
+  team_logo = models.CharField(max_length=200, null=True, default='')
   score_n = models.CharField(max_length=50)
   score_wins = models.CharField(max_length=50)
   score_loses = models.CharField(max_length=50)

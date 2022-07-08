@@ -119,7 +119,7 @@ def run():
         data.append(g)
         # data.append('\n')
         # print(rank_data)
-        rank.objects.filter(team=b).delete()
+        rank.objects.filter(team=c).delete()
 
         rank_data.append(data)
 
