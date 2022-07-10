@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import LCK_Data
 from .models import rank
 from .models import summerSummary
+from .models import recentSummary
 # from .models import opggData
 # Create your views here.
 def totogg(request):
@@ -20,12 +21,6 @@ def chart(request):
         {"datas":data}
         )
 
-def pred(request):
-    return render(
-        request,
-        'totogg/pred.html'
-        )
-
 def rank_page(request):
     data = rank.objects.all()
     return render(
@@ -34,3 +29,10 @@ def rank_page(request):
         {"datas":data}
         )
 
+def pred(request):
+    data = recentSummary.objects.all()
+    return render(
+        request,
+        'totogg/pred.html',
+        {"datas":data}
+        )

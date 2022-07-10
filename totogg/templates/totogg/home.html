@@ -7,7 +7,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="icon" href="{% static 'totogg/images/t1logo_fa.ico' %}" type="image/x-icon">
 		<link rel="stylesheet" href="{% static 'totogg/css/main.css' %}" />
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 		<noscript><link rel="stylesheet" href="{% static 'totogg/css/noscript.css' %}" /></noscript>
 		
 	</head>
@@ -55,73 +54,15 @@
 							</div>
 							<h2><a href="/pred">▶ predict</a></h2>
 							<div class="home">	
-						
-					<p><img src="{% static 'totogg/images/lck_pred.JPG' %}" alt="" /></p>
+								<h2>Today Match</h2>
+								<h3>1경기 <b style="color:#1E90FF">{% for data in datas %}{% if data.score_n == '1'%}{{ data.team }}{% endif %}{% endfor%}</b> vs <b style="color:#F7464A">{% for data in datas %}{% if data.score_n == '2'%}{{ data.team }}{% endif %}{% endfor%}</b><canvas id="match_1" width="50%" height="4%"></canvas></h3>
+								<h3>2경기 <b style="color:#1E90FF">{% for data in datas %}{% if data.score_n == '2'%}{{ data.team }}{% endif %}{% endfor%}</b> vs <b style="color:#F7464A">{% for data in datas %}{% if data.score_n == '1'%}{{ data.team }}{% endif %}{% endfor%}</b><canvas id="match_2" width="50%" height="4%"></canvas></h3>
 							</div>
 							<h2><a href="/chart">▶ chart</a></h2>
 							<div class="home">
 								
 								<canvas id="myChart" width="400" height="200"></canvas>
-                				<script type="text/javascript">
-                    			var context = document
-                    			    .getElementById('myChart')
-                    			    .getContext('2d');
-                    			var myChart = new Chart(context, {
-                    			    type: 'bar', // 차트의 형태
-                    			    data: { // 차트에 들어갈 데이터
-                    			        labels: [
-                    			            //x 축
-                    			            {% for data in datas %}'{{ data.team }}',{% endfor%}
-                    			        ],
-                    			        datasets: [
-                    			            { //데이터
-                    			                label: '총 게임 승률', //차트 제목
-                    			                fill: false, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
-                    			                data: [{% for data in datas %}'{{ data.score_wins_rates }}',{% endfor%}
-											
-                    			                //x축 label에 대응되는 데이터 값
-                    			                ],
-												borderColor: "rgba(255, 255, 255, 1)",
-            									backgroundColor: "rgba(255, 255, 255, 0.7)",
-                    			                borderWidth: 1 //경계선 굵기
-                    			            }
-                    			        ]
-                    			    },
-                    			    options: {
-									
-                    			                legend: {
-                    			                    labels: {
-                    			                        fontColor: 'rgba(255, 255, 255, 1)',
-													
-                    			                        fontSize : 20
-                    			                    }
-                    			                },
-                    			                scales: {
-                    			                    xAxes: [{
-                    			                        ticks: {
-                    			                            fontColor: 'rgba(255, 255, 255, 1)',
-                    			                            fontSize: 15
-                    			                        },
-                    			                        gridLines:{
-									                        color: "rgba(255, 255, 255, 1)",
-									                        lineWidth: 1
-								}       
-                    			                    }],
-                    			                    yAxes: [{
-                    			                        ticks: {
-                    			                            beginAtZero: true,
-                    			                            fontColor: 'rgba(255, 255, 255, 1)',
-                    			                            fontSize: 20
-                    			                        },
-                    			                        gridLines:{
-									                        color: "rgba(255, 255, 255, 1)",
-									                        lineWidth: 1
-								}
-                    			            }]
-                    			        }
-                    			    }
-                    			});
-                </script>
+                				
 				</div>
 				<h2>▶ Team</h2>
 				<div class="home">
@@ -219,9 +160,191 @@
 			<script src="{% static 'totogg/js/breakpoints.min.js' %}"></script>
 			<script src="{% static 'totogg/js/util.js' %}"></script>
 			<script src="{% static 'totogg/js/main.js' %}"></script>
+			<script src="{% static 'totogg/js/Chart.min.js' %}"></script>
+            <script src="{% static 'totogg/js/chartjs-plugin-datalabels.js' %}"></script>
 		</div>
 		
 	</body>
 	{% include 'totogg/footer.html' %}
 	
 </html>
+<script type="text/javascript">
+	var context = document
+		.getElementById('myChart')
+		.getContext('2d');
+	var myChart = new Chart(context, {
+		type: 'bar', // 차트의 형태
+		data: { // 차트에 들어갈 데이터
+			labels: [
+				//x 축
+				{% for data in datas %}'{{ data.team }}',{% endfor%}
+			],
+			datasets: [
+				{ //데이터
+					label: '총 게임 승률', //차트 제목
+					fill: false, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
+					data: [{% for data in datas %}'{{ data.score_wins_rates }}',{% endfor%}
+				
+					//x축 label에 대응되는 데이터 값
+					],
+					borderColor: "rgba(255, 255, 255, 1)",
+					backgroundColor: "rgba(255, 255, 255, 0.7)",
+					borderWidth: 3 //경계선 굵기
+				}
+			]
+		},
+		options: {
+                        plugins: {
+                           datalabels: {
+                            display: false
+                            	},
+                        	},
+                        title: {
+                            display: true,
+                            text: '『 Win Rate 』',
+                            fontFamily: 'Comic Sans MS',
+    						fontSize: 30,
+    						fontWeight: 'bold',    
+                            fontColor: 'rgba(255, 255, 255, 1)'
+                        },
+                        legend: {
+                        display: false
+                       
+                    
+                    },
+                    scales: {
+                        xAxes: [ {
+                            ticks: {
+                                fontFamily: 'Gulim',
+                                fontStyle: 'bold',
+                                fontColor: 'rgba(255, 255, 255, 1)',
+								fontSize: 15,
+                            },
+                            gridLines:{
+						        color: "rgba(0, 0, 0, 0.5)",
+						        lineWidth: 1
+                            }
+                        } ],
+                        yAxes: [ {
+                            ticks: {
+                                beginAtZero: true,
+                                fontFamily: 'Comic Sans MS',
+                                fontStyle: 'bold',
+                                fontColor: 'rgba(255, 255, 255, 1)'
+                            },
+                            gridLines:{
+						        color: "rgba(0, 0, 0, 0.5)",
+						        lineWidth: 1
+                            }
+                        } ]
+                            }
+                                
+                    
+        }
+    });
+	   
+</script>
+<!-- match1 -->
+<script type="text/javascript">
+	var context = document
+		.getElementById('match_1')
+		.getContext('2d');
+    var myChart = new Chart(context, {
+		type: 'horizontalBar', // 차트의 형태
+		data: { // 차트에 들어갈 데이터
+			labels: ["predict"],
+			datasets: [{
+				label: '{% for data in datas %}{% if data.score_n == '1'%}{{ data.team }}{% endif %}{% endfor%}',
+				backgroundColor: "#1E90FF",
+				data: ['{% for data in datas %}{% if data.score_n == '1'%}{{ data.score_wins_rates }}{% endif %}{% endfor%}']
+				}, {
+				label: '{% for data in datas %}{% if data.score_n == '2'%}{{ data.team }}{% endif %}{% endfor%}',
+				backgroundColor: "#F7464A",
+				data: ['{% for data in datas %}{% if data.score_n == '2'%}{{ data.score_wins_rates }}{% endif %}{% endfor%}']
+				
+			}]
+		},
+		options: {
+			plugins: {
+               datalabels: {
+                	color: ['#fff'],
+                	anchor: 'center',
+					font: { 
+                                family: 'Comic Sans MS',
+    							size: 20,
+    							weight: 'bold',
+    													
+    						}
+                	},
+            	},
+                    
+			legend: {
+				display: false,
+			},
+			scales: {
+    		xAxes: [ {
+				stacked: true,
+				display: false,
+    		} ],
+    		yAxes: [ {
+					stacked: true,
+					display: false,
+    		} ]
+    			}
+                                
+                    
+        }
+    });
+</script>
+<!-- match2 -->
+<script type="text/javascript">
+	var context = document
+		.getElementById('match_2')
+		.getContext('2d');
+    var myChart = new Chart(context, {
+		type: 'horizontalBar', // 차트의 형태
+		data: { // 차트에 들어갈 데이터
+			labels: ["predict"],
+			datasets: [{
+				label: '{% for data in datas %}{% if data.score_n == '2'%}{{ data.team }}{% endif %}{% endfor%}',
+				backgroundColor: "#1E90FF",
+				data: ['{% for data in datas %}{% if data.score_n == '2'%}{{ data.score_wins_rates }}{% endif %}{% endfor%}']
+				}, {
+				label: '{% for data in datas %}{% if data.score_n == '1'%}{{ data.team }}{% endif %}{% endfor%}',
+				backgroundColor: "#F7464A",
+				data: ['{% for data in datas %}{% if data.score_n == '1'%}{{ data.score_wins_rates }}{% endif %}{% endfor%}']
+				
+			}]
+		},
+		options: {
+			plugins: {
+               datalabels: {
+                	color: ['#fff'],
+                	anchor: 'center',
+					font: { 
+                                family: 'Comic Sans MS',
+    							size: 20,
+    							weight: 'bold',
+    							  							
+    						}
+                	},
+            	},
+                    
+			legend: {
+				display: false,
+			},
+			scales: {
+    		xAxes: [ {
+				stacked: true,
+				display: false,
+    		} ],
+    		yAxes: [ {
+					stacked: true,
+					display: false,
+    		} ]
+    			}
+                                
+                    
+        }
+    });
+</script>
