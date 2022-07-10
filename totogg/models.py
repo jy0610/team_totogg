@@ -89,3 +89,9 @@ class recentSummary(models.Model):
 
   def __str__(self):
     return f'{self.tname} data saved!'
+  
+class gameSchedule(models.Model):
+  date = models.DateField()
+  time = models.CharField(max_length=50)
+  team1 = models.CharField(max_length=20)
+  team2 = models.CharField(max_length=20)

@@ -252,20 +252,20 @@ def run():
         print("Summary Selected!")
         time.sleep(1)
         # 한 번 스크랩 한 경기는 스크랩 하지 않음
-        # if Summer_Data.object.filter(match_num=match_num, set=sn):
-        #   pass
-        # else:
-        #   print("-"*20)
-        #   scrapBlue(driver, match_num, sn)
-        #   print("-"*20)
-        #   scrapRed(driver, match_num, sn)
-        #   print("-"*20)
+        if Summer_Data.object.filter(match_num=match_num, set=sn):
+          pass
+        else:
+          print("-"*20)
+          scrapBlue(driver, match_num, sn)
+          print("-"*20)
+          scrapRed(driver, match_num, sn)
+          print("-"*20)
         
-        print("-"*20)
-        scrapBlue(driver, match_num, sn)
-        print("-"*20)
-        scrapRed(driver, match_num, sn)
-        print("-"*20)
+        # print("-"*20)
+        # scrapBlue(driver, match_num, sn)
+        # print("-"*20)
+        # scrapRed(driver, match_num, sn)
+        # print("-"*20)
 
         sn += 1
 
