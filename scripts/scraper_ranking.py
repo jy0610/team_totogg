@@ -94,17 +94,17 @@ def run():
                 score_wins_rates.append(win_rates)
 
     # 확인
-    print(score_n)
-    print('='*100)
-    print(TEAM)
-    print('='*100)
-    print(score_wins)
-    print('='*100)
-    print(score_loses)
-    print('='*100)
-    print(score_scd)
-    print('='*100)
-    print(score_wins_rates)
+    # print(score_n)
+    # print('='*100)
+    # print(TEAM)
+    # print('='*100)
+    # print(score_wins)
+    # print('='*100)
+    # print(score_loses)
+    # print('='*100)
+    # print(score_scd)
+    # print('='*100)
+    # print(score_wins_rates)
 
     rank_data = []
     for a,b,c,d,e,f,g in zip(score_n, logo_url, TEAM, score_wins, score_loses, score_scd, score_wins_rates):
@@ -127,7 +127,8 @@ def run():
         rank(score_n=a,team_logo=b,team=c,score_wins=d,score_loses=e,score_scd=f,score_wins_rates=g).save()
         
 
-    print(rank_data)
+    # print(rank_data)
+    print("script 실행")
 
 
     # 파일로 저장하기
@@ -143,3 +144,7 @@ def run():
     with open(file_name, 'w', encoding='utf8', newline="") as f:
         writer = csv.writer(f)
         writer.writerows(rank_data)
+
+    print("csv 파일 저장완료")
+
+    

@@ -1,0 +1,982 @@
+Traceback (most recent call last):
+  File "manage.py", line 11, in main
+    from django.core.management import execute_from_command_line
+ModuleNotFoundError: No module named 'django'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "manage.py", line 22, in <module>
+    main()
+  File "manage.py", line 13, in main
+    raise ImportError(
+ImportError: Couldn't import Django. Are you sure it's installed and available on your PYTHONPATH environment variable? Did you forget to activate a virtual environment?
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+[10/Jul/2022 20:54:15] "GET /test/ HTTP/1.1" 200 271
+[10/Jul/2022 20:54:16] "GET /static/totogg/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 76736
+[10/Jul/2022 20:54:21] "GET /pred/ HTTP/1.1" 200 4043
+[10/Jul/2022 20:54:24] "GET /chart/ HTTP/1.1" 200 35281
+[10/Jul/2022 20:54:27] "GET /rank/ HTTP/1.1" 200 8638
+[10/Jul/2022 20:54:29] "GET /rank/ HTTP/1.1" 200 8638
+[10/Jul/2022 20:54:37] "GET /team/bro HTTP/1.1" 301 0
+[10/Jul/2022 20:54:37] "GET /team/bro/ HTTP/1.1" 200 4216
+[10/Jul/2022 20:54:37] "GET /static/totogg/images/umti.png HTTP/1.1" 200 220487
+[10/Jul/2022 20:54:37] "GET /static/totogg/images/morgan.png HTTP/1.1" 200 235095
+[10/Jul/2022 20:54:37] "GET /static/totogg/images/lava.png HTTP/1.1" 200 247822
+[10/Jul/2022 20:54:37] "GET /static/totogg/images/hena.png HTTP/1.1" 200 216189
+[10/Jul/2022 20:54:37] "GET /static/totogg/images/delight.png HTTP/1.1" 200 243780
+[10/Jul/2022 20:54:39] "GET /team/bro_J HTTP/1.1" 301 0
+[10/Jul/2022 20:54:39] "GET /team/bro_J/ HTTP/1.1" 200 31131
+[10/Jul/2022 20:54:44] "GET /team/bro_T HTTP/1.1" 301 0
+[10/Jul/2022 20:54:44] "GET /team/bro_T/ HTTP/1.1" 200 31173
+[10/Jul/2022 20:55:00] "GET /team/bro_M HTTP/1.1" 301 0
+[10/Jul/2022 20:55:00] "GET /team/bro_M/ HTTP/1.1" 200 31198
+[10/Jul/2022 20:55:03] "GET /team/bro_J/ HTTP/1.1" 200 31131
+[10/Jul/2022 20:55:06] "GET /team/bro_S HTTP/1.1" 301 0
+[10/Jul/2022 20:55:06] "GET /team/bro_S/ HTTP/1.1" 200 31209
+[2022-07-10 11:57:50 +0000] [29218] [INFO] Starting gunicorn 20.1.0
+[2022-07-10 11:57:50 +0000] [29218] [INFO] Listening at: http://0.0.0.0:5000 (29218)
+[2022-07-10 11:57:50 +0000] [29218] [INFO] Using worker: sync
+[2022-07-10 11:57:50 +0000] [29220] [INFO] Booting worker with pid: 29220
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 10, 2022 - 20:54:00
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[1]
+Watching for file changes with StatReloader
+[2022-07-10 12:01:04 +0000] [29218] [CRITICAL] WORKER TIMEOUT (pid:29220)
+[2022-07-10 12:01:04 +0000] [29220] [INFO] Worker exiting (pid: 29220)
+[2022-07-10 12:01:05 +0000] [29258] [INFO] Booting worker with pid: 29258
+[10/Jul/2022 21:03:58] "GET /team/bro/ HTTP/1.1" 200 4216
+[10/Jul/2022 21:24:30] "GET / HTTP/1.1" 200 11070
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 10, 2022 - 20:59:43
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 10, 2022 - 21:53:53
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+[10/Jul/2022 21:54:36] "GET / HTTP/1.1" 200 11070
+[10/Jul/2022 21:54:40] code 400, message Bad request syntax ('\x16\x03\x01\x00u\x01\x00\x00q\x03\x03Psd9¥K¦tÝ\x8eó\x8cÎyª')
+[10/Jul/2022 21:54:40] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Internal Server Error: /test/
+Traceback (most recent call last):
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/totogg/totogg/views.py", line 71, in ml_deply
+    predb = loaded_model.predict_proba(test_x2)
+AttributeError: 'PyFuncModel' object has no attribute 'predict_proba'
+[10/Jul/2022 21:54:41] "GET /test/ HTTP/1.1" 500 61363
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 10, 2022 - 21:54:17
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[1]
+Watching for file changes with StatReloader
+[10/Jul/2022 22:06:53] "GET /test/ HTTP/1.1" 200 285
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 10, 2022 - 22:06:47
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 10, 2022 - 22:07:10
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Internal Server Error: /test/
+Traceback (most recent call last):
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/totogg/totogg/views.py", line 76, in ml_deply
+    predb = loaded_model.predict_proba(data)
+AttributeError: 'PyFuncModel' object has no attribute 'predict_proba'
+[10/Jul/2022 22:08:09] "GET /test/ HTTP/1.1" 500 58663
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 10, 2022 - 22:08:09
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Internal Server Error: /test/
+Traceback (most recent call last):
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/totogg/totogg/views.py", line 76, in ml_deply
+    predb = loaded_model.decision_function(data)
+AttributeError: 'PyFuncModel' object has no attribute 'decision_function'
+[10/Jul/2022 22:10:36] "GET /test/ HTTP/1.1" 500 58687
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 10, 2022 - 22:10:33
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 10, 2022 - 22:15:03
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 10, 2022 - 22:40:57
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Internal Server Error: /test/
+Traceback (most recent call last):
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/totogg/totogg/views.py", line 77, in ml_deply
+    predb = log_loss(data)
+TypeError: log_loss() missing 1 required positional argument: 'y_pred'
+[10/Jul/2022 23:09:19] "GET /test/ HTTP/1.1" 500 58747
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 10, 2022 - 23:09:14
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/management/base.py", line 487, in check
+    all_issues = checks.run_checks(
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/checks/registry.py", line 88, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/checks/urls.py", line 42, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/checks/urls.py", line 61, in _load_all_namespaces
+    url_patterns = getattr(resolver, "url_patterns", [])
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/utils/functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/urls/resolvers.py", line 696, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/utils/functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/urls/resolvers.py", line 689, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/ubuntu/totogg/totogg_prj/urls.py", line 21, in <module>
+    path('', include('totogg.urls')),
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/urls/conf.py", line 38, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/ubuntu/totogg/totogg/urls.py", line 2, in <module>
+    from . import views
+  File "/home/ubuntu/totogg/totogg/views.py", line 5, in <module>
+    from sklearn.metrics import log_loss, roc_auc_acore
+ImportError: cannot import name 'roc_auc_acore' from 'sklearn.metrics' (/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/sklearn/metrics/__init__.py)
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/management/base.py", line 487, in check
+    all_issues = checks.run_checks(
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/checks/registry.py", line 88, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/checks/urls.py", line 42, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/checks/urls.py", line 61, in _load_all_namespaces
+    url_patterns = getattr(resolver, "url_patterns", [])
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/utils/functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/urls/resolvers.py", line 696, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/utils/functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/urls/resolvers.py", line 689, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/ubuntu/totogg/totogg_prj/urls.py", line 21, in <module>
+    path('', include('totogg.urls')),
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/urls/conf.py", line 38, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/ubuntu/totogg/totogg/urls.py", line 2, in <module>
+    from . import views
+  File "/home/ubuntu/totogg/totogg/views.py", line 5, in <module>
+    from sklearn.metrics import log_loss, roc_auc_acore
+ImportError: cannot import name 'roc_auc_acore' from 'sklearn.metrics' (/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/sklearn/metrics/__init__.py)
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/management/base.py", line 487, in check
+    all_issues = checks.run_checks(
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/checks/registry.py", line 88, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/checks/urls.py", line 42, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/checks/urls.py", line 61, in _load_all_namespaces
+    url_patterns = getattr(resolver, "url_patterns", [])
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/utils/functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/urls/resolvers.py", line 696, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/utils/functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/urls/resolvers.py", line 689, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/ubuntu/totogg/totogg_prj/urls.py", line 21, in <module>
+    path('', include('totogg.urls')),
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/urls/conf.py", line 38, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/ubuntu/totogg/totogg/urls.py", line 2, in <module>
+    from . import views
+  File "/home/ubuntu/totogg/totogg/views.py", line 5, in <module>
+    from sklearn.metrics import log_loss, roc_auc_acore
+ImportError: cannot import name 'roc_auc_acore' from 'sklearn.metrics' (/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/sklearn/metrics/__init__.py)
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Internal Server Error: /test/
+Traceback (most recent call last):
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/totogg/totogg/views.py", line 78, in ml_deply
+    predb = loaded_model.predict_proba(data)
+AttributeError: 'PyFuncModel' object has no attribute 'predict_proba'
+[10/Jul/2022 23:19:21] "GET /test/ HTTP/1.1" 500 58784
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 10, 2022 - 23:19:11
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Internal Server Error: /test/
+Traceback (most recent call last):
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/totogg/totogg/views.py", line 76, in ml_deply
+    pred = loaded_model.predict(data).equals(data)
+AttributeError: 'numpy.ndarray' object has no attribute 'equals'
+[10/Jul/2022 23:45:15] "GET /test/ HTTP/1.1" 500 59077
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 10, 2022 - 23:45:10
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+[10/Jul/2022 23:45:54] "GET /test/ HTTP/1.1" 200 285
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 10, 2022 - 23:45:54
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Internal Server Error: /test/
+Traceback (most recent call last):
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/totogg/totogg/views.py", line 80, in ml_deply
+    predb = loaded_model.predict_distribution(data)
+AttributeError: 'PyFuncModel' object has no attribute 'predict_distribution'
+[10/Jul/2022 23:48:33] "GET /test/ HTTP/1.1" 500 58918
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 10, 2022 - 23:48:29
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Internal Server Error: /test/
+Traceback (most recent call last):
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/totogg/totogg/views.py", line 66, in ml_deply
+    predb = loaded_model.predict_proba(data)
+AttributeError: 'PyFuncModel' object has no attribute 'predict_proba'
+[11/Jul/2022 00:03:33] "GET /test/ HTTP/1.1" 500 58757
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 11, 2022 - 00:03:29
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 11, 2022 - 00:03:57
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 11, 2022 - 00:15:11
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Internal Server Error: /test/
+Traceback (most recent call last):
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/totogg/totogg/views.py", line 68, in ml_deply
+    predb = loaded_model.predict_proba(data)[:,1]
+AttributeError: 'PyFuncModel' object has no attribute 'predict_proba'
+[11/Jul/2022 00:15:22] "GET /test/ HTTP/1.1" 500 59037
+[11/Jul/2022 00:22:33,252] - Broken pipe from ('162.142.125.211', 34370)
+
+[11/Jul/2022 00:22:34] "GET / HTTP/1.1" 200 11070
+[11/Jul/2022 00:22:34,571] - Broken pipe from ('162.142.125.211', 46636)
+
+[11/Jul/2022 00:22:34] "GET / HTTP/1.1" 200 11070
+[11/Jul/2022 00:22:35] code 505, message Invalid HTTP version (2.0)
+[11/Jul/2022 00:22:35] "PRI * HTTP/2.0" 505 -
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 11, 2022 - 00:15:19
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Internal Server Error: /test/
+Traceback (most recent call last):
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/totogg/totogg/views.py", line 65, in ml_deply
+    model = xgb.XGBClassifier().load_model(loaded_model)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/xgboost/sklearn.py", line 736, in load_model
+    self.get_booster().load_model(fname)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/xgboost/core.py", line 2258, in load_model
+    raise TypeError('Unknown file type: ', fname)
+TypeError: ('Unknown file type: ', mlflow.pyfunc.loaded_model:
+  artifact_path: model
+  flavor: mlflow.xgboost
+  run_id: 2e3dfd0226c246a2b1587b94f74b90c3
+)
+[11/Jul/2022 00:23:07] "GET /test/ HTTP/1.1" 500 68295
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 11, 2022 - 00:22:50
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 11, 2022 - 00:23:48
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+[11/Jul/2022 00:32:00] "GET /static/totogg/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 76736
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 11, 2022 - 00:31:41
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+[11/Jul/2022 00:40:09] "GET / HTTP/1.0" 200 11070
+[11/Jul/2022 00:48:06] "GET / HTTP/1.1" 200 11070
+[11/Jul/2022 00:48:06,963] - Broken pipe from ('64.62.197.212', 23328)
+
+[11/Jul/2022 01:06:20] "GET / HTTP/1.1" 200 11072
+[11/Jul/2022 01:06:20] "GET /static/totogg/css/main.css HTTP/1.1" 200 72753
+[11/Jul/2022 01:06:20] "GET /static/totogg/css/fontawesome-all.min.css HTTP/1.1" 200 59401
+[11/Jul/2022 01:06:20] "GET /static/totogg/js/jquery.min.js HTTP/1.1" 200 89501
+[11/Jul/2022 01:06:20] "GET /static/totogg/js/browser.min.js HTTP/1.1" 200 2050
+[11/Jul/2022 01:06:20] "GET /static/totogg/js/breakpoints.min.js HTTP/1.1" 200 2438
+[11/Jul/2022 01:06:21] "GET /static/totogg/js/util.js HTTP/1.1" 200 11847
+[11/Jul/2022 01:06:21] "GET /static/totogg/js/main.js HTTP/1.1" 200 3305
+[11/Jul/2022 01:06:21] "GET /static/totogg/images/lck_logo.png HTTP/1.1" 200 12371
+[11/Jul/2022 01:06:21] "GET /static/totogg/images/no_1.png HTTP/1.1" 200 61911
+[11/Jul/2022 01:06:21] "GET /static/totogg/images/no_3.png HTTP/1.1" 200 63689
+[11/Jul/2022 01:06:21] "GET /static/totogg/images/drx_logo.png HTTP/1.1" 200 226193
+[11/Jul/2022 01:06:21] "GET /static/totogg/images/t1_logo.png HTTP/1.1" 200 57996
+[11/Jul/2022 01:06:21] "GET /static/totogg/images/lck_pred.JPG HTTP/1.1" 200 47339
+[11/Jul/2022 01:06:21] "GET /static/totogg/images/no_2.png HTTP/1.1" 200 57938
+[11/Jul/2022 01:06:21] "GET /static/totogg/images/gen_logo.png HTTP/1.1" 200 53219
+[11/Jul/2022 01:06:21] "GET /static/totogg/images/lol_background.jpg HTTP/1.1" 200 99320
+[11/Jul/2022 01:06:21] "GET /static/totogg/images/dk_logo.png HTTP/1.1" 200 124441
+[11/Jul/2022 01:06:21] "GET /static/totogg/images/kt_logo.png HTTP/1.1" 200 55048
+[11/Jul/2022 01:06:21] "GET /static/totogg/images/lsb_logo.png HTTP/1.1" 200 411583
+[11/Jul/2022 01:06:21] "GET /static/totogg/images/kf_logo.png HTTP/1.1" 200 200384
+[11/Jul/2022 01:06:21] "GET /static/totogg/images/hl_logo.png HTTP/1.1" 200 55967
+[11/Jul/2022 01:06:21] "GET /static/totogg/images/bro_logo.png HTTP/1.1" 200 117148
+[11/Jul/2022 01:06:21] "GET /static/totogg/images/ns_logo.png HTTP/1.1" 200 240535
+[11/Jul/2022 01:06:21] "GET /static/totogg/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 76736
+[11/Jul/2022 01:06:21] "GET /static/totogg/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 78268
+[11/Jul/2022 01:06:25] "GET /chart HTTP/1.1" 301 0
+[11/Jul/2022 01:06:25] "GET /chart/ HTTP/1.1" 200 35281
+[11/Jul/2022 01:06:28] "GET /pred HTTP/1.1" 301 0
+[11/Jul/2022 01:06:28] "GET /pred/ HTTP/1.1" 200 4043
+[11/Jul/2022 01:06:31] "GET /chart/ HTTP/1.1" 200 35281
+[2022-07-10 16:06:51 +0000] [29218] [CRITICAL] WORKER TIMEOUT (pid:29258)
+[2022-07-10 16:06:51 +0000] [29258] [INFO] Worker exiting (pid: 29258)
+[2022-07-10 16:06:51 +0000] [31731] [INFO] Booting worker with pid: 31731
+[11/Jul/2022 01:13:07] "GET /home HTTP/1.1" 301 0
+[11/Jul/2022 01:13:07] "GET /home/ HTTP/1.1" 200 11072
+Internal Server Error: /test/
+Traceback (most recent call last):
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/totogg/totogg/views.py", line 62, in ml_deply
+    return render (request, 'totogg/test.html', {'predict': pred}, {'predict_b': predb})
+NameError: name 'predb' is not defined
+[11/Jul/2022 01:16:22] "GET /test/ HTTP/1.1" 500 58164
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 11, 2022 - 00:33:32
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+[11/Jul/2022 01:17:04] "GET /test/ HTTP/1.1" 200 285
+[11/Jul/2022 01:17:08] "GET /home/ HTTP/1.1" 200 11072
+[11/Jul/2022 01:17:26] "GET /home/ HTTP/1.1" 200 11072
+[11/Jul/2022 01:17:42] "GET /home/ HTTP/1.1" 200 11072
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 11, 2022 - 01:16:48
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Internal Server Error: /test/
+Traceback (most recent call last):
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/totogg/totogg/views.py", line 56, in ml_deply
+    predb = loaded_model.predict_proba(data)
+AttributeError: 'PyFuncModel' object has no attribute 'predict_proba'
+[11/Jul/2022 01:19:50] "GET /test/ HTTP/1.1" 500 59038
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 11, 2022 - 01:19:50
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/management/base.py", line 487, in check
+    all_issues = checks.run_checks(
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/checks/registry.py", line 88, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/checks/urls.py", line 42, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/checks/urls.py", line 61, in _load_all_namespaces
+    url_patterns = getattr(resolver, "url_patterns", [])
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/utils/functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/urls/resolvers.py", line 696, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/utils/functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/urls/resolvers.py", line 689, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/ubuntu/totogg/totogg_prj/urls.py", line 21, in <module>
+    path('', include('totogg.urls')),
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/urls/conf.py", line 38, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/ubuntu/totogg/totogg/urls.py", line 2, in <module>
+    from . import views
+  File "/home/ubuntu/totogg/totogg/views.py", line 57
+    loaded_model.
+                ^
+SyntaxError: invalid syntax
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Internal Server Error: /test/
+Traceback (most recent call last):
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/totogg/totogg/views.py", line 56, in ml_deply
+    predb = loaded_model.predict_proba(data)
+AttributeError: 'PyFuncModel' object has no attribute 'predict_proba'
+[11/Jul/2022 01:45:17] "GET /test/ HTTP/1.1" 500 59046
+Internal Server Error: /test/
+Traceback (most recent call last):
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/totogg/totogg/views.py", line 56, in ml_deply
+    predb = loaded_model.predict_proba(data)
+AttributeError: 'PyFuncModel' object has no attribute 'predict_proba'
+[11/Jul/2022 01:45:20] "GET /test/ HTTP/1.1" 500 59046
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 11, 2022 - 01:44:02
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Internal Server Error: /test/
+Traceback (most recent call last):
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/totogg/totogg/views.py", line 56, in ml_deply
+    predb = loaded_model.predict_proba(data)
+AttributeError: 'PyFuncModel' object has no attribute 'predict_proba'
+[11/Jul/2022 01:47:44] "GET /test/ HTTP/1.1" 500 59038
+Internal Server Error: /test/
+Traceback (most recent call last):
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/totogg/totogg/views.py", line 56, in ml_deply
+    predb = loaded_model.predict_proba(data)
+AttributeError: 'PyFuncModel' object has no attribute 'predict_proba'
+[11/Jul/2022 01:47:45] "GET /test/ HTTP/1.1" 500 59038
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 11, 2022 - 01:47:32
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Internal Server Error: /test/
+Traceback (most recent call last):
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/totogg/totogg/views.py", line 56, in ml_deply
+    predb = loaded_model.predict_proba(data)
+AttributeError: 'PyFuncModel' object has no attribute 'predict_proba'
+[11/Jul/2022 01:48:01] "GET /test/ HTTP/1.1" 500 59040
+Internal Server Error: /test/
+Traceback (most recent call last):
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/totogg/totogg/views.py", line 56, in ml_deply
+    predb = loaded_model.predict_proba(data)
+AttributeError: 'PyFuncModel' object has no attribute 'predict_proba'
+[11/Jul/2022 01:48:02] "GET /test/ HTTP/1.1" 500 59040
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 11, 2022 - 01:47:57
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+[11/Jul/2022 01:48:11] "GET /test/ HTTP/1.1" 200 285
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 11, 2022 - 01:48:11
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+[11/Jul/2022 01:48:20] "GET /test/ HTTP/1.1" 200 285
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 11, 2022 - 01:48:19
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 11, 2022 - 01:53:54
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 11, 2022 - 02:01:53
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 11, 2022 - 02:05:55
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Internal Server Error: /test/
+Traceback (most recent call last):
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/totogg/totogg/views.py", line 56, in ml_deply
+    predb = loaded_model.predict_proba(data)
+AttributeError: 'PyFuncModel' object has no attribute 'predict_proba'
+[11/Jul/2022 02:06:13] "GET /test/ HTTP/1.1" 500 59046
+[11/Jul/2022 02:07:59] "GET /pred/ HTTP/1.1" 200 4043
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 11, 2022 - 02:06:06
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/management/base.py", line 487, in check
+    all_issues = checks.run_checks(
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/checks/registry.py", line 88, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/checks/urls.py", line 42, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/checks/urls.py", line 61, in _load_all_namespaces
+    url_patterns = getattr(resolver, "url_patterns", [])
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/utils/functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/urls/resolvers.py", line 696, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/utils/functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/urls/resolvers.py", line 689, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/ubuntu/totogg/totogg_prj/urls.py", line 21, in <module>
+    path('', include('totogg.urls')),
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/urls/conf.py", line 38, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/ubuntu/totogg/totogg/urls.py", line 2, in <module>
+    from . import views
+  File "/home/ubuntu/totogg/totogg/views.py", line 52
+    load_model = 
+                ^
+SyntaxError: invalid syntax
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Internal Server Error: /test/
+Traceback (most recent call last):
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/totogg/totogg/views.py", line 53, in ml_deply
+    with open("./models/model.pickle", "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: './models/model.pickle'
+[11/Jul/2022 02:37:54] "GET /test/ HTTP/1.1" 500 58587
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 11, 2022 - 02:37:50
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+[11/Jul/2022 02:38:24] "GET /test/ HTTP/1.1" 200 285
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 11, 2022 - 02:38:24
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 11, 2022 - 02:44:03
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Internal Server Error: /test/
+Traceback (most recent call last):
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/totogg/totogg/views.py", line 54, in ml_deply
+    loaded_model = pickle.load(f)
+_pickle.UnpicklingError: unpickling stack underflow
+[11/Jul/2022 02:47:23] "GET /test/ HTTP/1.1" 500 58636
+[11/Jul/2022 02:52:56] "GET /test/ HTTP/1.1" 200 308
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 11, 2022 - 02:46:42
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 11, 2022 - 02:54:01
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 11, 2022 - 03:11:35
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 11, 2022 - 03:16:05
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+[11/Jul/2022 03:22:22] "GET / HTTP/1.1" 200 11072
+[11/Jul/2022 03:22:26] "GET / HTTP/1.1" 200 11072

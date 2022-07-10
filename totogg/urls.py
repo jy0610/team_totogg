@@ -7,6 +7,6 @@ urlpatterns = [
     path('chart/', views.chart),
     path('pred/', views.pred),
     path('rank/', views.rank_page),
-    
+    path('test/', views.ml_deply),
     
 ]

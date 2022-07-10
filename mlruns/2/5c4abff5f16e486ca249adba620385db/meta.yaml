@@ -1,0 +1,15 @@
+artifact_uri: ./mlruns/2/5c4abff5f16e486ca249adba620385db/artifacts
+end_time: 1657458023087
+entry_point_name: ''
+experiment_id: '2'
+lifecycle_stage: active
+name: ''
+run_id: 5c4abff5f16e486ca249adba620385db
+run_uuid: 5c4abff5f16e486ca249adba620385db
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1657457899703
+status: 3
+tags: []
+user_id: ubuntu

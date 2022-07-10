@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-u8%hrw56^ymug$!%96#69%1&3ycw&$@-6@&+m6hb4y1##knlc&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['13.125.229.77']
 
 
 # Application definition
@@ -77,12 +77,24 @@ WSGI_APPLICATION = 'totogg_prj.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'totogg',
+        'USER': 'seok',
+        'PASSWORD': 'wjdgotjr516',
+        'HOST': '13.125.229.77',
+        'PORT': '3306',
     }
 }
+
 
 
 # Password validation
@@ -109,7 +121,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'ko-kr'
 
-TIME_ZONE = 'Asia/seoul'
+TIME_ZONE = 'Asia/Seoul'
 
 USE_I18N = True
 

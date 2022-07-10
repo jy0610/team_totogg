@@ -142,17 +142,17 @@ options.add_argument('--disable-dev-shm-usage')
 chrome = webdriver.Chrome(ChromeDriverManager().install(), options=options)
 chrome.implicitly_wait(10)
 
-# # 슬랙
-# SLACK_TOKEN = 'xoxb-3092638135718-3616430141383-ddZhWZ7KOPidJTePkTxx84al'
-# slack_channel = '#test'
+# 슬랙
+SLACK_TOKEN = 'xoxb-3092638135718-3616430141383-ddZhWZ7KOPidJTePkTxx84al'
+slack_channel = '#test'
 
-# # slack 봇 만들기 https://developerdk.tistory.com/96
-# def slack_bot(message):
-#    #  print(message)
-#     requests.post("https://slack.com/api/chat.postMessage", 
-#         headers={"Authorization": "Bearer "+ SLACK_TOKEN}, 
-#         data={"channel": slack_channel, "text": message}
-#         )
+# slack 봇 만들기 https://developerdk.tistory.com/96
+def slack_bot(message):
+   #  print(message)
+    requests.post("https://slack.com/api/chat.postMessage", 
+        headers={"Authorization": "Bearer "+ SLACK_TOKEN}, 
+        data={"channel": slack_channel, "text": message}
+        )
 
 def run():
  
@@ -211,7 +211,7 @@ def run():
                   \tcs 수급(분당cs) : {cs}"
 
                print(message)
-               # slack_bot(message)
+               slack_bot(message)
 
 
          except Exception as e:

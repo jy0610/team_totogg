@@ -1,0 +1,30 @@
+artifact_path: model
+flavors:
+  python_function:
+    env: conda.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    python_version: 3.8.10
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.1.1
+mlflow_version: 1.27.0
+model_uuid: 52868c3294954a79aa63bd9509e53526
+run_id: 97f4b488025e46e3a1d314b58a0c4602
+signature:
+  inputs: '[{"name": "match_num", "type": "long"}, {"name": "set", "type": "long"},
+    {"name": "side", "type": "long"}, {"name": "BRO", "type": "integer"}, {"name":
+    "DK", "type": "integer"}, {"name": "DRX", "type": "integer"}, {"name": "GEN",
+    "type": "integer"}, {"name": "HLE", "type": "integer"}, {"name": "KDF", "type":
+    "integer"}, {"name": "KT", "type": "integer"}, {"name": "LSB", "type": "integer"},
+    {"name": "NS", "type": "integer"}, {"name": "T1", "type": "integer"}, {"name":
+    "stand_gold", "type": "double"}, {"name": "stand_tot_dam", "type": "double"},
+    {"name": "kill", "type": "long"}, {"name": "death", "type": "long"}, {"name":
+    "assist", "type": "long"}, {"name": "tower", "type": "long"}, {"name": "inhibitor",
+    "type": "long"}, {"name": "herald", "type": "long"}, {"name": "dragon", "type":
+    "long"}, {"name": "elder", "type": "long"}, {"name": "baron", "type": "long"},
+    {"name": "sight", "type": "long"}, {"name": "stand_total_cs", "type": "double"}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+utc_time_created: '2022-07-10 09:13:26.341415'
