@@ -26,6 +26,30 @@ class LCK_Data(models.Model):
   def __str__(self):
     return f'{self.team}--{self.rst}'
 
+class Summer_Data(models.Model):
+  match_num = models.CharField(max_length=20)
+  set = models.IntegerField(null=True, default=0)
+  team = models.CharField(max_length=50)
+  side =  models.CharField(max_length=20)
+  gtime = models.CharField(max_length=50)
+  gold = models.IntegerField()
+  tot_dam = models.IntegerField()
+  kill = models.IntegerField()
+  death = models.IntegerField()
+  assist = models.IntegerField()
+  tower = models.IntegerField()
+  inhibitor = models.IntegerField()
+  herald = models.IntegerField()
+  dragon = models.IntegerField()
+  elder = models.IntegerField()
+  baron = models.IntegerField()
+  sight = models.IntegerField()
+  total_cs = models.IntegerField()
+  rst = models.CharField(max_length=20)
+
+  def __str__(self):
+    return f'{self.team}--{self.rst}'
+
 
 class rank(models.Model):
   team = models.CharField(max_length=50)
@@ -51,3 +75,17 @@ class summerSummary(models.Model):
   
   def __str__(self):
     return f'{self.tname}-{self.rate}'
+
+class recentSummary(models.Model):
+  tname = models.CharField(max_length=20, primary_key=True)
+  gold = models.FloatField()
+  dam = models.FloatField()
+  kill = models.FloatField()
+  tower = models.FloatField()
+  inhibitor = models.FloatField()
+  dragon = models.FloatField()
+  baron = models.FloatField()
+  cs = models.FloatField()
+
+  def __str__(self):
+    return f'{self.tname} data saved!'

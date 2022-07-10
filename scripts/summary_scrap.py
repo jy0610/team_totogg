@@ -57,6 +57,8 @@ def run():
 
   towers = driver.find_elements(By.CSS_SELECTOR, "div.min-h-10.relative.overflow-x-auto.overflow-hidden.rounded-md.mt-2 > table > tbody > tr > td:nth-child(11)")
 
+  
+
   for tname, rate, kill, gold, baron, dragon, tower in zip(tnames, rates, kills, golds, barons, dragons, towers):
     tn = tname.text
     r = float(rate.text.replace("%",""))
@@ -66,6 +68,6 @@ def run():
     d = float(dragon.text)
     t = float(tower.text)
     
-    summerSummary.objects.filter(tname=tn).delete()
+    #summerSummary.objects.filter(tname=tn).delete()
     summerSummary(tname=tn, rate=r, kill=k, gold=g, baron=b, dragon=d, tower=t).save()
     print(tn, " data saved!")
