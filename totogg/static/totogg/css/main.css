@@ -2399,10 +2399,10 @@ input, select, textarea {
 				color:black;
 				background-color: rgba(209, 209, 209, 0.9);
 			}
-			table tbody .승리 {
+			table tbody .Victory {
 				background-color: rgba(0, 0, 255, 0.3);
 			}
-			table tbody .패배 {
+			table tbody .Defeat {
 				background-color: rgba(255, 0, 0, 0.3);
 			}
 			table tbody .pred:nth-child(2n + 1) {
