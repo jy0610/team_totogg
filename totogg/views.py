@@ -77,7 +77,7 @@ def ml_deply(request):
     
     return render (request, 'totogg/test.html', {'predicts':predicts})
     
-def pred(request):
+def pred_data():
     #data = recentSummary.objects.all()
     schedules = gameSchedule.objects.all()
     t1s = []
@@ -196,7 +196,82 @@ def pred(request):
     chid = [[0,1], [2,3], [4,5], [6,7], [8,9]]
     gs = zip(schedule, chart_id)
     gs1 = zip(matches, chid)
-    data_zip = zip(t1_datas, t2_datas)
+    return gs, gs1, t1_datas, t2_datas
+
+def ml_deply(request):
+
+    # 정 어려우면 csv 파일로 받아서 team 만 전처리
+    # file = 'datas/pred_test.csv'
+    # data = pd.read_csv(file)
+
+	# 'runs:/실험실행ID/model정보폴더명'
+    # logged_model = 'runs:/e722aa6db7ba4ebfb0790f31e5d82bae/xgb_model'
+    # 예측값
+    # loaded_model = mlflow.pyfunc.load_model(logged_model)
+
+    gs, gs1, t1s, t2s = pred_data()
+
+    predicts = []
+    for t1, t2 in zip(t1s, t2s):
+        predict = {}
+        # pickle 파일 저장
+        import pickle
+        with open("./models/xgb_model_final.pkl", "rb") as f:
+            loaded_model = pickle.load(f)
+        
+        gold = t1['gold']
+        tot_dam = t1['tot_dam']
+        kill = t1['kill']
+        tower = t1['tower']
+        inhibitor = t1['inhibitor']
+        # herald = t1['herald']
+        dragon = t1['dragon']
+        # elder = t1['elder']
+        baron = t1['baron']
+        total_cs = t1['total_cs']
+        df_temp1 = pd.DataFrame({"gold": [gold], "tot_dam": [tot_dam], "kill": [kill],\
+        "tower": [tower], 'inhibitor': [inhibitor],'dragon': [dragon],\
+        'baron': [baron], 'total_cs': [total_cs]})
+
+        gold = t2['gold']
+        tot_dam = t2['tot_dam']
+        kill = t2['kill']
+        tower = t2['tower']
+        inhibitor = t2['inhibitor']
+        # herald = t2['herald']
+        dragon = t2['dragon']
+        # elder = t2['elder']
+        baron = t2['baron']
+        total_cs = t2['total_cs']
+
+        df_temp2 = pd.DataFrame({"gold": [gold], "tot_dam": [tot_dam], "kill": [kill],\
+        "tower": [tower], 'inhibitor': [inhibitor],'dragon': [dragon],\
+        'baron': [baron], 'total_cs': [total_cs]}) 
+        
+        # pred1 = loaded_model.predict(df_temp1)
+        # pred2 = loaded_model.predict(df_temp2)
+
+        # 예측확률
+        predb1 = loaded_model.predict_proba(df_temp1)[0][1]
+        predb2 = loaded_model.predict_proba(df_temp2)[0][1]
+        sum = predb1 + predb2
+        # predb = loaded_model.predict_distribution(data)
+        # predict['predict1'] = pred1
+        # predict['predict2'] = pred2
+        predict['proba1'] = predb1 / sum * 100
+        predict['proba2'] = predb2 / sum * 100
+        predict['team1'] = t1['tname']
+        predict['team2'] = t2['tname']
+        
+        predicts.append(predict)
+        
+    #return render (request, 'totogg/test.html', {'predicts':predicts})
+    return predicts
+
+def pred(request):
+    gs, gs1, t1s, t2s = pred_data()
+    pred = ml_deply(request)
+    data_zip = zip(t1s, t2s, pred)
     return render(
         request,
         'totogg/pred.html',
@@ -204,3 +279,6 @@ def pred(request):
         'gameSchedule': gs,
         'gameSchedule1': gs1,
         })
+
+
+

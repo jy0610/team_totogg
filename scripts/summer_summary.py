@@ -56,7 +56,8 @@ def run():
     # DB에 저장
     recentSummary(tname=tname, gold=gold, tot_dam=dam, kill=kill, tower=tower, inhibitor=inhibitor, dragon=dragon, baron=baron, total_cs=cs).save()
 
-    #print(type(t_datas))
+    # print(type(t_datas))
+    print("----")
 
   # for data in datas:
   #   print(data.kill)

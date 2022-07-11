@@ -88,7 +88,7 @@
 <!-- match1 -->
 <script type="text/javascript">
 	var num = 0
-	{% for t1_data, t2_data in data_zips %}
+	{% for t1_data, t2_data, pred in data_zips %}
 	var matchid = 'match' + String(num)
 	var match_id = 'match_' + String(num)
 	var context = document
@@ -101,11 +101,11 @@
 			datasets: [{
 				label: '{{ t1_data.tname }}',
 				backgroundColor: "#1E90FF",
-				data: [70]
+				data: [Math.round({{ pred.proba1 }} * 10) / 10]
 				}, {
 				label: '{{ t2_data.tname }}',
 				backgroundColor: "#F7464A",
-				data: [30]
+				data: [Math.round({{ pred.proba2 }} * 10) / 10]
 				
 			}]
 		},

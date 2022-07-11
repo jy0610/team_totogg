@@ -115,7 +115,7 @@ sns.heatmap(heatmap_data.astype(float).corr(), linewidths = 0.1, vmax = 1.0,
            square = True, cmap = colormap, linecolor = "white", annot = True, annot_kws = {"size" : 10})
 
 #XGBoost
-train_x = np.array(pd.DataFrame(data, columns=['gold', 'tot_dam', 'kill', 'tower', 'inhibitor', 'herald', 'dragon',  'elder', 'baron', 'total_cs']))  
+train_x = np.array(pd.DataFrame(data, columns=['gold', 'tot_dam', 'kill', 'tower', 'inhibitor', 'dragon', 'baron', 'total_cs']))  
 train_y = np.array(pd.DataFrame(data, columns=['rst'])) 
 
 def evaluation(model, test_x, test_y):
@@ -152,7 +152,7 @@ if __name__ == "__main__":
 
         xgb_model.fit(X_train, Y_train, early_stopping_rounds = 100, eval_metric='logloss', eval_set = evals, verbose=True)
         import pickle
-        pickle.dump(xgb_model, open('./models/xgb_model.pkl', 'wb'))
+        pickle.dump(xgb_model, open('./models/xgb_model_final.pkl', 'wb'))
         y_pred = xgb_model.predict(X_test)
         # proba = xgb_model.predict_proba(X_test)[:,1]
         score = evaluation(xgb_model, X_test, Y_test)

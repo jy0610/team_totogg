@@ -7,7 +7,14 @@
     <title>test</title>
 </head>
 <body>
-    <h1>{{ predicts.predict }}</h1>
-    <h1>{{ predicts.preba }}</h1>
+    {% for predict in predicts %}
+    <h1>predicts.team1: {{ predict.team1 }}</h1>
+    <h1>predicts.team2:{{ predict.team2 }}</h1>
+    
+    <hr>
+    <h1>predicts.proba1:{{ predict.proba1 }}</h1>
+    <h1>predicts.proba2:{{ predict.proba2 }}</h1>
+    <hr>
+    {% endfor %}
 </body>
 </html>
