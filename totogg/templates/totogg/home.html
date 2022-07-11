@@ -53,17 +53,23 @@
 								</div>
 							</div>
 							<h2><a href="/pred">▶ predict</a></h2>
-							<div class="home">	
+							<div class="home">
 								<h2>Today Match</h2>
-								<h3>1경기 <b style="color:#1E90FF">{% for data in datas %}{% if data.score_n == '1'%}{{ data.team }}{% endif %}{% endfor%}</b> vs <b style="color:#F7464A">{% for data in datas %}{% if data.score_n == '2'%}{{ data.team }}{% endif %}{% endfor%}</b><canvas id="match_1" width="50%" height="4%"></canvas></h3>
-								<h3>2경기 <b style="color:#1E90FF">{% for data in datas %}{% if data.score_n == '2'%}{{ data.team }}{% endif %}{% endfor%}</b> vs <b style="color:#F7464A">{% for data in datas %}{% if data.score_n == '1'%}{{ data.team }}{% endif %}{% endfor%}</b><canvas id="match_2" width="50%" height="4%"></canvas></h3>
+								{% if '{{date}}' == '{{today}}' %}	
+								<h3>1경기 <b style="color:#1E90FF">{{ t1s.0 }}</b> vs <b style="color:#F7464A">{{ t2s.0 }}</b><canvas id="match_1" width="50%" height="4%"></canvas></h3>
+								<h3>2경기 <b style="color:#1E90FF">{{ t1s.1 }}</b> vs <b style="color:#F7464A">{{ t2s.1 }}</b><canvas id="match_2" width="50%" height="4%"></canvas></h3>
+								{% else %}
+								<h1> No Matches Today </h1>
+								{% endif %}
 							</div>
+
+
 							<h2><a href="/chart">▶ chart</a></h2>
 							<div class="home">
 								
 								<canvas id="myChart" width="400" height="200"></canvas>
                 				
-				</div>
+						</div>
 				<h2>▶ Team</h2>
 				<div class="home">
 					
