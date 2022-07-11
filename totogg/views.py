@@ -8,6 +8,7 @@ import mlflow
 import xgboost as xgb
 
 # pip install pickle-mixin
+from .models import recentSummary
 # from .models import opggData
 # Create your views here.
 def totogg(request):
@@ -24,12 +25,6 @@ def chart(request):
         request,
         'totogg/chart.html',
         {"datas":data}
-        )
-
-def pred(request):
-    return render(
-        request,
-        'totogg/pred.html'
         )
 
 def rank_page(request):
@@ -70,3 +65,10 @@ def ml_deply(request):
     # return render (request, 'totogg/test.html', {'predict': pred})
 
     
+def pred(request):
+    data = recentSummary.objects.all()
+    return render(
+        request,
+        'totogg/pred.html',
+        {"datas":data}
+        )

@@ -170,8 +170,8 @@ if __name__ == "__main__":
 
         acc = accuracy_score(Y_test,y_pred)
         print("정확도 : ",accuracy_score(Y_test,y_pred))
-        # mlflow.log_metric("accuracy_score", acc)
+        mlflow.log_metric("accuracy_score", acc)
 
         conf_mat = confusion_matrix(Y_test,y_pred)
         print(confusion_matrix(Y_test,y_pred))
-        # mlflow.log_metric("confusion", conf_mat)
+        mlflow.log_param("confusion", conf_mat)

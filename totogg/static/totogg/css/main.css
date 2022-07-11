@@ -2393,17 +2393,20 @@ input, select, textarea {
 
 			table tbody .rank:nth-child(2n + 1) {
 				color:black;
-				background-color: rgba(255, 255, 255, 0.8);	
+				background-color: rgba(255, 255, 255, 0.9);	
 			}
 			table tbody .rank:nth-child(2n) {
 				color:black;
-				background-color: rgba(191, 191, 191, 0.8);
+				background-color: rgba(209, 209, 209, 0.9);
 			}
 			table tbody .승리 {
 				background-color: rgba(0, 0, 255, 0.3);
 			}
 			table tbody .패배 {
 				background-color: rgba(255, 0, 0, 0.3);
+			}
+			table tbody .pred:nth-child(2n + 1) {
+				background-color: rgba(0, 0, 0, 0.3);
 			}
 
 
@@ -2419,7 +2422,7 @@ input, select, textarea {
 		}
 
 		table thead {
-			border-bottom: solid 2px #ffffff;
+			border-bottom: solid 1px #ffffff;
 		}
 
 		table tfoot {
@@ -3461,7 +3464,6 @@ input, select, textarea {
 		-ms-transition: opacity 0.45s ease;
 		transition: opacity 0.45s ease;
 		opacity: 1;
-		/* background: #00000074; */
 	}
 
 	#menu {

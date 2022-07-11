@@ -1,0 +1,15 @@
+artifact_uri: file:///home/ubuntu/totogg/mlruns/0/e0c408e39e77434d921000edf6d06b66/artifacts
+end_time: 1657479455102
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+name: ''
+run_id: e0c408e39e77434d921000edf6d06b66
+run_uuid: e0c408e39e77434d921000edf6d06b66
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1657479449589
+status: 4
+tags: []
+user_id: ubuntu

@@ -22,9 +22,10 @@ import warnings
 # Import mlflow
 import mlflow
 import mlflow.sklearn
+from sklearn.metrics import f1_score
 
 
-mlflow.sklearn.autolog()
+# mlflow.sklearn.autolog()
 
 # load Data
 file = 'datas/LCK_2022_Spring_v2.csv'
@@ -82,32 +83,55 @@ lck_df_05 = lck_df_04[['side','stand_gold', 'stand_tot_dam', 'kill', 'death', 'a
     'herald', 'dragon', 'elder', 'baron', 'sight', 'stand_total_cs', 'target']]
 
 
+def evaluation(model, test_x, test_y):
+    pred_y = model.predict(test_x)
+    score = f1_score(test_y, pred_y, average='weighted')
+    return score
+
+
 if __name__ == "__main__":
     mlflow.set_experiment('gg02_kfold')
     warnings.filterwarnings("ignore")
 
-    # split data
-    X = lck_df_04.iloc[:, :-1]
-    y = lck_df_04.target
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3 , train_size=0.7, random_state=42)
+    with mlflow.start_run() as run:
 
-    model_rfc = RandomForestClassifier().fit(X_train, y_train)
-    y_epred = model_rfc.predict(X_test)
+        # split data
+        X = lck_df_04.iloc[:, :-1]
+        y = lck_df_04.target
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3 , train_size=0.7, random_state=42)
 
-    e_accuarcy = accuracy_score(y_test, y_epred)
-    # print('accuarcy:', e_accuarcy)
+        model_rfc = RandomForestClassifier().fit(X_train, y_train)
+        y_epred = model_rfc.predict(X_test)
 
-    kf = StratifiedKFold(n_splits=5, shuffle = True)
-    score = cross_val_score(model_rfc, X_train, y_train, cv = kf, scoring="accuracy")
-    print(score.mean())
+        e_accuarcy = accuracy_score(y_test, y_epred)
+        # print('accuarcy:', e_accuarcy)
 
-    params = {
-      'n_estimators' : [100,300,500],
-      'max_depth' : [6,8,10,12],
-      'min_samples_leaf' : [3,5,7,10],
-      'min_samples_split' : [3,5,10]
-    }
+        kf = StratifiedKFold(n_splits=5, shuffle = True)
+        score = cross_val_score(model_rfc, X_train, y_train, cv = kf, scoring="accuracy")
+        score2 = evaluation(model_rfc, X_test, y_test)
 
-    forest_grid = GridSearchCV(model_rfc, param_grid = params, scoring="accuracy", n_jobs=-1, verbose =1)
+        mlflow.log_metric("f1 score", score2)
+        mlflow.log_metric("accuracy", score.mean())
 
-    forest_grid.fit(X_train, y_train)
+        print(score.mean())
+
+        params = {
+            'n_estimators' : [100,300,500],
+            'max_depth' : [6,8,10,12],
+            'min_samples_leaf' : [3,5,7,10],
+            'min_samples_split' : [3,5,10]
+        }
+
+        mlflow.log_param("train", file)
+        mlflow.log_param("train num", len(file))
+        mlflow.log_artifact(file)
+        mlflow.sklearn.log_model(model_rfc, "titanic_model")
+
+        forest_grid = GridSearchCV(model_rfc, param_grid = params, scoring="accuracy", n_jobs=-1, verbose =1)
+        model_forest = forest_grid.fit(X_train, y_train)
+
+        score_for = cross_val_score(model_forest, X_train, y_train, cv = kf, scoring="accuracy")
+        score2_for = evaluation(model_forest, X_test, y_test)
+
+        mlflow.log_metric("f1 score", score2_for)
+        mlflow.log_metric("accuracy", score_for.mean())

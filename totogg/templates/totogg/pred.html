@@ -7,7 +7,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="icon" href="{% static 'totogg/images/t1logo_fa.ico' %}" type="image/x-icon">
 		<link rel="stylesheet" href="{% static 'totogg/css/main.css' %}" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 		<noscript><link rel="stylesheet" href="{% static 'totogg/css/noscript.css' %}" /></noscript>
 	</head>
     <body class="is-preload">
@@ -17,9 +16,21 @@
 		<div id="main">
 			<div class="inner">
 				<!-- Text -->
-                
+                <h2>2022 LCK SUmmer Predict</h2>
+				
+			<div class="chart">
+				<h3>1경기 <b style="color:#1E90FF">T1</b> vs <b style="color:#F7464A">GEN</b><canvas id="match_1" width="50%" height="7%"></canvas></h3>
+				<h1 style="color:#1E90FF">승리팀 : T1</h1>
+				<canvas id="match_1" width="50%" height="7%"></canvas>
+				<br>
+                <canvas id="match1" width="50%" height="15%"></canvas>
                 </div>
+			
+				
             </div>
+			</div>
+		</div>
+
 				
 				
 
@@ -29,8 +40,164 @@
 			<script src="{% static 'totogg/js/breakpoints.min.js' %}"></script>
 			<script src="{% static 'totogg/js/util.js' %}"></script>
 			<script src="{% static 'totogg/js/main.js' %}"></script>
+			<script src="{% static 'totogg/js/Chart.min.js' %}"></script>
+            <script src="{% static 'totogg/js/chartjs-plugin-datalabels.js' %}"></script>
 		</div>
 		
 	</body>
 	{% include 'totogg/footer.html' %}
 </html>
+<!-- match1 -->
+<script type="text/javascript">
+	var context = document
+		.getElementById('match_1')
+		.getContext('2d');
+    var myChart = new Chart(context, {
+		type: 'horizontalBar', // 차트의 형태
+		data: { // 차트에 들어갈 데이터
+			labels: ["predict"],
+			datasets: [{
+				label: 'T1',
+				backgroundColor: "#1E90FF",
+				data: [70]
+				}, {
+				label: 'GEN',
+				backgroundColor: "#F7464A",
+				data: [30]
+				
+			}]
+		},
+		options: {
+			plugins: {
+               datalabels: {
+                	color: ['#fff'],
+                	anchor: 'center',
+					font: { 
+                                family: 'Comic Sans MS',
+    							size: 30,
+    							weight: 'bold',
+    							lineHeight: 1.2,    							
+    						}
+                	},
+            	},
+                    
+			legend: {
+				labels: {
+					fontColor: "White",
+					fontSize: 15
+				}
+			},
+			scales: {
+    		xAxes: [ {
+				stacked: true,
+				display: false,
+    		} ],
+    		yAxes: [ {
+					stacked: true,
+					display: false,
+    		} ]
+    			}
+                                
+                    
+        }
+    });
+</script>
+<script type="text/javascript">
+	var context = document
+		.getElementById('match1')
+		.getContext('2d');
+	var myChart = new Chart(context, {
+		type: 'bar', // 차트의 형태
+		data: { // 차트에 들어갈 데이터
+			labels: ["Gold", "Tot_Dam", "Kill", "Tower", "Inhibitor", "Dragon", "Baron","Total_CS"],
+			datasets: [{
+				label: 'T1',
+				backgroundColor: "#1E90FF",
+				data: [
+				{% for data in datas %}{% if data.tname == 'T1' %}'{{ data.gold }}',{% endif %}{% endfor%}
+				{% for data in datas %}{% if data.tname == 'T1' %}'{{ data.dam }}',{% endif %}{% endfor%}
+				{% for data in datas %}{% if data.tname == 'T1' %}'{{ data.kill }}',{% endif %}{% endfor%}
+				{% for data in datas %}{% if data.tname == 'T1' %}'{{ data.tower }}',{% endif %}{% endfor%}
+				{% for data in datas %}{% if data.tname == 'T1' %}'{{ data.inhibitor }}',{% endif %}{% endfor%}
+				{% for data in datas %}{% if data.tname == 'T1' %}'{{ data.dragon }}',{% endif %}{% endfor%}
+				{% for data in datas %}{% if data.tname == 'T1' %}'{{ data.baron }}',{% endif %}{% endfor%}
+				{% for data in datas %}{% if data.tname == 'T1' %}'{{ data.cs }}',{% endif %}{% endfor%}
+				
+				]
+				
+				 }, {
+				label: 'GEN',
+				backgroundColor: "#F7464A",
+				data: [
+				{% for data in datas %}{% if data.tname == 'GEN' %}'{{ data.gold }}',{% endif %}{% endfor%}
+				{% for data in datas %}{% if data.tname == 'GEN' %}'{{ data.dam }}',{% endif %}{% endfor%}
+				{% for data in datas %}{% if data.tname == 'GEN' %}'{{ data.kill }}',{% endif %}{% endfor%}
+				{% for data in datas %}{% if data.tname == 'GEN' %}'{{ data.tower }}',{% endif %}{% endfor%}
+				{% for data in datas %}{% if data.tname == 'GEN' %}'{{ data.inhibitor }}',{% endif %}{% endfor%}
+				{% for data in datas %}{% if data.tname == 'GEN' %}'{{ data.dragon }}',{% endif %}{% endfor%}
+				{% for data in datas %}{% if data.tname == 'GEN' %}'{{ data.baron }}',{% endif %}{% endfor%}
+				{% for data in datas %}{% if data.tname == 'GEN' %}'{{ data.cs }}',{% endif %}{% endfor%}
+				]
+				}],
+			
+				
+			  
+
+		},
+		options: {
+						plugins: {
+            			   datalabels: {
+								display: false,
+            			    	color: '#fff',
+            			    	anchor: 'center',
+								font: { 
+            			                    family: 'Comic Sans MS',
+    										size: 10,
+    										weight: 'bold',
+    										lineHeight: 1.2,    							
+    									}
+            			    	},
+            				},
+                        title: {
+                            display: true,
+                            text: '『 Feature Data 』',
+                            fontFamily: 'Comic Sans MS',
+    						fontSize: 30,
+    						fontWeight: 'bold',    
+                            fontColor: 'rgba(255, 255, 255, 1)'
+                        },
+                        legend: {
+                        display: false
+                       
+                    
+                    },
+                    scales: {
+                        xAxes: [ {
+                            ticks: {
+                                fontFamily: 'Comic Sans MS',
+                                fontStyle: 'bold',
+                                fontColor: 'rgba(255, 255, 255, 1)',
+								fontSize: 15,
+                            },
+                            gridLines:{
+						        color: "rgba(255, 255, 255, 1)",
+						        lineWidth: 1
+                            }
+                        } ],
+                        yAxes: [ {
+                            ticks: {
+                                fontFamily: 'Comic Sans MS',
+                                fontStyle: 'bold',
+                                fontColor: 'rgba(255, 255, 255, 1)'
+                            },
+                            gridLines:{
+						        color: "rgba(255, 255, 255, 1)",
+						        lineWidth: 1
+                            }
+                        } ]
+                            }
+                                
+                    
+        }
+    });
+</script>
