@@ -19,12 +19,15 @@
                 <h2>2022 LCK SUmmer Predict</h2>
 				
 			<div class="chart">
-				<h3>1경기 <b style="color:#1E90FF">T1</b> vs <b style="color:#F7464A">GEN</b><canvas id="match_1" width="50%" height="7%"></canvas></h3>
-				<h1 style="color:#1E90FF">승리팀 : T1</h1>
-				<canvas id="match_1" width="50%" height="7%"></canvas>
+				<h2>◈ 2022-07-13</h2>
+				<h2>『 1경기 』 <b style="color:#1E90FF">T1</b> vs <b style="color:#F7464A">GEN</b><canvas id="match_1" width="50%" height="5%"></canvas></h2>				
+                <canvas id="match1" width="50%" height="10%"></canvas>
 				<br>
-                <canvas id="match1" width="50%" height="15%"></canvas>
+				<h2>『 2경기 』 <b style="color:#1E90FF">DRX</b> vs <b style="color:#F7464A">DK</b><canvas id="match_2" width="50%" height="5%"></canvas></h2>				
+                <canvas id="match2" width="50%" height="10%"></canvas>
+                
                 </div>
+				
 			
 				
             </div>
@@ -114,29 +117,14 @@
 				label: 'T1',
 				backgroundColor: "#1E90FF",
 				data: [
-				{% for data in datas %}{% if data.tname == 'T1' %}'{{ data.gold }}',{% endif %}{% endfor%}
-				{% for data in datas %}{% if data.tname == 'T1' %}'{{ data.dam }}',{% endif %}{% endfor%}
-				{% for data in datas %}{% if data.tname == 'T1' %}'{{ data.kill }}',{% endif %}{% endfor%}
-				{% for data in datas %}{% if data.tname == 'T1' %}'{{ data.tower }}',{% endif %}{% endfor%}
-				{% for data in datas %}{% if data.tname == 'T1' %}'{{ data.inhibitor }}',{% endif %}{% endfor%}
-				{% for data in datas %}{% if data.tname == 'T1' %}'{{ data.dragon }}',{% endif %}{% endfor%}
-				{% for data in datas %}{% if data.tname == 'T1' %}'{{ data.baron }}',{% endif %}{% endfor%}
-				{% for data in datas %}{% if data.tname == 'T1' %}'{{ data.cs }}',{% endif %}{% endfor%}
-				
+				0.5,0.8,0.4,0.2,0.9,0.3,0.7,0.5
 				]
 				
 				 }, {
 				label: 'GEN',
 				backgroundColor: "#F7464A",
 				data: [
-				{% for data in datas %}{% if data.tname == 'GEN' %}'{{ data.gold }}',{% endif %}{% endfor%}
-				{% for data in datas %}{% if data.tname == 'GEN' %}'{{ data.dam }}',{% endif %}{% endfor%}
-				{% for data in datas %}{% if data.tname == 'GEN' %}'{{ data.kill }}',{% endif %}{% endfor%}
-				{% for data in datas %}{% if data.tname == 'GEN' %}'{{ data.tower }}',{% endif %}{% endfor%}
-				{% for data in datas %}{% if data.tname == 'GEN' %}'{{ data.inhibitor }}',{% endif %}{% endfor%}
-				{% for data in datas %}{% if data.tname == 'GEN' %}'{{ data.dragon }}',{% endif %}{% endfor%}
-				{% for data in datas %}{% if data.tname == 'GEN' %}'{{ data.baron }}',{% endif %}{% endfor%}
-				{% for data in datas %}{% if data.tname == 'GEN' %}'{{ data.cs }}',{% endif %}{% endfor%}
+				0.2,0.6,0.8,0.3,0.4,0.7,0.3,0.9
 				]
 				}],
 			
@@ -186,6 +174,149 @@
                         } ],
                         yAxes: [ {
                             ticks: {
+								beginAtZero: true,
+								max :1,
+                                fontFamily: 'Comic Sans MS',
+                                fontStyle: 'bold',
+                                fontColor: 'rgba(255, 255, 255, 1)'
+                            },
+                            gridLines:{
+						        color: "rgba(255, 255, 255, 1)",
+						        lineWidth: 1
+                            }
+                        } ]
+                            }
+                                
+                    
+        }
+    });
+</script>
+<!-- match1 -->
+<script type="text/javascript">
+	var context = document
+		.getElementById('match_2')
+		.getContext('2d');
+    var myChart = new Chart(context, {
+		type: 'horizontalBar', // 차트의 형태
+		data: { // 차트에 들어갈 데이터
+			labels: ["predict"],
+			datasets: [{
+				label: 'DRX',
+				backgroundColor: "#1E90FF",
+				data: [60]
+				}, {
+				label: 'DK',
+				backgroundColor: "#F7464A",
+				data: [40]
+				
+			}]
+		},
+		options: {
+			plugins: {
+               datalabels: {
+                	color: ['#fff'],
+                	anchor: 'center',
+					font: { 
+                                family: 'Comic Sans MS',
+    							size: 30,
+    							weight: 'bold',
+    							lineHeight: 1.2,    							
+    						}
+                	},
+            	},
+                    
+			legend: {
+				labels: {
+					fontColor: "White",
+					fontSize: 15
+				}
+			},
+			scales: {
+    		xAxes: [ {
+				stacked: true,
+				display: false,
+    		} ],
+    		yAxes: [ {
+					stacked: true,
+					display: false,
+    		} ]
+    			}
+                                
+                    
+        }
+    });
+</script>
+<script type="text/javascript">
+	var context = document
+		.getElementById('match2')
+		.getContext('2d');
+	var myChart = new Chart(context, {
+		type: 'bar', // 차트의 형태
+		data: { // 차트에 들어갈 데이터
+			labels: ["Gold", "Tot_Dam", "Kill", "Tower", "Inhibitor", "Dragon", "Baron","Total_CS"],
+			datasets: [{
+				label: 'DRX',
+				backgroundColor: "#1E90FF",
+				data: [
+				0.5,0.8,0.4,0.2,0.9,0.3,0.7,0.5
+				]
+				
+				 }, {
+				label: 'DK',
+				backgroundColor: "#F7464A",
+				data: [
+				0.2,0.6,0.8,0.3,0.4,0.7,0.3,0.9
+				]
+				}],
+			
+				
+			  
+
+		},
+		options: {
+						plugins: {
+            			   datalabels: {
+								display: false,
+            			    	color: '#fff',
+            			    	anchor: 'center',
+								font: { 
+            			                    family: 'Comic Sans MS',
+    										size: 10,
+    										weight: 'bold',
+    										lineHeight: 1.2,    							
+    									}
+            			    	},
+            				},
+                        title: {
+                            display: true,
+                            text: '『 Feature Data 』',
+                            fontFamily: 'Comic Sans MS',
+    						fontSize: 30,
+    						fontWeight: 'bold',    
+                            fontColor: 'rgba(255, 255, 255, 1)'
+                        },
+                        legend: {
+                        display: false
+                       
+                    
+                    },
+                    scales: {
+                        xAxes: [ {
+                            ticks: {
+                                fontFamily: 'Comic Sans MS',
+                                fontStyle: 'bold',
+                                fontColor: 'rgba(255, 255, 255, 1)',
+								fontSize: 15,
+                            },
+                            gridLines:{
+						        color: "rgba(255, 255, 255, 1)",
+						        lineWidth: 1
+                            }
+                        } ],
+                        yAxes: [ {
+                            ticks: {
+								beginAtZero: true,
+								max :1,
                                 fontFamily: 'Comic Sans MS',
                                 fontStyle: 'bold',
                                 fontColor: 'rgba(255, 255, 255, 1)'
