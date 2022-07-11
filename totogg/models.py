@@ -79,13 +79,16 @@ class summerSummary(models.Model):
 class recentSummary(models.Model):
   tname = models.CharField(max_length=20, primary_key=True)
   gold = models.FloatField()
-  dam = models.FloatField()
+  tot_dam = models.FloatField()
   kill = models.FloatField()
   tower = models.FloatField()
   inhibitor = models.FloatField()
   dragon = models.FloatField()
   baron = models.FloatField()
-  cs = models.FloatField()
+  total_cs = models.FloatField()
+
+  def get_gold(self):
+    return self.gold
 
   def __str__(self):
     return f'{self.tname} data saved!'

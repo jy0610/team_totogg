@@ -54,7 +54,7 @@ def run():
     recentSummary.objects.filter(tname=tname).delete()
 
     # DB에 저장
-    recentSummary(tname=tname, gold=gold, dam=dam, kill=kill, tower=tower, inhibitor=inhibitor, dragon=dragon, baron=baron, cs=cs).save()
+    recentSummary(tname=tname, gold=gold, tot_dam=dam, kill=kill, tower=tower, inhibitor=inhibitor, dragon=dragon, baron=baron, total_cs=cs).save()
 
     #print(type(t_datas))
 
