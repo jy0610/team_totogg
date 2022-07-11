@@ -10,14 +10,29 @@ import xgboost as xgb
 # pip install pickle-mixin
 from .models import recentSummary
 from .models import gameSchedule
+from datetime import datetime
+import pandas as pd
 # from .models import opggData
 # Create your views here.
 def totogg(request):
     data = rank.objects.all()
+    schedules = gameSchedule.objects.all()
+    t1s = []
+    t2s = []
+    for i in range(0, 2):
+        s = schedules[i]
+        t1s.append(s.team1)
+        t2s.append(s.team2)
+        date = s.date
+    today = datetime.now().date()
     return render(
         request,
         'totogg/home.html',
-        {"datas":data}
+        {"datas":data,
+        't1s':t1s,
+        't2s':t2s,
+        'date':date,
+        'today':today}
         )
 
 def chart(request):
@@ -64,21 +79,39 @@ def ml_deply(request):
     
 def pred(request):
     #data = recentSummary.objects.all()
-    schedule = gameSchedule.objects.all()
+    schedules = gameSchedule.objects.all()
     t1s = []
     t2s = []
-    sets = []
     t1_datas = []
     t2_datas = []
-    # for s in schedule:
-    #     t1s.append(s.team1)
-    #     t2s.append(s.team2)
+    chart_id = list(range(0, 10))
+    schedule = []
+    dates = []
     for i in range(0, 10):
-        s = schedule[i]
+        s = schedules[i]
+        schedule.append(s)
         t1s.append(s.team1)
         t2s.append(s.team2)
-        sets.append(s.set)
+        if s.date not in dates:
+            dates.append(s.date)
     
+    matches = []
+    for date in dates:
+        match_data = gameSchedule.objects.filter(date=date)
+        g1t1 = match_data[0].team1
+        g1t2 = match_data[0].team2
+        g2t1 = match_data[1].team1
+        g2t2 = match_data[1].team2
+        matchs = {}
+        matchs['date'] = date
+        matchs['g1t1'] = g1t1
+        matchs['g1t2'] = g1t2
+        matchs['g2t1'] = g2t1
+        matchs['g2t2'] = g2t2
+
+        matches.append(matchs)
+
+
     zips = zip(t1s, t2s)
     for t1, t2 in zips:
         team1_data = recentSummary.objects.get(tname=t1)
@@ -160,8 +193,14 @@ def pred(request):
         t1_datas.append(t1_data)
         t2_datas.append(t2_data)
     
-    data_zip = zip(t1_datas, t2_datas, sets)
+    chid = [[0,1], [2,3], [4,5], [6,7], [8,9]]
+    gs = zip(schedule, chart_id)
+    gs1 = zip(matches, chid)
+    data_zip = zip(t1_datas, t2_datas)
     return render(
         request,
         'totogg/pred.html',
-        {"data_zips":data_zip})
+        {"data_zips":data_zip,
+        'gameSchedule': gs,
+        'gameSchedule1': gs1,
+        })

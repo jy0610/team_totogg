@@ -9,28 +9,63 @@
 		<link rel="stylesheet" href="{% static 'totogg/css/main.css' %}" />
 		<noscript><link rel="stylesheet" href="{% static 'totogg/css/noscript.css' %}" /></noscript>
 	</head>
-    <body class="is-preload">
+  <body class="is-preload">
 		<div id="wrapper">
-        {% include 'totogg/mainmenu.html' %}
-		<!-- Main -->
-		<div id="main">
-			<div class="inner">
-				<!-- Text -->
-                <h2>2022 LCK SUmmer Predict</h2>
-				
-			<div class="chart">
-				<h2>◈ 2022-07-13</h2>
-				<h2>『 1경기 』 <b style="color:#1E90FF">T1</b> vs <b style="color:#F7464A">GEN</b><canvas id="match_1" width="50%" height="5%"></canvas></h2>				
-                <canvas id="match1" width="50%" height="10%"></canvas>
-				<br>
-				<h2>『 2경기 』 <b style="color:#1E90FF">DRX</b> vs <b style="color:#F7464A">DK</b><canvas id="match_2" width="50%" height="5%"></canvas></h2>				
-                <canvas id="match2" width="50%" height="10%"></canvas>
-                
-                </div>
-				
-			
-				
-            </div>
+  	      {% include 'totogg/mainmenu.html' %}
+			<!-- Main -->
+			<div id="main">
+				<div class="inner">
+					<!-- Text -->
+  	      <h2>2022 LCK Summer Predict</h2>
+					<!-- 경기 일정 -->
+					
+					<div class='chart'>
+						<table>
+							<thead>
+								<tr>
+									<th scope='col'>날짜</th>
+									<th scope='col'>1경기</th>
+									<th scope='col'>2경기</th>
+								</tr>
+							</thead>
+							<tbody>
+					{% for matches, chart_id in gameSchedule1 %}
+							<tr class="predict">
+								<th scope='col'>{{ matches.date }}</th>
+								<th scope='col'>
+									<a href='#match__{{ chart_id.0 }}'>
+									<b style="color:#1E90FF">{{ matches.g1t1 }}</b> vs 
+									<b style="color:#F7464A">{{ matches.g1t2 }}</b>
+									</a>
+								</th>
+								<th scope='col'>
+									<a href='#match__{{ chart_id.1 }}'>
+									<b style="color:#1E90FF">{{ matches.g2t1 }}</b> vs 
+									<b style="color:#F7464A">{{ matches.g2t2 }}</b>
+									</a>
+								</th>
+							</tr>
+					{% endfor %}
+							</tbody>
+						</table>
+					</div>
+
+					{% for schedule, chart_id in gameSchedule %}
+					<div class="chart" id="match__{{ chart_id }}">
+						<h2>◈ {{ schedule.date }}</h2>
+						<h2>『 {{ schedule.set }}경기 』
+							<b style="color:#1E90FF">{{ schedule.team1 }}</b> vs 
+							<b style="color:#F7464A">{{ schedule.team2 }}</b>
+							<canvas id="match{{ chart_id }}" width="50%" height="7%"></canvas>
+						</h2>
+						<br>
+						<canvas id="match_{{ chart_id }}" width="50%" height="15%"></canvas>
+						<br>
+  	    	</div>
+					
+					{% endfor %}
+
+  	    </div>
 			</div>
 		</div>
 
@@ -52,19 +87,23 @@
 </html>
 <!-- match1 -->
 <script type="text/javascript">
+	var num = 0
+	{% for t1_data, t2_data in data_zips %}
+	var matchid = 'match' + String(num)
+	var match_id = 'match_' + String(num)
 	var context = document
-		.getElementById('match_1')
+		.getElementById(matchid)
 		.getContext('2d');
     var myChart = new Chart(context, {
 		type: 'horizontalBar', // 차트의 형태
 		data: { // 차트에 들어갈 데이터
 			labels: ["predict"],
 			datasets: [{
-				label: 'T1',
+				label: '{{ t1_data.tname }}',
 				backgroundColor: "#1E90FF",
 				data: [70]
 				}, {
-				label: 'GEN',
+				label: '{{ t2_data.tname }}',
 				backgroundColor: "#F7464A",
 				data: [30]
 				
@@ -76,7 +115,7 @@
                 	color: ['#fff'],
                 	anchor: 'center',
 					font: { 
-                                family: 'Comic Sans MS',
+                  family: 'Comic Sans MS',
     							size: 30,
     							weight: 'bold',
     							lineHeight: 1.2,    							
@@ -104,27 +143,27 @@
                     
         }
     });
-</script>
-<script type="text/javascript">
+
+	
 	var context = document
-		.getElementById('match1')
+		.getElementById(match_id)
 		.getContext('2d');
 	var myChart = new Chart(context, {
 		type: 'bar', // 차트의 형태
 		data: { // 차트에 들어갈 데이터
 			labels: ["Gold", "Tot_Dam", "Kill", "Tower", "Inhibitor", "Dragon", "Baron","Total_CS"],
 			datasets: [{
-				label: 'T1',
+				label: '{{ t1_data.tname }}',
 				backgroundColor: "#1E90FF",
 				data: [
-				0.5,0.8,0.4,0.2,0.9,0.3,0.7,0.5
+				{{ t1_data.gold }}, {{ t1_data.tot_dam }}, {{ t1_data.kill }}, {{ t1_data.tower }}, {{ t1_data.inhibitor }}, {{ t1_data.dragon }}, {{ t1_data.baron }}, {{ t1_data.total_cs }}
 				]
 				
 				 }, {
-				label: 'GEN',
+				label: '{{ t2_data.tname }}',
 				backgroundColor: "#F7464A",
 				data: [
-				0.2,0.6,0.8,0.3,0.4,0.7,0.3,0.9
+				{{ t2_data.gold }}, {{ t2_data.tot_dam }}, {{ t2_data.kill }}, {{ t2_data.tower }}, {{ t2_data.inhibitor }}, {{ t2_data.dragon }}, {{ t2_data.baron }}, {{ t2_data.total_cs }}
 				]
 				}],
 			
@@ -190,145 +229,6 @@
                     
         }
     });
-</script>
-<!-- match1 -->
-<script type="text/javascript">
-	var context = document
-		.getElementById('match_2')
-		.getContext('2d');
-    var myChart = new Chart(context, {
-		type: 'horizontalBar', // 차트의 형태
-		data: { // 차트에 들어갈 데이터
-			labels: ["predict"],
-			datasets: [{
-				label: 'DRX',
-				backgroundColor: "#1E90FF",
-				data: [60]
-				}, {
-				label: 'DK',
-				backgroundColor: "#F7464A",
-				data: [40]
-				
-			}]
-		},
-		options: {
-			plugins: {
-               datalabels: {
-                	color: ['#fff'],
-                	anchor: 'center',
-					font: { 
-                                family: 'Comic Sans MS',
-    							size: 30,
-    							weight: 'bold',
-    							lineHeight: 1.2,    							
-    						}
-                	},
-            	},
-                    
-			legend: {
-				labels: {
-					fontColor: "White",
-					fontSize: 15
-				}
-			},
-			scales: {
-    		xAxes: [ {
-				stacked: true,
-				display: false,
-    		} ],
-    		yAxes: [ {
-					stacked: true,
-					display: false,
-    		} ]
-    			}
-                                
-                    
-        }
-    });
-</script>
-<script type="text/javascript">
-	var context = document
-		.getElementById('match2')
-		.getContext('2d');
-	var myChart = new Chart(context, {
-		type: 'bar', // 차트의 형태
-		data: { // 차트에 들어갈 데이터
-			labels: ["Gold", "Tot_Dam", "Kill", "Tower", "Inhibitor", "Dragon", "Baron","Total_CS"],
-			datasets: [{
-				label: 'DRX',
-				backgroundColor: "#1E90FF",
-				data: [
-				0.5,0.8,0.4,0.2,0.9,0.3,0.7,0.5
-				]
-				
-				 }, {
-				label: 'DK',
-				backgroundColor: "#F7464A",
-				data: [
-				0.2,0.6,0.8,0.3,0.4,0.7,0.3,0.9
-				]
-				}],
-			
-				
-			  
-
-		},
-		options: {
-						plugins: {
-            			   datalabels: {
-								display: false,
-            			    	color: '#fff',
-            			    	anchor: 'center',
-								font: { 
-            			                    family: 'Comic Sans MS',
-    										size: 10,
-    										weight: 'bold',
-    										lineHeight: 1.2,    							
-    									}
-            			    	},
-            				},
-                        title: {
-                            display: true,
-                            text: '『 Feature Data 』',
-                            fontFamily: 'Comic Sans MS',
-    						fontSize: 30,
-    						fontWeight: 'bold',    
-                            fontColor: 'rgba(255, 255, 255, 1)'
-                        },
-                        legend: {
-                        display: false
-                       
-                    
-                    },
-                    scales: {
-                        xAxes: [ {
-                            ticks: {
-                                fontFamily: 'Comic Sans MS',
-                                fontStyle: 'bold',
-                                fontColor: 'rgba(255, 255, 255, 1)',
-								fontSize: 15,
-                            },
-                            gridLines:{
-						        color: "rgba(255, 255, 255, 1)",
-						        lineWidth: 1
-                            }
-                        } ],
-                        yAxes: [ {
-                            ticks: {
-								beginAtZero: true,
-								max :1,
-                                fontFamily: 'Comic Sans MS',
-                                fontStyle: 'bold',
-                                fontColor: 'rgba(255, 255, 255, 1)'
-                            },
-                            gridLines:{
-						        color: "rgba(255, 255, 255, 1)",
-						        lineWidth: 1
-                            }
-                        } ]
-                            }
-                                
-                    
-        }
-    });
+		num += 1
+	{% endfor %}
 </script>
