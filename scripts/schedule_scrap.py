@@ -69,8 +69,8 @@ def run():
         #gameSchedule.objects.filter(date <= datetime.today().date()).delete()
 
         # DB 입력
-        gameSchedule(date=date, time=g1time, team1=g1t1.text, team2=g1t2.text).save()
-        gameSchedule(date=date, time=g2time, team1=g2t1.text, team2=g2t2.text).save()
+        gameSchedule(date=date, time=g1time, team1=g1t1.text, team2=g1t2.text, set=1).save()
+        gameSchedule(date=date, time=g2time, team1=g2t1.text, team2=g2t2.text, set=2).save()
 
         #결과 출력
         print(date, " ", g1t1.text, " ", g1time, " ", g1t2.text)

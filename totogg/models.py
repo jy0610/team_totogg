@@ -98,3 +98,4 @@ class gameSchedule(models.Model):
   time = models.CharField(max_length=50)
   team1 = models.CharField(max_length=20)
   team2 = models.CharField(max_length=20)
+  set = models.IntegerField(null=True)

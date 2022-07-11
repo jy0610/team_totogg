@@ -35,6 +35,7 @@ def pred(request):
     schedule = gameSchedule.objects.all()
     t1s = []
     t2s = []
+    sets = []
     t1_datas = []
     t2_datas = []
     # for s in schedule:
@@ -44,9 +45,10 @@ def pred(request):
         s = schedule[i]
         t1s.append(s.team1)
         t2s.append(s.team2)
+        sets.append(s.set)
     
-    tname_zip = zip(t1s, t2s)
-    for t1, t2 in tname_zip:
+    zips = zip(t1s, t2s)
+    for t1, t2 in zips:
         team1_data = recentSummary.objects.get(tname=t1)
         team2_data = recentSummary.objects.get(tname=t2)
         t1_data = {}
@@ -126,7 +128,7 @@ def pred(request):
         t1_datas.append(t1_data)
         t2_datas.append(t2_data)
     
-    data_zip = zip(t1_datas, t2_datas)
+    data_zip = zip(t1_datas, t2_datas, sets)
     return render(
         request,
         'totogg/pred.html',
