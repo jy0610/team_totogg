@@ -13,8 +13,8 @@ import time
 #chrome_options
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument("window-size=1000,1000") # 윈도우 사이즈 결정
-chrome_options.add_argument('no-sandbox')
-chrome_options.add_argument("headless") # 창을 띄우지않음
+chrome_options.add_argument('--no-sandbox')
+chrome_options.add_argument("--headless") # 창을 띄우지않음
 chrome_options.add_argument("--single-process")
 chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
 chrome_options.add_argument('--disable-dev-shm-usage')
@@ -23,13 +23,6 @@ driver = webdriver.Chrome(ChromeDriverManager().install(), chrome_options=chrome
 driver.implicitly_wait(5)
 
 url_pre = 'https://www.op.gg/summoners/kr/'
-
-def slack_bot(message):
-    print(message)
-    requests.post("https://slack.com/api/chat.postMessage", 
-        headers={"Authorization": "Bearer "+ SLACK_BOT_TOKEN}, 
-        data={"channel": slack_channel, "text": message}
-        )
 
 #검색어
 team = 'T1'
@@ -190,7 +183,7 @@ def run():
             champ = item.find_element(By.CSS_SELECTOR, "div .info  div .champion .icon a img").get_attribute("alt")
             kda = item.find_element(By.CSS_SELECTOR, "div .info  div .kda .k-d-a").text
             score = item.find_element(By.CSS_SELECTOR, "div .info  div .ratio span").text
-            ka = item.find_element(By.CSS_SELECTOR, "div .info  div .stats .p-kill div").text[4:]
+            ka = item.find_element(By.CSS_SELECTOR, "div .info  div .stats .p-kill div").text[6:]
             cs = item.find_element(By.CSS_SELECTOR, "div .info  div .stats .cs div").text[3:6]
             g_time = item.find_element(By.CSS_SELECTOR, "div .game .length").text
 
@@ -204,7 +197,8 @@ def run():
                         킬관여 : {ka} \
                         CS : {cs} \
                         게임시간 : {g_time}"
-            slack_bot(message)
+
+            print(message)
 
           except Exception as e:
             print("--")

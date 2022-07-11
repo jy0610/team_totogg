@@ -55,15 +55,11 @@ def ml_deply(request):
 
     # 예측확률
     predb = loaded_model.predict_proba(data)
-    # predb = log_loss(data)
-    # predb = mlflow.log_metric("validation_0-logloss")
     # predb = loaded_model.predict_distribution(data)
     predicts = {"predict":pred, "preba":predb}
 
     
     return render (request, 'totogg/test.html', {'predicts':predicts})
-    # return render (request, 'totogg/test.html', {'predict': pred})
-
     
 def pred(request):
     data = recentSummary.objects.all()

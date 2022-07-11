@@ -14,14 +14,15 @@ from totogg.models import rank
 url = 'https://game.naver.com/esports/record/lck/team/lck_2022_summer'
 
 # driver 설정과 지정
-options = webdriver.ChromeOptions()
-options.add_argument("window-size=1000,1000") # 윈도우 사이즈 결정
-# options.add_argument("headless") # 창을 띄우지않음
-options.add_experimental_option('excludeSwitches', ['enable-logging'])
-options.add_argument('--no-sandbox')
-options.add_argument('--disable-dev-shm-usage')
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument("window-size=1000,1000") # 윈도우 사이즈 결정
+chrome_options.add_argument("--headless") # 창을 띄우지않음
+chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
+chrome_options.add_argument('--no-sandbox')
+chrome_options.add_argument('--disable-dev-shm-usage')
+chrome_options.add_argument("--single-process")
 
-chrome = webdriver.Chrome(ChromeDriverManager().install(), options=options)
+chrome = webdriver.Chrome(ChromeDriverManager().install(), chrome_options=chrome_options)
 chrome.implicitly_wait(5)
 
 TEAM = []
@@ -127,7 +128,7 @@ def run():
         rank(score_n=a,team_logo=b,team=c,score_wins=d,score_loses=e,score_scd=f,score_wins_rates=g).save()
         
 
-    # print(rank_data)
+    print(rank_data)
     print("script 실행")
 
 

@@ -1505,3 +1505,611 @@ Performing system checks...
 Watching for file changes with StatReloader
 [11/Jul/2022 11:00:22] "GET / HTTP/1.1" 200 13019
 [11/Jul/2022 11:00:25] "GET /pred/ HTTP/1.1" 200 8355
+[11/Jul/2022 11:05:18] "GET / HTTP/1.1" 200 13019
+[11/Jul/2022 11:05:22] "GET /chart/ HTTP/1.1" 200 29075
+[11/Jul/2022 11:05:24] "GET /team/t1 HTTP/1.1" 301 0
+[11/Jul/2022 11:05:25] "GET /team/t1/ HTTP/1.1" 200 4263
+[11/Jul/2022 11:05:25] "GET /static/totogg/images/oner.png HTTP/1.1" 200 65097
+[11/Jul/2022 11:05:25] "GET /static/totogg/images/faker.png HTTP/1.1" 200 62072
+[11/Jul/2022 11:05:25] "GET /static/totogg/images/zeus.png HTTP/1.1" 200 452876
+[11/Jul/2022 11:05:25] "GET /static/totogg/images/gumayusi.png HTTP/1.1" 200 445549
+[11/Jul/2022 11:05:25] "GET /static/totogg/images/keria.png HTTP/1.1" 200 461714
+[11/Jul/2022 11:05:26] "GET /team/t1_T HTTP/1.1" 301 0
+[11/Jul/2022 11:05:26] "GET /team/t1_T/ HTTP/1.1" 200 31249
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 11, 2022 - 11:00:12
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+[11/Jul/2022 11:42:06] "GET /team/t1_T/ HTTP/1.1" 200 30171
+[11/Jul/2022 11:42:06] "GET /static/totogg/css/main.css HTTP/1.1" 200 72810
+[11/Jul/2022 11:42:16] "GET /team/t1_M HTTP/1.1" 301 0
+[11/Jul/2022 11:42:16] "GET /team/t1_M/ HTTP/1.1" 200 30126
+[11/Jul/2022 11:42:22] "GET /team/t1_T/ HTTP/1.1" 200 30171
+[11/Jul/2022 11:42:25] "GET /team/t1_T/ HTTP/1.1" 200 30171
+[11/Jul/2022 11:42:29] "GET /team/t1_M/ HTTP/1.1" 200 30126
+[11/Jul/2022 11:42:32] "GET /team/kdf HTTP/1.1" 301 0
+[11/Jul/2022 11:42:32] "GET /team/kdf/ HTTP/1.1" 200 4281
+[11/Jul/2022 11:42:32] "GET /static/totogg/images/kiin.png HTTP/1.1" 200 223283
+[11/Jul/2022 11:42:32] "GET /static/totogg/images/ellim.png HTTP/1.1" 200 232512
+[11/Jul/2022 11:42:32] "GET /static/totogg/images/fate.png HTTP/1.1" 200 223196
+[11/Jul/2022 11:42:32] "GET /static/totogg/images/teddy.png HTTP/1.1" 200 214256
+[11/Jul/2022 11:42:32] "GET /static/totogg/images/hoit.png HTTP/1.1" 200 237268
+[11/Jul/2022 11:42:33] "GET /team/kdf_J HTTP/1.1" 301 0
+[11/Jul/2022 11:42:33] "GET /team/kdf_J/ HTTP/1.1" 200 30218
+[11/Jul/2022 11:42:38] "GET /team/t1/ HTTP/1.1" 200 4263
+[11/Jul/2022 11:42:39] "GET /team/t1_T/ HTTP/1.1" 200 30171
+[11/Jul/2022 12:04:52] "GET /team/t1_M/ HTTP/1.1" 200 30432
+[11/Jul/2022 12:04:53] "GET /static/totogg/css/main.css HTTP/1.1" 304 0
+[11/Jul/2022 12:05:14] "GET /team/drx HTTP/1.1" 301 0
+[11/Jul/2022 12:05:14] "GET /team/drx/ HTTP/1.1" 200 4279
+[11/Jul/2022 12:05:15] "GET /static/totogg/images/pyosik.png HTTP/1.1" 200 219868
+[11/Jul/2022 12:05:15] "GET /static/totogg/images/kingen.png HTTP/1.1" 200 214972
+[11/Jul/2022 12:05:15] "GET /static/totogg/images/deft.png HTTP/1.1" 200 177372
+[11/Jul/2022 12:05:15] "GET /static/totogg/images/zeka.png HTTP/1.1" 200 195454
+[11/Jul/2022 12:05:15] "GET /static/totogg/images/beryl.png HTTP/1.1" 200 200043
+[11/Jul/2022 12:05:16] "GET /team/drx_T HTTP/1.1" 301 0
+[11/Jul/2022 12:05:16] "GET /team/drx_T/ HTTP/1.1" 200 30431
+[11/Jul/2022 12:45:20] "GET /team/drx_T/ HTTP/1.1" 200 30431
+[11/Jul/2022 12:45:20] "GET /static/totogg/css/main.css HTTP/1.1" 304 0
+[11/Jul/2022 12:45:45] "GET /team/t1/ HTTP/1.1" 200 4263
+[11/Jul/2022 12:45:46] "GET /team/t1_T/ HTTP/1.1" 200 30477
+[11/Jul/2022 12:46:26] "GET / HTTP/1.1" 200 13019
+[11/Jul/2022 12:46:26] "GET /static/totogg/css/main.css HTTP/1.1" 200 72810
+[11/Jul/2022 12:46:26] "GET /static/totogg/images/lck_logo.png HTTP/1.1" 304 0
+[11/Jul/2022 12:46:26] "GET /static/totogg/js/browser.min.js HTTP/1.1" 304 0
+[11/Jul/2022 12:46:26] "GET /static/totogg/js/jquery.min.js HTTP/1.1" 304 0
+[11/Jul/2022 12:46:26] "GET /static/totogg/js/breakpoints.min.js HTTP/1.1" 304 0
+[11/Jul/2022 12:46:26] "GET /static/totogg/js/util.js HTTP/1.1" 304 0
+[11/Jul/2022 12:46:26] "GET /static/totogg/js/main.js HTTP/1.1" 304 0
+[11/Jul/2022 12:46:26] "GET /static/totogg/css/fontawesome-all.min.css HTTP/1.1" 304 0
+[11/Jul/2022 12:46:26] "GET /static/totogg/images/no_3.png HTTP/1.1" 304 0
+[11/Jul/2022 12:46:26] "GET /static/totogg/images/no_1.png HTTP/1.1" 304 0
+[11/Jul/2022 12:46:26] "GET /static/totogg/images/no_2.png HTTP/1.1" 304 0
+[11/Jul/2022 12:46:26] "GET /static/totogg/js/chartjs-plugin-datalabels.js HTTP/1.1" 200 13070
+[11/Jul/2022 12:46:26] "GET /static/totogg/js/Chart.min.js HTTP/1.1" 200 173077
+[11/Jul/2022 12:46:26] "GET /static/totogg/images/t1_logo.png HTTP/1.1" 304 0
+[11/Jul/2022 12:46:26] "GET /static/totogg/images/gen_logo.png HTTP/1.1" 304 0
+[11/Jul/2022 12:46:26] "GET /static/totogg/images/drx_logo.png HTTP/1.1" 304 0
+[11/Jul/2022 12:46:26] "GET /static/totogg/images/lol_background.jpg HTTP/1.1" 304 0
+[11/Jul/2022 12:46:26] "GET /static/totogg/images/kt_logo.png HTTP/1.1" 304 0
+[11/Jul/2022 12:46:26] "GET /static/totogg/images/dk_logo.png HTTP/1.1" 304 0
+[11/Jul/2022 12:46:27] "GET /static/totogg/images/lsb_logo.png HTTP/1.1" 304 0
+[11/Jul/2022 12:46:27] "GET /static/totogg/images/ns_logo.png HTTP/1.1" 304 0
+[11/Jul/2022 12:46:27] "GET /static/totogg/images/kf_logo.png HTTP/1.1" 304 0
+[11/Jul/2022 12:46:27] "GET /static/totogg/images/hl_logo.png HTTP/1.1" 304 0
+[11/Jul/2022 12:46:27] "GET /static/totogg/webfonts/fa-brands-400.woff2 HTTP/1.1" 304 0
+[11/Jul/2022 12:46:27] "GET /static/totogg/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+[11/Jul/2022 12:46:27] "GET /static/totogg/images/bro_logo.png HTTP/1.1" 304 0
+[11/Jul/2022 12:46:27] "GET /static/totogg/images/t1logo_fa.ico HTTP/1.1" 404 1844
+[11/Jul/2022 12:46:30] "GET /team/t1 HTTP/1.1" 301 0
+[11/Jul/2022 12:46:30] "GET /team/t1/ HTTP/1.1" 200 4263
+[11/Jul/2022 12:46:30] "GET /static/totogg/images/faker.png HTTP/1.1" 200 62072
+[11/Jul/2022 12:46:30] "GET /static/totogg/images/oner.png HTTP/1.1" 200 65097
+[11/Jul/2022 12:46:30] "GET /static/totogg/images/gumayusi.png HTTP/1.1" 200 445549
+[11/Jul/2022 12:46:30] "GET /static/totogg/images/zeus.png HTTP/1.1" 200 452876
+[11/Jul/2022 12:46:30] "GET /static/totogg/images/keria.png HTTP/1.1" 200 461714
+Not Found: /favicon.ico
+[11/Jul/2022 12:46:30] "GET /favicon.ico HTTP/1.1" 404 3084
+[11/Jul/2022 12:46:31] "GET /team/t1_T HTTP/1.1" 301 0
+[11/Jul/2022 12:46:31] "GET /team/t1_T/ HTTP/1.1" 200 30477
+[11/Jul/2022 12:48:08] "GET /team/t1/ HTTP/1.1" 200 4263
+[11/Jul/2022 12:48:09] "GET /home/ HTTP/1.1" 200 13019
+Internal Server Error: /pred/
+Traceback (most recent call last):
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'totogg_recentsummary.dam' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/totogg/totogg/views.py", line 68, in pred
+    return render(
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/defaulttags.py", line 194, in render
+    len_values = len(values)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/models/query.py", line 302, in __len__
+    self._fetch_all()
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/models/query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/models/query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1361, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'totogg_recentsummary.dam' in 'field list'")
+[11/Jul/2022 12:48:13] "GET /pred/ HTTP/1.1" 500 230840
+Internal Server Error: /pred/
+Traceback (most recent call last):
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'totogg_recentsummary.dam' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/totogg/totogg/views.py", line 68, in pred
+    return render(
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/defaulttags.py", line 194, in render
+    len_values = len(values)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/models/query.py", line 302, in __len__
+    self._fetch_all()
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/models/query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/models/query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1361, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'totogg_recentsummary.dam' in 'field list'")
+[11/Jul/2022 12:48:33] "GET /pred/ HTTP/1.1" 500 230840
+Internal Server Error: /pred/
+Traceback (most recent call last):
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'totogg_recentsummary.dam' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/totogg/totogg/views.py", line 68, in pred
+    return render(
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/defaulttags.py", line 194, in render
+    len_values = len(values)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/models/query.py", line 302, in __len__
+    self._fetch_all()
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/models/query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/models/query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1361, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'totogg_recentsummary.dam' in 'field list'")
+[11/Jul/2022 12:50:04] "GET /pred/ HTTP/1.1" 500 230977
+Internal Server Error: /pred/
+Traceback (most recent call last):
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'totogg_recentsummary.dam' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/totogg/totogg/views.py", line 68, in pred
+    return render(
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/defaulttags.py", line 194, in render
+    len_values = len(values)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/models/query.py", line 302, in __len__
+    self._fetch_all()
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/models/query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/models/query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1361, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'totogg_recentsummary.dam' in 'field list'")
+[11/Jul/2022 12:50:05] "GET /pred/ HTTP/1.1" 500 230977
+Internal Server Error: /pred/
+Traceback (most recent call last):
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'totogg_recentsummary.dam' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/totogg/totogg/views.py", line 68, in pred
+    return render(
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/template/defaulttags.py", line 194, in render
+    len_values = len(values)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/models/query.py", line 302, in __len__
+    self._fetch_all()
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/models/query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/models/query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1361, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/ubuntu/totogg/venv_totogg/lib/python3.8/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'totogg_recentsummary.dam' in 'field list'")
+[11/Jul/2022 12:54:49] "GET /pred/ HTTP/1.1" 500 230977
+[11/Jul/2022 12:54:51] "GET /home/ HTTP/1.1" 200 13019
+[11/Jul/2022 12:54:54] "GET /chart/ HTTP/1.1" 200 29075
+[11/Jul/2022 12:54:59] "GET /team/t1/ HTTP/1.1" 200 4263
+[11/Jul/2022 12:55:00] "GET /team/t1_T/ HTTP/1.1" 200 30477
+[11/Jul/2022 12:55:04] "GET /team/t1/ HTTP/1.1" 200 4263
+[11/Jul/2022 12:55:06] "GET /team/t1_T/ HTTP/1.1" 200 30477
+[11/Jul/2022 12:55:22] "GET /team/t1_T/ HTTP/1.1" 200 30477
+[11/Jul/2022 12:55:27] "GET /team/t1_T/ HTTP/1.1" 200 30477
+[11/Jul/2022 13:01:02] "GET /team/t1_T/ HTTP/1.1" 200 29357
+[11/Jul/2022 13:01:02] "GET /static/totogg/css/main.css HTTP/1.1" 200 72811
+[11/Jul/2022 13:13:19] "GET /team/t1_T/ HTTP/1.1" 200 30437
+[11/Jul/2022 13:13:19] "GET /static/totogg/css/main.css HTTP/1.1" 304 0
+[11/Jul/2022 13:13:23] "GET /team/t1_J HTTP/1.1" 301 0
+[11/Jul/2022 13:13:23] "GET /team/t1_J/ HTTP/1.1" 200 30443
+[11/Jul/2022 13:13:26] "GET /team/t1_M/ HTTP/1.1" 200 30392
+[11/Jul/2022 13:13:30] "GET /team/t1_A HTTP/1.1" 301 0
+[11/Jul/2022 13:13:30] "GET /team/t1_A/ HTTP/1.1" 200 30442
+[11/Jul/2022 13:13:35] "GET /team/kdf/ HTTP/1.1" 200 4281
+[11/Jul/2022 13:13:39] "GET /team/kdf_M HTTP/1.1" 301 0
+[11/Jul/2022 13:13:39] "GET /team/kdf_M/ HTTP/1.1" 200 30410
+[11/Jul/2022 13:13:45] "GET /team/kdf_J/ HTTP/1.1" 200 30460
+/home/ubuntu/totogg/totogg/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 11, 2022 - 11:09:02
+Django version 4.0.5, using settings 'totogg_prj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+[11/Jul/2022 13:18:09] "GET /team/ns HTTP/1.1" 301 0
+[11/Jul/2022 13:18:09] "GET /team/ns/ HTTP/1.1" 200 4340
+[11/Jul/2022 13:18:09] "GET /static/totogg/css/main.css HTTP/1.1" 304 0
+[11/Jul/2022 13:18:09] "GET /static/totogg/images/canna.png HTTP/1.1" 200 203280
+[11/Jul/2022 13:18:09] "GET /static/totogg/images/dread.png HTTP/1.1" 200 209692
+[11/Jul/2022 13:18:09] "GET /static/totogg/images/ghost.png HTTP/1.1" 200 217644
+[11/Jul/2022 13:18:09] "GET /static/totogg/images/bdd.png HTTP/1.1" 200 220516
+[11/Jul/2022 13:18:09] "GET /static/totogg/images/effort.png HTTP/1.1" 200 216888
+[11/Jul/2022 13:18:11] "GET /team/ns_S HTTP/1.1" 301 0
+[11/Jul/2022 13:18:11] "GET /team/ns_S/ HTTP/1.1" 200 30482
+Invalid HTTP_HOST header: 'example.com'. You may need to add 'example.com' to ALLOWED_HOSTS.
+Bad Request: /http:/example.com/
+[11/Jul/2022 13:24:25] "GET http://example.com/ HTTP/1.1" 400 61742
+[11/Jul/2022 15:22:34] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00°\x01\x00\x00¬\x03\x03\x9d\\q´G[ÑA\x01â¶ý¡ò¥\x10\x88\x9eÍ\x8b\x99í#:Ó,Xø+\x80dã\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[11/Jul/2022 15:22:34] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[11/Jul/2022 15:22:51] "GET / HTTP/1.1" 200 13019
+[11/Jul/2022 15:24:04] "GET /static/totogg/images/t1logo_fa.ico HTTP/1.1" 404 1844
+Not Found: /robots.txt
+[11/Jul/2022 15:24:07] "GET /robots.txt HTTP/1.1" 404 3081
+Not Found: /sitemap.xml
+[11/Jul/2022 15:24:21] "GET /sitemap.xml HTTP/1.1" 404 3084
+[11/Jul/2022 15:24:25] "GET /static/totogg/js/breakpoints.min.js HTTP/1.1" 200 2438
+[11/Jul/2022 15:24:25] "GET /static/totogg/js/main.js HTTP/1.1" 200 3305
+[11/Jul/2022 15:24:25] "GET /static/totogg/js/util.js HTTP/1.1" 200 11847
+[11/Jul/2022 15:24:26] "GET /static/totogg/js/jquery.min.js HTTP/1.1" 200 89501
+[11/Jul/2022 15:24:26] "GET /static/totogg/js/Chart.min.js HTTP/1.1" 200 173077
+[11/Jul/2022 15:24:31] "GET /static/totogg/js/browser.min.js HTTP/1.1" 200 2050
+[11/Jul/2022 15:24:31] "GET /static/totogg/js/chartjs-plugin-datalabels.js HTTP/1.1" 200 13070

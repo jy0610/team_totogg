@@ -27,17 +27,14 @@ def deleteSideBar(driver):
 # getPlayoff() -> playoff 선택 후 driver 반환
 # scrapBlue(TeamName)
 
-
-
-
 def run():
   chrome_options = webdriver.ChromeOptions()
   chrome_options.add_argument("window-size=1200,1000") # 윈도우 사이즈 결정
-  #chrome_options.add_argument("headless") # 창을 띄우지않음
-  #chrome_options.add_argument("--single-process")
+  chrome_options.add_argument("--headless") # 창을 띄우지않음
+  chrome_options.add_argument("--single-process")
   chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
-  #chrome_options.add_argument('no-sandbox')
-  #chrome_options.add_argument('--disable-dev-shm-usage')
+  chrome_options.add_argument('--no-sandbox')
+  chrome_options.add_argument('--disable-dev-shm-usage')
   driver = webdriver.Chrome(ChromeDriverManager().install(), chrome_options=chrome_options)
   driver.get(url)
   print("--")
@@ -78,14 +75,8 @@ def run():
 
     except Exception as e:
       print("예외발생")
-      print(e)
-  
-  
 
-  
 #run()
-
-
 
 # for문 두 번: 정규시즌 + 플레이오프
 # for문 :
